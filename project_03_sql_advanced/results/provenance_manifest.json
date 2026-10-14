@@ -1,0 +1,19 @@
+{
+  "pipeline": "AMR CSV ETL",
+  "status": "SUCCESS",
+  "input_filename": "DEMO_SYNTHETIC_amr_sql.csv",
+  "input_sha256": "57906722d8c415f6ef3f3c649ee91adeec760d326c62ebab317aca7a77a13773",
+  "rows_received": 12,
+  "rows_curated": 12,
+  "unique_isolates": 4,
+  "organisms": [
+    "Escherichia coli",
+    "Klebsiella pneumoniae"
+  ],
+  "source_url": "UNSPECIFIED",
+  "source_query": "UNSPECIFIED",
+  "retrieval_date": "UNSPECIFIED",
+  "run_utc": "2026-10-13T07:34:38.588209+00:00",
+  "database_status": "loaded_sqlite_portable",
+  "data_provenance_note": "Source metadata are user-supplied and are not independently verified by this script."
+}

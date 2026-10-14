@@ -1,0 +1,7 @@
+organism,antibiotic,n_tested,resistant_n,intermediate_n,susceptible_n,resistant_pct
+Escherichia coli,Ceftriaxone,2,1,1,0,50.0
+Escherichia coli,Ciprofloxacin,2,1,0,1,50.0
+Escherichia coli,Gentamicin,2,0,0,2,0.0
+Klebsiella pneumoniae,Ceftriaxone,2,1,0,1,50.0
+Klebsiella pneumoniae,Ciprofloxacin,2,1,0,1,50.0
+Klebsiella pneumoniae,Gentamicin,2,1,1,0,50.0

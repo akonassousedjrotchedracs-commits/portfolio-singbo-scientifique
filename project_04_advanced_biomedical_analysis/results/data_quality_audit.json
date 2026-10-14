@@ -1,0 +1,14 @@
+{
+  "rows_received": 12,
+  "missing_by_column": {
+    "isolate_id": 0,
+    "organism": 0,
+    "antibiotic": 0,
+    "result": 0,
+    "collection_year": 0,
+    "country": 0,
+    "source_accession": 0
+  },
+  "duplicate_isolate_antibiotic_rows": 0,
+  "invalid_result_values": []
+}
