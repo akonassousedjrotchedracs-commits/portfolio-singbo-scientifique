@@ -1,12 +1,16 @@
 organism,antibiotic,result,n
-Escherichia coli,Ceftriaxone,I,1
-Escherichia coli,Ceftriaxone,R,1
-Escherichia coli,Ceftriaxone,S,1
-Escherichia coli,Ciprofloxacin,R,2
-Escherichia coli,Ciprofloxacin,S,1
-Klebsiella pneumoniae,Ceftriaxone,R,1
-Klebsiella pneumoniae,Ceftriaxone,S,1
-Klebsiella pneumoniae,Ciprofloxacin,I,1
-Klebsiella pneumoniae,Ciprofloxacin,S,1
-Staphylococcus aureus,Cefoxitin,R,1
-Staphylococcus aureus,Cefoxitin,S,1
+Escherichia coli,Ceftriaxone,R,6
+Escherichia coli,Ceftriaxone,I,4
+Escherichia coli,Ceftriaxone,S,10
+Escherichia coli,Ciprofloxacin,R,11
+Escherichia coli,Ciprofloxacin,I,2
+Escherichia coli,Ciprofloxacin,S,7
+Klebsiella pneumoniae,Ceftriaxone,R,8
+Klebsiella pneumoniae,Ceftriaxone,I,3
+Klebsiella pneumoniae,Ceftriaxone,S,9
+Klebsiella pneumoniae,Ciprofloxacin,R,4
+Klebsiella pneumoniae,Ciprofloxacin,I,5
+Klebsiella pneumoniae,Ciprofloxacin,S,11
+Staphylococcus aureus,Cefoxitin,R,7
+Staphylococcus aureus,Cefoxitin,I,1
+Staphylococcus aureus,Cefoxitin,S,12
