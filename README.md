@@ -12,7 +12,7 @@ Chaque fiche expose l’objectif, les méthodes, la méthodologie, les résultat
 2. [Contrôle qualité de séquences bactériennes](project_02_bacterial_sequence/README.md)
 3. [Modélisation SQL et pipeline ETL](project_03_sql_advanced/README.md)
 4. [Analyse statistique biomédicale](project_04_advanced_biomedical_analysis/README.md)
-5. [Mémoire de soutenance sur le diagnostic du paludisme](project_05_formation_hematologie_paludisme/README.md)
+5. [Mémoire de soutenance : inflammation et dysfonctionnements de la prostate](project_05_memoire_soutenance_prostate/README.md)
 
 ## Portée scientifique
 
