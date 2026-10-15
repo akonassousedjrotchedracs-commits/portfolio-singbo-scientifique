@@ -1,89 +1,25 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Portfolio scientifique de Tchédrac Singbo : microbiologie, bioinformatique, SQL et analyse biomédicale.">
-<title>Portfolio scientifique | Tchédrac Singbo</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-<main class="hero-grid">
-<div>
-<div class="eyebrow">Portfolio scientifique · Scientific portfolio</div>
-<h1>AKONASSOU SEDJRO<br>TCHÉDRAC SINGBO</h1>
-<p><strong>Biotechnologie médicale · Microbiologie clinique · Bioinformatique · SQL · Analyse de données biomédicales</strong></p>
-<p>Un espace de travail consacré à la biotechnologie médicale, à la microbiologie, à la bioinformatique et à l’analyse de données de santé.</p>
-<div class="links">
-<a href="documentation.html">Dossier public (FR)</a>
-<a href="documentation-en.html">Public file (EN)</a>
-<a href="methodes-resultats.html">Méthodes publiques</a>
-<a href="methods-results.html">Public methods (EN)</a>
-</div>
-</div>
-</main>
-</header>
-
-<main>
-<section>
-<h2>Projets</h2>
-<div class="grid">
-
-<article class="card">
-<span class="tag">MICROBIOLOGIE</span>
-<h3>Résistance aux antimicrobiens</h3>
-<p>Contrôles de structure, validation S/I/R, agrégations par organisme et antibiotique, tableaux et visualisation.</p>
-<a href="project_01_antimicrobial_resistance/index.html">Ouvrir le dossier →</a>
-</article>
-
-<article class="card">
-<span class="tag">BIOINFORMATIQUE</span>
-<h3>Contrôle qualité de séquences</h3>
-<p>Lecture FASTA, longueur, fraction GC, bases ambiguës et recherche exploratoire d’ORF avec Biopython.</p>
-<a href="project_02_bacterial_sequence/index.html">Ouvrir le dossier →</a>
-</article>
-
-<article class="card">
-<span class="tag">DONNÉES DE LABORATOIRE</span>
-<h3>SQL et pipeline ETL</h3>
-<p>Validation de CSV, empreinte SHA-256, contrôle qualité, manifeste de provenance et requêtes SQL.</p>
-<a href="project_03_sql_advanced/index.html">Ouvrir le dossier →</a>
-</article>
-
-<article class="card">
-<span class="tag">BIOSTATISTIQUE</span>
-<h3>Analyse statistique biomédicale</h3>
-<p>Audit qualité, proportions de résistance, intervalles de Wilson à 95 % et matrices descriptives.</p>
-<a href="project_04_advanced_biomedical_analysis/index.html">Ouvrir le dossier →</a>
-</article>
-
-<article class="card">
-<span class="tag">MÉMOIRE DE SOUTENANCE</span>
-<h3>Mémoire de soutenance : inflammation et prostate</h3>
-<p>Évaluation de l’inflammation et des marqueurs biologiques dans les dysfonctionnements de la prostate au CHUD-OP.</p>
-<a href="project_05_memoire_soutenance_prostate/index.html">Ouvrir le dossier →</a>
-</article>
-
-</div>
-</section>
-
-<section>
-<h2>Méthode de travail et attribution</h2>
-<p>Chaque projet documente la question scientifique, les méthodes, les étapes d’analyse, les contrôles de qualité, les résultats publiables et leur interprétation.</p>
-<p>Le contexte d’utilisation est décrit avec exactitude : le portfolio ne revendique pas une utilisation en routine hospitalière ou dans le mémoire si elle n’a pas eu lieu. Cette distinction garantit la rigueur scientifique sans minimiser la contribution personnelle au travail technique et analytique.</p>
-<div class="notice"><strong>Provenance et portée :</strong> les fichiers <code>DEMO_SYNTHETIC</code> sont les jeux d’exemple fournis pour reproduire les traitements. Ils ne sont pas des dossiers patients, des résultats du CHU-MEL ni un export NCBI. Le portfolio documente mon travail de conception, de programmation, d’exécution, de contrôle et d’interprétation. Les résultats des jeux d’exemple démontrent le fonctionnement des méthodes et ne sont pas présentés comme des estimations cliniques.</div>
-</section>
-
-<footer>
-<strong>AKONASSOU SEDJRO TCHÉDRAC SINGBO</strong><br>
-Biotechnologie médicale · Analyse scientifique reproductible<br>
-<a href="profile.html">Profil français</a> ·
-<a href="profile-en.html">English profile</a>
-</footer>
-</main>
-</body>
-</html>
-
-
-
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Interface de documentation scientifique et bioinformatique — espace vierge personnalisable.">
+<title>Documentation scientifique | Espace de travail</title>
+<style>
+:root{color-scheme:light;--bg:#fff;--ink:#202124;--muted:#5f6368;--line:#dadce0;--soft:#f8f9fa;--blue:#1a5a96;--teal:#007c91;--code:#f5f7f9;--focus:#174ea6;font-family:Arial,Helvetica,sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--bg);font-size:15px;line-height:1.65}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}button{font:inherit}.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;background:#fff;padding:8px;z-index:9}.top{height:62px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px;padding:0 clamp(16px,4vw,48px);background:#fff}.brand-mark{width:28px;height:28px;border:2px solid var(--blue);border-radius:50%;display:grid;place-items:center;color:var(--blue);font-size:12px;font-weight:700}.brand{font-size:16px;font-weight:600;color:#303134}.brand small{display:block;color:var(--muted);font-size:11px;font-weight:400;line-height:1.2}.top-right{margin-left:auto;color:var(--muted);font-size:12px}.layout{display:grid;grid-template-columns:245px minmax(0,1fr);max-width:1440px;margin:auto;min-height:calc(100vh - 62px)}aside{border-right:1px solid var(--line);padding:25px 15px 30px 22px} .nav-title{margin:0 0 9px 10px;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}nav{display:grid;gap:2px}nav button{background:transparent;border:0;border-left:3px solid transparent;text-align:left;padding:8px 10px;color:#3c4043;cursor:pointer;border-radius:0 4px 4px 0}nav button:hover{background:var(--soft)}nav button[aria-current=page]{background:#e8f0fe;border-left-color:var(--blue);color:#174ea6;font-weight:600}main{padding:clamp(24px,4vw,54px);min-width:0;max-width:1100px}.crumb{font-size:12px;color:var(--muted);margin-bottom:16px}.eyebrow{color:var(--teal);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700}h1{font-size:clamp(28px,3.4vw,38px);line-height:1.2;font-weight:500;letter-spacing:-.025em;margin:8px 0 12px}h2{font-size:22px;line-height:1.3;font-weight:500;margin:30px 0 8px;padding-bottom:7px;border-bottom:1px solid var(--line)}h3{font-size:16px;font-weight:600;margin:20px 0 6px}p{margin:8px 0 14px}.intro{max-width:760px;color:#3c4043;font-size:16px}.note{border-left:4px solid var(--teal);background:#f3f8f9;padding:12px 16px;margin:22px 0;color:#303b40}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px}.section-head small{font-size:12px;color:var(--muted)}.empty{border:1px solid var(--line);padding:22px;margin-top:12px;background:#fff}.empty h3{margin-top:0}.empty p{color:var(--muted);margin-bottom:0}.empty-label{display:inline-block;border:1px solid var(--line);padding:3px 8px;font-size:11px;color:var(--muted);border-radius:2px}.toc{border:1px solid var(--line);padding:16px 20px;max-width:520px;background:#fff}.toc strong{display:block;margin-bottom:8px}.toc ul{margin:0;padding-left:20px}.toc li{padding:2px 0}.code{background:var(--code);border:1px solid var(--line);padding:12px 14px;font:13px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;overflow:auto;color:#374151}.meta{border-collapse:collapse;width:100%;margin:14px 0;font-size:13px}.meta th,.meta td{text-align:left;border:1px solid var(--line);padding:9px 11px;vertical-align:top}.meta th{background:var(--soft);font-weight:600}.meta td{color:var(--muted)}.footer{border-top:1px solid var(--line);margin-top:44px;padding-top:14px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:12px}.page{display:none}.page.active{display:block}button:focus-visible,a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}@media(max-width:760px){.top{height:auto;min-height:60px;padding:10px 14px}.top-right{display:none}.layout{display:block}aside{border-right:0;border-bottom:1px solid var(--line);padding:10px 12px} .nav-title{display:none}nav{display:flex;overflow-x:auto;gap:4px}nav button{white-space:nowrap;border-left:0;border-bottom:3px solid transparent;border-radius:3px 3px 0 0;padding:7px 10px}nav button[aria-current=page]{border-left:0;border-bottom-color:var(--blue)}main{padding:25px 17px}.footer{flex-direction:column}.meta{display:block;overflow-x:auto}}
+</style></head><body>
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="top"><div class="brand-mark" aria-hidden="true">S</div><div class="brand">Documentation scientifique<small>Espace de travail indépendant</small></div><div class="top-right">Interface de documentation · Version 7</div></header>
+<div class="layout"><aside aria-label="Navigation documentaire"><p class="nav-title">Sommaire</p><nav>
+<button type="button" data-page="home" aria-current="page">Vue d’ensemble</button><button type="button" data-page="method">Méthodologie</button><button type="button" data-page="data">Données</button><button type="button" data-page="qc">Contrôle qualité</button><button type="button" data-page="results">Résultats</button><button type="button" data-page="docs">Documentation</button>
+</nav></aside><main id="content">
+<section class="page active" id="home"><div class="crumb">Accueil / Vue d’ensemble</div><div class="eyebrow">Documentation technique</div><h1>Espace de travail scientifique</h1><p class="intro">Un espace neutre pour documenter un projet, depuis les données d’entrée jusqu’aux résultats interprétables. Chaque projet peut disposer de sa propre structure, de ses propres méthodes et de ses propres visualisations.</p><div class="note"><strong>État de l’espace :</strong> aucun projet ni jeu de données n’est chargé. Aucun résultat d’exemple n’est affiché.</div><div class="toc"><strong>Dans cet espace</strong><ul><li><a href="#" data-goto="method">Méthodes et étapes de traitement</a></li><li><a href="#" data-goto="data">Données et provenance</a></li><li><a href="#" data-goto="qc">Contrôles et critères de qualité</a></li><li><a href="#" data-goto="results">Résultats et interprétation</a></li></ul></div><h2>Organisation documentaire</h2><p>Les sections ci-dessous constituent une trame documentaire, pas des résultats scientifiques. Elles ne présument d’aucun organisme, jeu de données ou résultat particulier.</p><table class="meta"><thead><tr><th>Section</th><th>Contenu attendu</th><th>État</th></tr></thead><tbody><tr><td>Méthodologie</td><td>Outils, versions, paramètres et étapes reproductibles</td><td>À renseigner</td></tr><tr><td>Données</td><td>Sources, formats, variables et transformations</td><td>À renseigner</td></tr><tr><td>Contrôle qualité</td><td>Règles de validation, exclusions et anomalies</td><td>À renseigner</td></tr><tr><td>Résultats</td><td>Sorties, tableaux, figures et interprétation</td><td>À renseigner</td></tr></tbody></table></section>
+<section class="page" id="method"><div class="crumb">Documentation / Méthodologie</div><div class="eyebrow">01 · Procédure</div><h1>Méthodologie</h1><p class="intro">Décrire les étapes de traitement de façon à permettre la compréhension, la vérification et, lorsque les ressources le permettent, la reproduction de l’analyse.</p><h2>Étapes du traitement</h2><div class="empty"><span class="empty-label">À documenter</span><h3>Pipeline d’analyse</h3><p>Ajouter ici le diagramme du pipeline, l’ordre des opérations et les conditions de passage entre étapes.</p></div><h2>Environnement logiciel</h2><table class="meta"><thead><tr><th>Outil / bibliothèque</th><th>Version</th><th>Rôle et paramètres</th></tr></thead><tbody><tr><td>Non renseigné</td><td>—</td><td>À compléter pour le projet concerné</td></tr></tbody></table><h2>Exemple de bloc de commande</h2><div class="code"># Ajouter ici une commande réelle et documentée
+# Préciser les entrées, options et sorties attendues</div></section>
+<section class="page" id="data"><div class="crumb">Documentation / Données</div><div class="eyebrow">02 · Provenance</div><h1>Données</h1><p class="intro">Décrire la source, le format, les critères de sélection, les transformations et les limites connues des données utilisées.</p><h2>Inventaire des fichiers</h2><table class="meta"><thead><tr><th>Fichier / source</th><th>Format</th><th>Rôle</th><th>Statut</th></tr></thead><tbody><tr><td>Aucun fichier chargé</td><td>—</td><td>À préciser</td><td>En attente</td></tr></tbody></table><h2>Dictionnaire des variables</h2><div class="empty"><h3>Variables et unités</h3><p>Ajouter les noms de variables, définitions, unités, valeurs autorisées et traitement des valeurs manquantes.</p></div><h2>Traçabilité</h2><p>Noter la date d’acquisition, la source, la licence ou les conditions d’utilisation, l’identifiant de version et les opérations effectuées.</p></section>
+<section class="page" id="qc"><div class="crumb">Documentation / Contrôle qualité</div><div class="eyebrow">03 · Validation</div><h1>Contrôle qualité</h1><p class="intro">Présenter les contrôles réellement appliqués, leurs critères d’acceptation et les conséquences d’un échec. Les seuils doivent être justifiés pour le jeu de données concerné.</p><table class="meta"><thead><tr><th>Contrôle</th><th>Critère / seuil</th><th>Résultat</th><th>Action en cas d’échec</th></tr></thead><tbody><tr><td>À définir</td><td>À justifier</td><td>Non évalué</td><td>À définir</td></tr></tbody></table><div class="note"><strong>Principe :</strong> ne pas afficher de taux de réussite, d’anomalies ou de validation avant l’exécution des contrôles sur des données identifiées.</div></section>
+<section class="page" id="results"><div class="crumb">Documentation / Résultats</div><div class="eyebrow">04 · Sorties de l’analyse</div><h1>Résultats et interprétation</h1><p class="intro">Cette section accueillera uniquement des sorties calculées à partir des données du projet, avec légendes, unités, dénominateurs et limites d’interprétation.</p><div class="empty"><h3>Tableaux et figures</h3><p>Aucun graphique ou résultat n’est chargé. Les figures seront ajoutées après exécution et vérification des analyses.</p></div><h2>Interprétation</h2><div class="empty"><h3>Constats, limites et conclusions</h3><p>Documenter les constats soutenus par les résultats, les limites méthodologiques et les analyses complémentaires nécessaires.</p></div></section>
+<section class="page" id="docs"><div class="crumb">Documentation / Références</div><div class="eyebrow">05 · Références</div><h1>Documentation</h1><p class="intro">Regrouper les références méthodologiques, les articles, les liens vers les logiciels et les notes de version réellement utilisés.</p><h2>Références du projet</h2><div class="empty"><h3>Aucune référence ajoutée</h3><p>Les références seront ajoutées ici avec titre, auteurs ou organisme, année, lien et date de consultation si nécessaire.</p></div><h2>Historique des modifications</h2><table class="meta"><thead><tr><th>Version</th><th>Modification</th><th>Date</th></tr></thead><tbody><tr><td>V7</td><td>Création de la structure documentaire vierge</td><td>2026-10-15</td></tr></tbody></table></section>
+<footer class="footer"><span>Documentation scientifique · Interface vierge</span><span>Les sections sont des modèles documentaires, pas des résultats.</span></footer>
+</main></div><script>
+(()=>{const buttons=[...document.querySelectorAll('nav button[data-page]')];const pages=[...document.querySelectorAll('.page')];function show(id){pages.forEach(p=>p.classList.toggle('active',p.id===id));buttons.forEach(b=>{if(b.dataset.page===id)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});window.scrollTo({top:0,behavior:'auto'});const active=pages.find(p=>p.id===id);if(active)active.setAttribute('tabindex','-1')}buttons.forEach(b=>b.addEventListener('click',()=>show(b.dataset.page)));document.querySelectorAll('[data-goto]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();show(a.dataset.goto)}));})();
+</script></body></html>
