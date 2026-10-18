@@ -2,7 +2,7 @@
 
 ## Périmètre et principe de traçabilité
 
-Ce document rassemble la méthode effectivement implémentée dans les scripts présents dans le dépôt et les résultats générés à partir des fichiers d’exemple livrés. Les jeux de démonstration portent explicitement la mention `DEMO_SYNTHETIC`. Ils permettent d’exécuter le code, de contrôler les formats et de vérifier les sorties. Les chiffres ci-dessous sont donc des résultats de calcul sur ces entrées, pas des estimations de fréquence clinique ou de surveillance réelle.
+Ce document résume les méthodes décrites dans les fiches publiques et les résultats présents dans les fichiers de démonstration livrés. Les scripts de travail ne font pas partie de ce dépôt public. Les jeux de démonstration portent explicitement la mention `DEMO_SYNTHETIC`. Ils permettent d’exécuter le code, de contrôler les formats et de vérifier les sorties. Les chiffres ci-dessous sont donc des résultats de calcul sur ces entrées, pas des estimations de fréquence clinique ou de surveillance réelle.
 
 ## Projet 1 — Résistance aux antimicrobiens
 
@@ -12,7 +12,7 @@ Ce document rassemble la méthode effectivement implémentée dans les scripts p
 
 **Étapes exécutées.** Lecture du CSV ; vérification des quatre champs obligatoires ; conversion des champs en chaînes et retrait des espaces ; passage des résultats en majuscules ; contrôle des catégories S/I/R ; arrêt si doublons dans la clé isolat-organisme-antibiotique ; calcul des nombres S/I/R et de la proportion R ; export des tableaux et de la figure.
 
-**Résultats observés dans la fixture.** *E. coli*–ceftriaxone : 1 R sur 3 (33,3 %) ; *E. coli*–ciprofloxacine : 2/3 (66,7 %) ; *K. pneumoniae*–ceftriaxone : 1/2 (50 %) ; *K. pneumoniae*–ciprofloxacine : 0/2 (0 %) ; *S. aureus*–céfoxitine : 1/2 (50 %). Les effectifs très faibles produisent des pourcentages instables.
+**Résultats observés dans le CSV publié.** Le jeu contient 100 observations synthétiques, réparties sur cinq couples organisme–antibiotique (20 tests par couple). *E. coli*–ceftriaxone : 6/20 (30 %) ; *E. coli*–ciprofloxacine : 11/20 (55 %) ; *K. pneumoniae*–ceftriaxone : 8/20 (40 %) ; *K. pneumoniae*–ciprofloxacine : 4/20 (20 %) ; *S. aureus*–céfoxitine : 7/20 (35 %).
 
 **Interprétation.** Le script démontre l’agrégation et le maintien de S/I/R. Il ne peut établir une prévalence sans plan d’échantillonnage, ni harmoniser des référentiels de seuils non documentés. Les catégories doivent correspondre au référentiel et à la méthode de laboratoire d’origine.
 
@@ -46,9 +46,9 @@ Ce document rassemble la méthode effectivement implémentée dans les scripts p
 
 **Interprétation.** Les intervalles de Wilson sont adaptés à une proportion binomiale et se comportent mieux que l’approximation normale simple pour de petits n, mais ils ne corrigent ni biais de sélection, ni dépendance entre isolats, ni erreur de classification. Les tendances temporelles ne sont comparables que si les procédures et populations sont suffisamment comparables.
 
-## Vérifications réalisées pour cette livraison
+## Artefacts disponibles dans le dépôt public
 
-Les cinq commandes principales ont été exécutées sur les fichiers de démonstration : analyse AMR, QC FASTA, chargement/requêtes SQL, ETL et analyse avancée. Elles ont toutes terminé avec un code de sortie nul. Les sorties ont été créées dans des répertoires temporaires de test. Cette vérification confirme que les scripts s’exécutent sur les entrées fournies ; elle ne remplace pas des tests unitaires exhaustifs, une revue indépendante du code ou une validation clinique.
+Les tableaux CSV, figures et manifestes référencés dans les fiches sont les artefacts publiés. Les scripts de travail ne sont pas inclus dans ce dépôt ; les résultats documentent donc les exemples livrés et ne constituent pas une exécution reproductible à partir du dépôt seul. Les jeux synthétiques ne sont ni des données du CHU-MEL ni des données de patients.
 
 ## Contrôles à refaire avant toute analyse de données réelles
 

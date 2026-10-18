@@ -1,11 +1,16 @@
-# Publication du portfolio sur GitHub — guide français
+# Publication du portfolio sur GitHub Pages
 
-1. Créer un dépôt public nommé `portfolio-microbio-bioinfo`.
-2. Extraire l’archive ZIP localement : GitHub Pages doit voir `index.html` à la racine du dépôt, pas uniquement un fichier ZIP.
-3. Transférer tous les fichiers et dossiers en conservant l’arborescence (`profile/`, `evidence/`, les quatre dossiers `project_.../`).
-4. Vérifier que `README.md`, `index.html`, les deux guides méthodologiques et les dossiers de projets apparaissent à la racine.
-5. Ouvrir **Settings → Pages**, choisir la branche `main` et le dossier `/ (root)`, puis enregistrer.
-6. Attendre la fin du déploiement et ouvrir l’URL affichée par GitHub Pages. Vérifier chaque lien et chaque image sur téléphone.
-7. Ne pas téléverser de données personnelles, secrets, clés API ou données cliniques identifiantes.
+Le dépôt public est `portfolio-singbo-scientifique`. Le workflow `.github/workflows/pages.yml` publie le contenu de la racine sur GitHub Pages après chaque mise à jour de la branche `main`, ou lors d’un lancement manuel du workflow.
 
-Le site utilise des liens relatifs vers les fichiers du dépôt. Si le nom du dépôt change, vérifier que GitHub Pages continue à pointer vers la bonne branche et la racine.
+## Avant la publication
+
+1. Conserver `index.html` à la racine ainsi que `style.css`, les profils, les pages de documentation et les cinq dossiers `project_.../`.
+2. Vérifier les liens internes, les fichiers de résultats et les versions française et anglaise des profils et résumés de projet.
+3. Ne pas ajouter de données individuelles de patients, de secrets ou de coordonnées personnelles que l’on ne souhaite pas rendre publiques. Le CV complet n’est pas requis pour afficher le portfolio.
+
+## Après la publication
+
+1. Vérifier l’exécution de `Deploy public portfolio` dans l’onglet **Actions**.
+2. Ouvrir l’URL GitHub Pages fournie par le déploiement.
+3. Parcourir l’accueil, les profils, les méthodes, les cinq fiches de projet et les liens de téléchargement, sur ordinateur et téléphone.
+4. Confirmer que les résultats des projets 01 à 04 restent clairement identifiés comme synthétiques, et que le mémoire reste séparé des données de démonstration.

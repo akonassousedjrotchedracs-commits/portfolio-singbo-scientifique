@@ -1,18 +1,20 @@
 # Projet 02 — Contrôle qualité de séquences bactériennes
 
-## Objectif
+**Positionnement :** exercice complémentaire de bioinformatique du portfolio. Le CV décrit des compétences en Python et analyse de données, mais ne présente pas ce travail comme une expérience hospitalière ou un résultat clinique.
 
-Présenter des métriques descriptives avant une analyse bioinformatique plus poussée.
+## Objectif et méthode
 
-## Méthodes et méthodologie
+Calculer des métriques de contrôle exploratoire sur des séquences FASTA synthétiques : longueur, fraction GC, bases ambiguës et indicateur simple d’ORF sur le brin direct.
 
-Les séquences FASTA sont examinées selon leur longueur, leur fraction GC, leurs bases ambiguës et un indicateur exploratoire de cadre de lecture ouvert.
+## Résumé des données
+
+Le jeu de démonstration contient trois séquences pour un total de 191 bases. Huit bases ambiguës sont présentes dans l’ensemble. Les indicateurs ne constituent ni une identification bactérienne, ni une annotation de gènes, ni une analyse de résistance.
 
 ## Résultats
 
+- [Présentation détaillée](index.html)
+- [Graphique de contrôle qualité (SVG)](results/sequence_qc_overview.svg)
 - [Tableau de contrôle qualité](results/sequence_qc.csv)
-- [Résumé des séquences](results/sequence_qc_summary.json)
+- [Résumé JSON](results/sequence_qc_summary.json)
 
-## Interprétation et limites
-
-Le contrôle est exploratoire. Il ne réalise ni annotation de gènes, ni identification d’espèce, ni recherche d’homologie. Les séquences de démonstration sont synthétiques.
+[English version](README_EN.md)

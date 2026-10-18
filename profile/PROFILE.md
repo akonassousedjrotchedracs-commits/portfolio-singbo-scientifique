@@ -1,13 +1,17 @@
 # Profil scientifique — AKONASSOU SEDJRO TCHÉDRAC SINGBO
 
-**Biotechnologie médicale | Microbiologie clinique | Bioinformatique | Analyse de données biomédicales | SQL et ETL**
+**Inspecteur d’Actions Sanitaires en Analyse Biomédicale | Technicien de laboratoire**  
+Biotechnologie médicale · microbiologie clinique · recherche biomédicale · analyse de données
 
-Je suis titulaire d’une licence en biotechnologie médicale (ENSBBA–UNSTIM, Dassa-Zou, Bénin). Mon expérience de laboratoire hospitalier comprend l’hématologie, la biochimie clinique, la sérologie, la microbiologie et la parasitologie. Je développe des compétences complémentaires en Python, SQL, biostatistique, qualité des données et visualisation.
+Je suis titulaire d’une licence en biotechnologie médicale, mention Bien, obtenue à l’ENSBBA–UNSTIM à Dassa-Zoumé, au Bénin. Depuis juillet 2026, j’exerce au CHU de la Mère et de l’Enfant (CHU-MEL), à Cotonou. Mes activités couvrent l’hématologie, la biochimie clinique, la sérologie/immunologie, la microbiologie et la parasitologie.
 
-Ce portfolio met en pratique une démarche reproductible : formaliser une question, vérifier la structure des données, appliquer des traitements explicites, générer des sorties lisibles, contrôler leur cohérence et discuter les limites. Il comprend quatre projets : surveillance descriptive de la résistance aux antimicrobiens, contrôle qualité élémentaire de séquences, modélisation SQL/ETL et analyse statistique biomédicale.
+Mon expérience comprend également le contrôle qualité, la validation technique des résultats, la biosécurité, la gestion des données de laboratoire et la réalisation de techniques telles que l’ELISA, l’immunoturbidimétrie, la culture bactérienne, la coloration de Gram et les antibiogrammes.
 
-Les méthodes, résultats synthétiques et limites sont présentés pour permettre une lecture scientifique claire. Les expériences professionnelles et les projets personnels sont distingués : les projets de ce dépôt ne sont pas présentés comme des outils déployés à l’hôpital. Les données de démonstration sont identifiées comme telles ; elles ne sont pas des données de patients ni un export de surveillance public.
+Mon mémoire de licence, soutenu au CHUD Ouémé-Plateau, porte sur l’évaluation statistique des biomarqueurs inflammatoires dans le dysfonctionnement prostatique. Il concerne 81 patients et les biomarqueurs CRP, PSA, leucocytes et cytokines. J’ai obtenu 17,67/20 pour ce mémoire et 15,87/20 de moyenne finale en licence.
 
-**Contact :** utiliser les coordonnées professionnelles que je choisis de publier dans mon CV.
+Je développe aussi des compétences en Python, SQL, Excel avancé, Power BI, biostatistique et visualisation de données. Je parle français (langue maternelle) et anglais (niveau B2).
+
+**Lieu :** Cotonou, Bénin.  
+**Contact professionnel :** [akonassousedjrotchedracs@gmail.com](mailto:akonassousedjrotchedracs@gmail.com)
 
 [English profile](PROFILE_EN.md)

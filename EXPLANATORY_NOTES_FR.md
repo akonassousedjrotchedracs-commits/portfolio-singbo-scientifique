@@ -32,7 +32,7 @@ Le pipeline lit des fichiers FASTA, calcule la longueur, le pourcentage GC et le
 
 ## 4. Projet 3 — SQL et ingénierie des données
 
-Le modèle sépare les observations de sensibilité (une ligne par isolat et antibiotique) des informations d’organisme et de contexte. Les requêtes regroupent les tests, calculent des comptes S/I/R, et repèrent les doublons. L’ETL (Extract–Transform–Load) conserve le fichier source, calcule son SHA-256, vérifie le schéma et les valeurs, écrit une table normalisée et, si DuckDB est installé, construit une base analytique et un résumé SQL. Le pipeline échoue volontairement si le contrôle qualité détecte des problèmes : il ne « répare » pas silencieusement les données.
+Le modèle sépare les observations de sensibilité (une ligne par isolat et antibiotique) des informations d’organisme et de contexte. L’ETL vérifie le schéma et les valeurs, conserve la provenance disponible, produit une empreinte SHA-256 et alimente l’exécution SQLite indiquée dans le manifeste publié. La démonstration n’est pas présentée comme un flux utilisé au CHU-MEL. Une empreinte identifie un fichier ; elle ne prouve ni son origine ni sa validité biologique.
 
 ### Pourquoi le SHA-256 ?
 Il permet de vérifier que le fichier analysé est le même fichier source à travers les étapes. Il ne prouve ni que la source est vraie, ni que la donnée est correcte.
@@ -46,7 +46,7 @@ Pour une proportion binomiale, l’intervalle de Wilson se comporte généraleme
 
 ## 6. Résultats de la démonstration fournie
 
-Le fichier de démonstration contient **12 observations synthétiques**, provenant de **4 identifiants d’isolats fictifs**, avec deux organismes et trois antibiotiques. Ces chiffres vérifient le fonctionnement des scripts ; ils ne constituent pas une découverte biologique et ne doivent pas être présentés comme des résultats NCBI ou hospitaliers. Les tableaux détaillés produits sont dans les dossiers `reports/demo_run/`.
+Deux jeux de démonstration distincts sont publiés : le projet 01 contient 100 observations synthétiques sur cinq couples organisme–antibiotique ; le projet 03 contient 12 observations synthétiques, quatre identifiants d’isolats et deux organismes. Leurs tableaux de résultats sont placés dans les dossiers `project_01_antimicrobial_resistance/results/` et `project_03_sql_advanced/results/`. Aucun des deux jeux ne constitue une découverte biologique ni un résultat hospitalier.
 
 ## 7. Données publiques : ce qui doit être vérifié
 

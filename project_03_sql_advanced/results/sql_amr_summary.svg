@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="510" viewBox="0 0 960 510">
+<rect width="100%" height="100%" fill="#f7fafc"/>
+<text x="38" y="45" font-family="Arial" font-size="24" font-weight="700" fill="#173b52">Résumé des observations après ETL</text>
+<text x="38" y="73" font-family="Arial" font-size="14" fill="#587080">Agrégations publiées · données synthétiques · n=2 par couple</text>
+<text x="38" y="129" font-family="Arial" font-size="14" fill="#173b52">Escherichia coli · Ceftriaxone</text>
+<rect x="390" y="111" width="380" height="18" rx="9" fill="#e3edf1"/>
+<rect x="390" y="111" width="190.0" height="18" rx="9" fill="#0b8290"/>
+<text x="790" y="126" font-family="Arial" font-size="13" font-weight="700" fill="#173b52">50% R · n=2</text>
+<text x="38" y="185" font-family="Arial" font-size="14" fill="#173b52">Escherichia coli · Ciprofloxacin</text>
+<rect x="390" y="167" width="380" height="18" rx="9" fill="#e3edf1"/>
+<rect x="390" y="167" width="190.0" height="18" rx="9" fill="#0b8290"/>
+<text x="790" y="182" font-family="Arial" font-size="13" font-weight="700" fill="#173b52">50% R · n=2</text>
+<text x="38" y="241" font-family="Arial" font-size="14" fill="#173b52">Escherichia coli · Gentamicin</text>
+<rect x="390" y="223" width="380" height="18" rx="9" fill="#e3edf1"/>
+<rect x="390" y="223" width="0.0" height="18" rx="9" fill="#0b8290"/>
+<text x="790" y="238" font-family="Arial" font-size="13" font-weight="700" fill="#173b52">0% R · n=2</text>
+<text x="38" y="297" font-family="Arial" font-size="14" fill="#173b52">Klebsiella pneumoniae · Ceftriaxone</text>
+<rect x="390" y="279" width="380" height="18" rx="9" fill="#e3edf1"/>
+<rect x="390" y="279" width="190.0" height="18" rx="9" fill="#0b8290"/>
+<text x="790" y="294" font-family="Arial" font-size="13" font-weight="700" fill="#173b52">50% R · n=2</text>
+<text x="38" y="353" font-family="Arial" font-size="14" fill="#173b52">Klebsiella pneumoniae · Ciprofloxacin</text>
+<rect x="390" y="335" width="380" height="18" rx="9" fill="#e3edf1"/>
+<rect x="390" y="335" width="190.0" height="18" rx="9" fill="#0b8290"/>
+<text x="790" y="350" font-family="Arial" font-size="13" font-weight="700" fill="#173b52">50% R · n=2</text>
+<text x="38" y="409" font-family="Arial" font-size="14" fill="#173b52">Klebsiella pneumoniae · Gentamicin</text>
+<rect x="390" y="391" width="380" height="18" rx="9" fill="#e3edf1"/>
+<rect x="390" y="391" width="190.0" height="18" rx="9" fill="#0b8290"/>
+<text x="790" y="406" font-family="Arial" font-size="13" font-weight="700" fill="#173b52">50% R · n=2</text>
+<rect x="38" y="464" width="884" height="26" rx="5" fill="#eaf3f4"/>
+<text x="50" y="482" font-family="Arial" font-size="13" fill="#315462">Pipeline : 12 lignes reçues · 12 chargées · 4 isolats · source non précisée dans le manifeste</text>
+</svg>

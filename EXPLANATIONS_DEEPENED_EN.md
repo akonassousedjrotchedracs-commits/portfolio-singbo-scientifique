@@ -20,4 +20,4 @@ This companion document explains the implemented portfolio methods and how to re
 
 ## Reproducibility
 
-The repository README lists runnable commands. Record Python and package versions for a formal release, preserve the original input, document every exclusion and compare a sample of transformed rows with the source. The five main commands were run successfully on the supplied demonstration inputs for this release.
+The public repository contains result tables, figures and manifests; working scripts are maintained separately and are not included here. Preserve the original input, document exclusions and compare transformed rows with the source before describing a future rerun as reproducible.

@@ -40,14 +40,14 @@ Une ligne représente un résultat associé à un identifiant d’isolat, un org
 - Exporter les données nettoyées, les résumés et un graphique.
 
 ### 3.4 Résultats de démonstration
-Les données de test produisent les valeurs suivantes :
-- **Escherichia coli — Ceftriaxone :** 1 résultat(s) R sur 3 résultat(s) renseigné(s), soit 33.3 % dans ce jeu synthétique.
-- **Escherichia coli — Ciprofloxacin :** 2 résultat(s) R sur 3 résultat(s) renseigné(s), soit 66.7 % dans ce jeu synthétique.
-- **Klebsiella pneumoniae — Ceftriaxone :** 1 résultat(s) R sur 2 résultat(s) renseigné(s), soit 50.0 % dans ce jeu synthétique.
-- **Klebsiella pneumoniae — Ciprofloxacin :** 0 résultat(s) R sur 2 résultat(s) renseigné(s), soit 0.0 % dans ce jeu synthétique.
-- **Staphylococcus aureus — Cefoxitin :** 1 résultat(s) R sur 2 résultat(s) renseigné(s), soit 50.0 % dans ce jeu synthétique.
+Le CSV publié contient 100 observations synthétiques, réparties sur cinq couples organisme–antibiotique, avec 20 tests par couple :
+- **Escherichia coli — Ceftriaxone :** 6 résultats R sur 20, soit 30 % ;
+- **Escherichia coli — Ciprofloxacin :** 11 résultats R sur 20, soit 55 % ;
+- **Klebsiella pneumoniae — Ceftriaxone :** 8 résultats R sur 20, soit 40 % ;
+- **Klebsiella pneumoniae — Ciprofloxacin :** 4 résultats R sur 20, soit 20 % ;
+- **Staphylococcus aureus — Cefoxitin :** 7 résultats R sur 20, soit 35 %.
 
-Ces pourcentages sont des vérifications de calcul sur un petit fichier artificiel. Ils ne doivent pas être interprétés comme une estimation de prévalence, ni comme une comparaison valable entre hôpitaux, pays ou périodes. Le nombre de lignes est volontairement faible pour faciliter les tests unitaires et le contrôle manuel.
+Ces valeurs sont des calculs sur un fichier artificiel. Elles ne doivent pas être interprétées comme une estimation de prévalence, une comparaison valable entre établissements ou une recommandation de traitement.
 
 ### 3.5 Interprétation correcte
 Une proportion de résistance n’a de sens que si le nombre testé, la méthode, les critères d’interprétation, la période, l’origine des isolats et les éventuelles règles de déduplication sont compris. Par exemple, 1 résultat R sur 2 donne 50 %, mais l’incertitude est très importante. Il serait imprudent d’en déduire une tendance clinique ou de recommander un traitement.

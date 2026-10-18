@@ -2,7 +2,7 @@
 
 ## Scope and traceability
 
-This document describes the methods implemented in the repository scripts and the outputs generated from the bundled example files. The demonstration fixtures are labelled `DEMO_SYNTHETIC`. They exercise the code, formats and output checks. Figures below are calculations on these inputs, not clinical prevalence estimates or real surveillance findings.
+This document summarizes the methods described in the public project pages and the outputs included with the demonstration files. Working scripts are not part of this public repository. The demonstration fixtures are labelled `DEMO_SYNTHETIC`. They exercise the code, formats and output checks. Figures below are calculations on these inputs, not clinical prevalence estimates or real surveillance findings.
 
 ## Project 1 — Antimicrobial resistance
 
@@ -12,7 +12,7 @@ This document describes the methods implemented in the repository scripts and th
 
 **Executed steps.** Read CSV; check four required columns; convert required fields to strings and trim whitespace; uppercase result codes; validate S/I/R categories; stop on duplicate isolate-organism-antibiotic keys; calculate S/I/R counts and R proportion; export tables and plot.
 
-**Fixture results.** *E. coli*–ceftriaxone: 1 R of 3 (33.3%); *E. coli*–ciprofloxacin: 2/3 (66.7%); *K. pneumoniae*–ceftriaxone: 1/2 (50%); *K. pneumoniae*–ciprofloxacin: 0/2 (0%); *S. aureus*–cefoxitin: 1/2 (50%). Very small denominators make percentages unstable.
+**Results in the published CSV.** The synthetic dataset contains 100 observations across five organism–antibiotic pairs (20 tests per pair). *E. coli*–ceftriaxone: 6/20 (30%); *E. coli*–ciprofloxacin: 11/20 (55%); *K. pneumoniae*–ceftriaxone: 8/20 (40%); *K. pneumoniae*–ciprofloxacin: 4/20 (20%); *S. aureus*–cefoxitin: 7/20 (35%).
 
 **Interpretation.** The script demonstrates aggregation and preservation of S/I/R. It cannot establish prevalence without a sampling design or harmonize undocumented breakpoint standards. Categories must match the original laboratory method and interpretive standard.
 
@@ -46,9 +46,9 @@ This document describes the methods implemented in the repository scripts and th
 
 **Interpretation.** Wilson intervals are appropriate for binomial proportions and behave better than a simple normal approximation for small n, but they do not correct selection bias, dependence between isolates or classification error. Time trends are comparable only when procedures and populations are sufficiently comparable.
 
-## Checks performed for this release
+## Public repository artefacts
 
-The five principal commands were run on the supplied demonstration inputs: AMR analysis, FASTA QC, SQL loading/queries, ETL and advanced analysis. All completed with exit code zero. Outputs were generated in temporary test directories. This confirms execution on the supplied fixtures; it is not a substitute for exhaustive unit tests, independent code review or clinical validation.
+The tables, figures and manifests linked from the project pages are the published artefacts. Working scripts are not included in this repository, so the results document the supplied examples and do not represent a rerun reproducible from this repository alone. The synthetic datasets are neither CHU-MEL data nor patient records.
 
 ## Checks required before analysing real data
 
