@@ -11,7 +11,6 @@ Titulaire d’une licence en biotechnologie médicale (ENSBBA–UNSTIM, mention 
 3. [Modélisation SQL et pipeline ETL](project_03_sql_advanced/README.md)
 4. [Analyse statistique biomédicale](project_04_advanced_biomedical_analysis/README.md)
 5. [Mémoire : biomarqueurs inflammatoires dans le dysfonctionnement prostatique](project_05_memoire_soutenance_prostate/README.md)
-6. [Santé publique infantile au Bénin](project_06_child_health_public_health/README.md)
 
 ## Recherche et compétences complémentaires
 

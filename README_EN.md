@@ -11,7 +11,6 @@ I hold a Bachelor's degree in Medical Biotechnology from ENSBBA–UNSTIM, awarde
 3. [SQL modelling and ETL](project_03_sql_advanced/README_EN.md)
 4. [Biomedical statistical analysis](project_04_advanced_biomedical_analysis/README_EN.md)
 5. [Thesis: inflammatory biomarkers in prostatic dysfunction](project_05_memoire_soutenance_prostate/README_EN.md)
-6. [Child public health in Benin](project_06_child_health_public_health/README.md)
 
 ## Research and additional skills
 
