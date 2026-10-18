@@ -1,0 +1,14 @@
+{
+  "dataset": "UNICEF Data country profile: Benin, under-five mortality rate",
+  "indicator": "Probability of dying before age five, expressed per 1,000 live births (UN IGME estimate series)",
+  "source_url": "https://data.unicef.org/country/ben/",
+  "retrieved_on": "2026-10-18",
+  "source_series_years": [
+    1990,
+    2024
+  ],
+  "observations": 35,
+  "data_type": "official modelled estimates, not raw observed deaths or individual records",
+  "use": "descriptive visualization only; annual points are estimates and should not be treated as independent observed samples",
+  "license_note": "Consult the source website terms and attribution requirements before reuse."
+}

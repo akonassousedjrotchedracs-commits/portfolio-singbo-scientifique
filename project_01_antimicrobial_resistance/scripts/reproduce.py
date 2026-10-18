@@ -21,22 +21,22 @@ def write_csv(path: Path, headers: list[str], rows: list[dict[str, object]]) -> 
 
 
 def render_svg(rows: list[dict[str, object]], path: Path) -> None:
-    width, height = 1200, 620
+    width, height = 1400, 190 + 62 * len(rows)
     x0, chart_width = 365, 755
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">',
         '<title id="title">Synthetic antimicrobial resistance proportions</title>',
-        '<desc id="desc">Five synthetic organism-antibiotic pairs with 20 records per pair.</desc>',
+        '<desc id="desc">Ten synthetic organism-antibiotic pairs with 10 records per pair.</desc>',
         '<rect width="100%" height="100%" fill="#fff"/>',
         '<text x="55" y="55" font-family="Arial" font-size="26" font-weight="700" fill="#153b52">Antimicrobial resistance proportions</text>',
         '<text x="55" y="88" font-family="Arial" font-size="16" fill="#59686e">Synthetic dataset · denominators shown · no clinical inference</text>',
     ]
     for tick in (0, 25, 50, 75, 100):
         x = x0 + chart_width * tick / 100
-        out += [f'<line x1="{x:.1f}" y1="125" x2="{x:.1f}" y2="515" stroke="#d7e1e4"/>',
+        out += [f'<line x1="{x:.1f}" y1="125" x2="{x:.1f}" y2="{height - 78}" stroke="#d7e1e4"/>',
                 f'<text x="{x:.1f}" y="118" text-anchor="middle" font-family="Arial" font-size="13" fill="#59686e">{tick}%</text>']
     for i, row in enumerate(rows):
-        y = 165 + i * 77
+        y = 145 + i * 55
         organism = html.escape(str(row["organism"]))
         antibiotic = html.escape(str(row["antibiotic"]))
         pct = float(row["resistant_pct"])
@@ -46,7 +46,7 @@ def render_svg(rows: list[dict[str, object]], path: Path) -> None:
                 f'<rect x="{x0}" y="{y - 21}" width="{chart_width * pct / 100:.1f}" height="30" rx="4" fill="#087e8b"/>',
                 f'<text x="{x0 + chart_width * pct / 100 + 10:.1f}" y="{y + 1}" font-family="Arial" font-size="15" font-weight="700" fill="#153b52">{pct:g}% (n={n})</text>',
                 f'<line x1="55" y1="{y + 28}" x2="1145" y2="{y + 28}" stroke="#d7e1e4"/>']
-    out += ['<text x="742" y="550" text-anchor="middle" font-family="Arial" font-size="15" fill="#59686e">Resistant results (R) / all classified tests in each synthetic pair</text>', '</svg>']
+    out += [f'<text x="742" y="{height - 28}" text-anchor="middle" font-family="Arial" font-size="15" fill="#59686e">Resistant results (R) / all classified tests in each synthetic pair</text>', '</svg>']
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(out), encoding="utf-8")
 

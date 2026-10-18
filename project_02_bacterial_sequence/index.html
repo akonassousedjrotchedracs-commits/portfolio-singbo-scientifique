@@ -1,17 +1,213 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Projet 02 · Contrôle qualité de séquences bactériennes</title><link rel="stylesheet" href="../style.css"></head><body>
-<header class="site-masthead"><a class="site-brand" href="../index.html"><span class="site-brand-mark" aria-hidden="true">S</span><span>Akonassou Singbo<small>Biotechnologie médicale · Cotonou, Bénin</small></span></a><nav class="site-nav" aria-label="Portfolio"><a href="../index.html">Accueil</a><a href="../index.html#projects">Projets</a><a href="../profile.html">Profil</a><a href="../methodes-resultats.html">Méthodes</a><a class="language-link" href="../profile-en.html">English profile</a></nav></header><aside class="portfolio-context"><strong>Positionnement :</strong> exercice complémentaire de bioinformatique du portfolio, sur trois séquences synthétiques. Il ne s’agit ni d’une analyse de souche clinique ni d’une expérience hospitalière.</aside><main><header class="project-hero"><span class="eyebrow">Projet 02 · bioinformatique</span><h1>Contrôle qualité de séquences bactériennes</h1><p>Transformer des séquences FASTA en indicateurs lisibles avant toute interprétation biologique.</p><span class="study-badge">Données synthétiques · contrôle exploratoire</span></header>
-<div class="download-panel"><strong>Reproduire cette démonstration</strong><p>Python 3, sans dépendance externe. Depuis ce dossier : <code>python scripts/reproduce.py</code>. Le calcul d’ORF est exploratoire, sur le brin avant et le cadre simple indiqué par le script.</p><a href="scripts/reproduce.py" download>Script Python</a><a href="data/DEMO_SYNTHETIC_sequences.fasta" download>Entrée FASTA synthétique</a><a href="results/sequence_qc.csv" download>Résultats CSV</a><a href="results/sequence_qc_overview.svg" target="_blank" rel="noopener">Figure SVG</a><a href="results/workflow.svg" download>Schéma de méthode SVG</a><a href="scripts/reproduce_fastq_qc.py" download>Script FASTQ · Phred+33</a><a href="data/DEMO_SYNTHETIC_reads.fastq" download>Reads FASTQ synthétiques</a><a href="results/fastq_read_qc.csv" download>Métriques par read</a><a href="results/fastq_per_cycle_qc.csv" download>Métriques par cycle</a><a href="results/fastq_qc_summary.json" download>Provenance FASTQ</a></div>
+<header class="site-masthead"><a class="site-brand" href="../index.html"><span class="site-brand-mark" aria-hidden="true">S</span><span>Akonassou Singbo<small>Biotechnologie médicale · Cotonou, Bénin</small></span></a><nav class="site-nav" aria-label="Portfolio"><a href="../index.html">Accueil</a><a href="../index.html#projects">Projets</a><a href="../profile.html">Profil</a><a href="../methodes-resultats.html">Méthodes</a><a class="language-link" href="../profile-en.html">English profile</a></nav></header><aside class="portfolio-context"><strong>Positionnement :</strong> exercice complémentaire de bioinformatique du portfolio, sur trois séquences synthétiques. Il ne s’agit ni d’une analyse de souche clinique ni d’une expérience hospitalière.</aside><main><header class="project-hero"><span class="eyebrow">Projet 02 · bioinformatique</span><h1>Contrôle qualité de séquences bactériennes</h1><p>Transformer des séquences FASTA en indicateurs lisibles avant toute interprétation biologique.</p><span class="study-badge">Données synthétiques · contrôle exploratoire</span></header><section class="context-block"><h2>Contexte et justification</h2><p>Le contrôle qualité d’un séquençage inclut le format, la qualité des reads et les indicateurs de run fournis par l’automate. Cette démonstration ne contient que des séquences et reads synthétiques; aucun résultat d’automate réel n’est disponible.</p></section>
+<p class="note">Données, tableaux, graphiques, JSON et scripts sont affichés dans cette fiche; les liens de téléchargement sont réservés aux logiciels.</p>
 <div class="metrics"><div class="metric"><strong>FASTA</strong><span>format d’entrée</span></div><div class="metric"><strong>GC %</strong><span>composition calculée</span></div><div class="metric"><strong>ORF</strong><span>indicateur exploratoire</span></div></div>
 <h2>1. Problématique</h2><p>Une séquence biologique ne peut pas être interprétée correctement si son format, sa longueur ou son contenu présentent des anomalies. Le contrôle qualité constitue donc une étape préalable à l’alignement, à l’annotation et à la comparaison de génomes. Il ne remplace pas une identification taxonomique : il vérifie que le matériau analysé est cohérent avec l’analyse envisagée.</p>
 <h2>2. Objectifs</h2><ul><li>lire des séquences au format FASTA de manière reproductible ;</li><li>calculer la longueur et la fraction GC de chaque séquence ;</li><li>repérer les bases ambiguës ou les caractères inattendus ;</li><li>fournir un indicateur d’ORF exploratoire sans le présenter comme une annotation ;</li><li>documenter les limites de l’interprétation sur des séquences synthétiques.</li></ul>
 <h2>3. Revue de lecture</h2><p>Le format FASTA associe un identifiant précédé d’un signe « supérieur à » à une séquence composée de lettres nucléotidiques. Les contrôles de format sont essentiels car un espace, une lettre non autorisée ou une ligne mal concaténée peut modifier une longueur et fausser une composition. La fraction GC est un indicateur descriptif ; elle peut varier entre espèces et régions génomiques, mais elle ne suffit pas à identifier une bactérie.</p><p>La recherche de cadres ouverts de lecture (ORF) est également exploratoire. Un ORF candidat doit être confirmé par une annotation, un alignement, des bases de données et, lorsque cela est pertinent, des preuves expérimentales. La présence d’un ORF ne prouve ni l’expression d’un gène, ni la virulence, ni la résistance à un antibiotique.</p>
 <h2>4. De la saisie FASTA au contrôle qualité</h2><p><strong>FASTA</strong> est un format texte simple : une ligne d’identification commence par <code>&gt;</code>, puis une ou plusieurs lignes contiennent la séquence. La première étape consiste à vérifier que chaque en-tête possède un identifiant unique et que les lignes de séquence sont correctement réunies. Les espaces, retours à la ligne et caractères invisibles sont retirés ; les lettres sont converties dans une casse homogène.</p><p>Le tri en amont sépare les entrées valides des entrées à revoir. Une séquence vide, un en-tête absent, un caractère hors alphabet ou une longueur inattendue est signalé plutôt que silencieusement corrigé. Cette décision conserve la traçabilité : le lecteur sait ce qui a été accepté, transformé ou exclu.</p><p>Pour chaque séquence retenue, on conserve l’identifiant original, la longueur avant et après normalisation, le nombre de bases ambiguës, la fraction GC et le statut du contrôle. Ces champs permettent de retrouver la séquence à l’origine d’un résultat et d’expliquer une anomalie.</p>
 <h2>5. Méthode</h2><div class="method-grid"><div class="method-card"><h3>Lecture et normalisation</h3><p>Les en-têtes et les séquences sont séparés, les retours à la ligne sont supprimés et les caractères sont uniformisés avant calcul.</p></div><div class="method-card"><h3>Contrôles</h3><p>La longueur, les bases ambiguës et les caractères hors alphabet attendu sont comptés pour chaque entrée.</p></div><div class="method-card"><h3>Métriques</h3><p>La composition GC est calculée sur les bases G et C rapportées à la longueur. L’indicateur ORF est présenté comme une exploration et non une annotation.</p></div><div class="method-card"><h3>Traçabilité</h3><p>Les métriques par séquence sont exportées dans un tableau CSV et un résumé JSON afin de faciliter la vérification.</p></div></div>
-<figure class="figure-card"><a href="results/workflow.svg" target="_blank" rel="noopener"><img src="results/workflow.svg" alt="Schéma de l’analyse FASTA : parsing, alphabet, métriques GC et ORF exploratoire"></a><figcaption class="figure-meta">Du fichier FASTA aux indicateurs exploratoires, sans franchir l’étape d’annotation.</figcaption></figure><h3>Règles de contrôle et définition des métriques</h3><ul><li><strong>Format :</strong> chaque séquence doit suivre un en-tête FASTA non vide; les lignes sont concaténées et mises en majuscules. Les entrées mal formées sont rejetées plutôt que réparées silencieusement.</li><li><strong>Alphabet :</strong> A, C, G, T sont les bases non ambiguës; N est compté comme ambigu. Les autres symboles ne sont pas acceptés par l’analyse.</li><li><strong>Longueur :</strong> compte tous les caractères nucléotidiques retenus, y compris N. La fraction GC utilise uniquement A/C/G/T valides : (G+C)/(A+C+G+T) × 100.</li><li><strong>ORF :</strong> repérer ATG puis un codon stop en phase dans le cadre avant décrit par le script. La recherche n’évalue ni le brin inverse ni tous les cadres; ce n’est pas une annotation fonctionnelle.</li><li><strong>Interprétation :</strong> aucune qualité Phred, couverture, contamination, alignement ou référence génomique n’est fournie; aucune identification taxonomique ou conclusion clinique n’est permise.</li></ul>
-<h2>6. Résultats</h2><p>Le tableau public rassemble les métriques calculées pour chaque séquence. La lecture doit commencer par les contrôles de longueur et de caractères, puis se poursuivre par la composition GC. Une séquence contenant des ambiguïtés exige une interprétation plus prudente, car les métriques dépendant de l’alphabet peuvent être incomplètes.</p><figure class="figure-card"><img src="results/sequence_qc_overview.svg" alt="Contrôle qualité des trois séquences synthétiques : longueur, fraction GC et bases ambiguës"><figcaption class="figure-meta"><strong>Lecture :</strong> trois séquences, 191 pb au total, 8 bases ambiguës concentrées dans la troisième séquence. La fraction GC moyenne est de 47,35 %.<br><strong>Limite :</strong> ces indicateurs exploratoires ne permettent ni d’identifier une espèce ni d’annoter un génome.</figcaption></figure><p><a href="results/sequence_qc.csv">Télécharger le tableau de contrôle qualité</a> · <a href="results/sequence_qc_summary.json">Télécharger le résumé JSON</a></p>
-<h2>7. Qualité de lectures FASTQ : démonstration séparée</h2><p>FASTA conserve les bases mais pas leurs scores de qualité. Pour illustrer la qualité de lecture, le dépôt fournit donc un second jeu entièrement synthétique au format FASTQ, avec trois reads courts et des scores Phred+33. Cette partie ne modifie pas les métriques calculées sur le FASTA.</p><p><strong>Règle de lecture :</strong> score Phred Q = −10 log<sub>10</sub>(probabilité d’erreur). Q20 correspond à une probabilité théorique d’erreur de 1 %; Q30 à 0,1 %. Ces scores sont des encodages de qualité, pas des garanties de justesse biologique. Le script contrôle les quatre lignes par read, l’accord longueur/qualité, l’encodage imprimable Phred+33 puis calcule longueur, GC, N, moyenne Phred, Q20 et Q30. Les métriques par cycle utilisent uniquement les reads couvrant le cycle.</p><figure class="figure-card"><img src="results/fastq_quality_by_cycle.svg" alt="Score moyen Phred par cycle calculé sur trois reads FASTQ entièrement synthétiques"><figcaption class="figure-meta">Un premier read porte des scores élevés, un deuxième une qualité moyenne, et un troisième comprend des bases ambiguës; ces valeurs ont été construites pour tester le calcul, elles ne proviennent pas d’un séquenceur.</figcaption></figure><h3>Tableau synthétique par lecture</h3><div class="data-table"><table><thead><tr><th>Read</th><th>Longueur</th><th>GC %</th><th>Bases N</th><th>Phred moyen</th><th>Q20</th><th>Q30</th></tr></thead><tbody><tr><td>DEMO_READ_01</td><td>20</td><td>50,0</td><td>0</td><td>40,0</td><td>100 %</td><td>100 %</td></tr><tr><td>DEMO_READ_02</td><td>20</td><td>50,0</td><td>0</td><td>20,0</td><td>100 %</td><td>0 %</td></tr><tr><td>DEMO_READ_03</td><td>20</td><td>50,0</td><td>4</td><td>40,0</td><td>100 %</td><td>100 %</td></tr></tbody></table></div><p><a href="results/fastq_read_qc.csv">Télécharger les métriques par lecture</a> · <a href="results/fastq_per_cycle_qc.csv">Télécharger les métriques par cycle</a> · <a href="results/fastq_qc_summary.json">Provenance et limites</a></p><p class="note"><strong>Limites FASTQ :</strong> n=3 reads artificiels, aucune calibration instrumentale, aucun adaptateur, contamination ou contrôle de couverture. Pour de vrais runs, employer un outil validé tel que FastQC/MultiQC, conserver les fichiers bruts et documenter le séquenceur et la librairie.</p>
+<figure class="figure-card"><span><img src="results/workflow.svg" alt="Schéma de l’analyse FASTA : parsing, alphabet, métriques GC et ORF exploratoire"> — contenu présenté dans la fiche</span><figcaption class="figure-meta">Du fichier FASTA aux indicateurs exploratoires, sans franchir l’étape d’annotation.</figcaption></figure><h3>Règles de contrôle et définition des métriques</h3><ul><li><strong>Format :</strong> chaque séquence doit suivre un en-tête FASTA non vide; les lignes sont concaténées et mises en majuscules. Les entrées mal formées sont rejetées plutôt que réparées silencieusement.</li><li><strong>Alphabet et bases ambiguës :</strong> A, C, G, T sont les bases non ambiguës; N est compté comme incertitude et les autres symboles sont signalés. Ce compte rend visible l’incertitude qui affecte la fraction GC et les interprétations aval.</li><li><strong>Longueur :</strong> compter les caractères de bases retenus, y compris N, pour détecter une entrée vide ou une longueur incohérente; la longueur seule ne mesure ni couverture ni complétude du génome.</li><li><strong>ORF :</strong> repérer ATG puis un codon stop en phase dans le cadre avant décrit par le script. La recherche n’évalue ni le brin inverse ni tous les cadres; ce n’est pas une annotation fonctionnelle.</li><li><strong>Interprétation :</strong> aucune qualité Phred, couverture, contamination, alignement ou référence génomique n’est fournie; aucune identification taxonomique ou conclusion clinique n’est permise.</li><li><strong>Fraction GC :</strong> calculer (G+C)/(A+C+G+T) pour décrire la composition parmi les bases appelables; les N sont exclus du dénominateur. Cette statistique peut repérer un profil atypique mais n’identifie pas une espèce et ne prouve pas une contamination.</li></ul>
+<h2>6. Résultats</h2><p>Le tableau public rassemble les métriques calculées pour chaque séquence. La lecture doit commencer par les contrôles de longueur et de caractères, puis se poursuivre par la composition GC. Une séquence contenant des ambiguïtés exige une interprétation plus prudente, car les métriques dépendant de l’alphabet peuvent être incomplètes.</p><figure class="figure-card"><img src="results/sequence_qc_overview.svg" alt="Contrôle qualité des trois séquences synthétiques : longueur, fraction GC et bases ambiguës"><figcaption class="figure-meta"><strong>Lecture :</strong> trois séquences, 191 pb au total, 8 bases ambiguës concentrées dans la troisième séquence. La fraction GC moyenne est de 47,35 %.<br><strong>Limite :</strong> ces indicateurs exploratoires ne permettent ni d’identifier une espèce ni d’annoter un génome.</figcaption></figure><p><span>Contenu consultable ci-dessous le tableau de contrôle qualité — contenu présenté dans la fiche</span> · <span>Contenu consultable ci-dessous le résumé JSON — contenu présenté dans la fiche</span></p>
+<h2>7. Qualité de lectures FASTQ : démonstration séparée</h2><p>FASTA conserve les bases mais pas leurs scores de qualité. Pour illustrer la qualité de lecture, le dépôt fournit donc un second jeu entièrement synthétique au format FASTQ, avec trois reads courts et des scores Phred+33. Cette partie ne modifie pas les métriques calculées sur le FASTA.</p><p><strong>Règle de lecture :</strong> score Phred Q = −10 log<sub>10</sub>(probabilité d’erreur). Q20 correspond à une probabilité théorique d’erreur de 1 %; Q30 à 0,1 %. Ces scores sont des encodages de qualité, pas des garanties de justesse biologique. Le script contrôle les quatre lignes par read, l’accord longueur/qualité, l’encodage imprimable Phred+33 puis calcule longueur, GC, N, moyenne Phred, Q20 et Q30. Les métriques par cycle utilisent uniquement les reads couvrant le cycle.</p><figure class="figure-card"><img src="results/fastq_quality_by_cycle.svg" alt="Score moyen Phred par cycle calculé sur trois reads FASTQ entièrement synthétiques"><figcaption class="figure-meta">Un premier read porte des scores élevés, un deuxième une qualité moyenne, et un troisième comprend des bases ambiguës; ces valeurs ont été construites pour tester le calcul, elles ne proviennent pas d’un séquenceur.</figcaption></figure><h3>Tableau synthétique par lecture</h3><div class="data-table"><table><thead><tr><th>Read</th><th>Longueur</th><th>GC %</th><th>Bases N</th><th>Phred moyen</th><th>Q20</th><th>Q30</th></tr></thead><tbody><tr><td>DEMO_READ_01</td><td>20</td><td>50,0</td><td>0</td><td>40,0</td><td>100 %</td><td>100 %</td></tr><tr><td>DEMO_READ_02</td><td>20</td><td>50,0</td><td>0</td><td>20,0</td><td>100 %</td><td>0 %</td></tr><tr><td>DEMO_READ_03</td><td>20</td><td>50,0</td><td>4</td><td>40,0</td><td>100 %</td><td>100 %</td></tr></tbody></table></div><p><span>Contenu consultable ci-dessous les métriques par lecture — contenu présenté dans la fiche</span> · <span>Contenu consultable ci-dessous les métriques par cycle — contenu présenté dans la fiche</span> · <span>Provenance et limites — contenu présenté dans la fiche</span></p><p class="note"><strong>Limites FASTQ :</strong> n=3 reads artificiels, aucune calibration instrumentale, aucun adaptateur, contamination ou contrôle de couverture. Pour de vrais runs, employer un outil validé tel que FastQC/MultiQC, conserver les fichiers bruts et documenter le séquenceur et la librairie.</p>
 <h2>8. Interprétation et limites</h2><p>Une variation de GC peut être utile pour comparer des séquences, mais elle ne constitue pas une preuve d’appartenance taxonomique. De même, un ORF détecté par une règle simple ne permet pas d’assigner une fonction. Les séquences étant synthétiques, aucun résultat ne doit être extrapolé à une souche clinique.</p><ul><li>absence de qualité de séquençage par position et de scores Phred ;</li><li>pas d’alignement avec une base de référence ;</li><li>pas d’annotation fonctionnelle ni de validation expérimentale ;</li><li>petit nombre de séquences et absence de contexte d’échantillonnage.</li></ul>
-<h2>8. Conclusion</h2><p>Ce projet met en place une étape de contrôle simple mais indispensable. Avant d’interpréter une séquence bactérienne, il faut vérifier ce qui a réellement été lu, conserver les métriques et expliciter ce que chaque indicateur permet — ou ne permet pas — de conclure.</p><h2>9. Références de lecture</h2><ul><li>NCBI. <em>FASTA format specification</em>.</li><li>Altschul SF et al. Basic local alignment search tool. <em>J Mol Biol</em>. 1990.</li><li>Li H, Durbin R. Fast and accurate short read alignment with Burrows-Wheeler transform. <em>Bioinformatics</em>. 2009.</li></ul><h2>10. Références et ressources</h2><ol><li>NCBI. <a href="https://www.ncbi.nlm.nih.gov/genbank/fastaformat/" target="_blank" rel="noopener">FASTA format</a>.</li><li>NCBI. <a href="https://www.ncbi.nlm.nih.gov/sra/docs/submitformats/" target="_blank" rel="noopener">SRA submission formats and FASTQ</a>.</li><li>Babraham Bioinformatics. <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank" rel="noopener">FastQC</a>.</li><li>Ewels P et al. <a href="https://doi.org/10.1093/bioinformatics/btw354" target="_blank" rel="noopener">MultiQC: summarize analysis results for multiple tools and samples</a>. Bioinformatics. 2016.</li><li>Phred quality scores. Cock et al. <a href="https://doi.org/10.1186/gb-2009-10-3-r25" target="_blank" rel="noopener">The Sanger FASTQ file format for sequences with quality scores</a>. 2009.</li><li>NCBI. <a href="https://www.ncbi.nlm.nih.gov/books/NBK279690/" target="_blank" rel="noopener">BLAST documentation</a>.</li><li>Biopython. <a href="https://biopython.org/wiki/SeqIO" target="_blank" rel="noopener">SeqIO sequence input/output</a>.</li><li>European Nucleotide Archive. <a href="https://www.ebi.ac.uk/ena/browser/home" target="_blank" rel="noopener">ENA sequence archive</a>.</li><li>NCBI. <a href="https://www.ncbi.nlm.nih.gov/genbank/" target="_blank" rel="noopener">GenBank</a>.</li><li>Galaxy Training Network. <a href="https://training.galaxyproject.org/" target="_blank" rel="noopener">Training materials</a>.</li></ol>
-<p class="note">Données synthétiques publiées pour démontrer la méthode.</p></main><footer class="site-footer"><div class="site-footer-inner"><span>Akonassou Sedjro Tchédrac Singbo · Technicien de laboratoire</span><a href="mailto:akonassousedjrotchedracs@gmail.com">Contact professionnel</a></div></footer>
+<h2>8. Conclusion</h2><p>Ce projet met en place une étape de contrôle simple mais indispensable. Avant d’interpréter une séquence bactérienne, il faut vérifier ce qui a réellement été lu, conserver les métriques et expliciter ce que chaque indicateur permet — ou ne permet pas — de conclure.</p><section class="inline-evidence"><h2>Données, sorties et code visibles</h2>
+<figure class="figure-card"><img src="results/fasta_format_guide.svg" alt="Structure d’un enregistrement FASTA"><figcaption class="figure-meta">En-tête commençant par &gt;, puis séquence; les lignes sont concaténées avant le calcul.</figcaption></figure>
+<h3>Entrée FASTA intégrale (synthétique)</h3><pre class="code"><code>&gt;DEMO_SYNTHETIC_seq01|not_a_real_isolate
+ATGGCTGCTTAAGCGCGCGCGCGCGCGCGCGCGCGCGCGATATATATATATATATATATATATA
+&gt;DEMO_SYNTHETIC_seq02|not_a_real_isolate
+GCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGATATATATATATATATATATATATATATATAT
+&gt;DEMO_SYNTHETIC_seq03|not_a_real_isolate
+GCGCGCGCGCGCGCGCGCGCGCGCATATATATATATATATATATATATATATATATNNNNNNNN
+</code></pre>
+<h3>Tableau QC FASTA</h3><p></p><details open><summary>Afficher le tableau intégral · 3 lignes</summary><div class="data-table"><table><thead><tr><th>sequence_id</th><th>length_bp</th><th>gc_percent</th><th>ambiguous_bases</th><th>ambiguous_percent</th><th>longest_simple_orf_nt_forward_strand</th><th>contains_non_acgt</th></tr></thead><tbody><tr><td>DEMO_SYNTHETIC_seq01|not_a_real_isolate</td><td>64</td><td>50.0</td><td>0</td><td>0.0</td><td>12</td><td>False</td></tr><tr><td>DEMO_SYNTHETIC_seq02|not_a_real_isolate</td><td>63</td><td>49.206</td><td>0</td><td>0.0</td><td>0</td><td>False</td></tr><tr><td>DEMO_SYNTHETIC_seq03|not_a_real_isolate</td><td>64</td><td>42.857</td><td>8</td><td>12.5</td><td>0</td><td>True</td></tr></tbody></table></div></details>
+<h3>Résumé JSON FASTA</h3><pre class="code"><code>{
+  &quot;fasta_file&quot;: &quot;DEMO_SYNTHETIC_sequences.fasta&quot;,
+  &quot;n_sequences&quot;: 3,
+  &quot;total_bp&quot;: 191,
+  &quot;mean_length_bp&quot;: 63.67,
+  &quot;mean_gc_percent&quot;: 47.354,
+  &quot;total_ambiguous_bases&quot;: 8,
+  &quot;note&quot;: &quot;Synthetic exploratory QC only; not species identification, assembly validation or formal annotation.&quot;
+}</code></pre>
+<h3>Contrôle synthétique par read FASTQ</h3><p></p><details open><summary>Afficher le tableau intégral · 3 lignes</summary><div class="data-table"><table><thead><tr><th>read_id</th><th>length_bp</th><th>gc_percent</th><th>ambiguous_bases</th><th>mean_phred</th><th>q20_bases</th><th>q20_percent</th><th>q30_bases</th><th>q30_percent</th></tr></thead><tbody><tr><td>DEMO_READ_01</td><td>20</td><td>55.0</td><td>0</td><td>40.0</td><td>20</td><td>100.0</td><td>20</td><td>100.0</td></tr><tr><td>DEMO_READ_02</td><td>20</td><td>50.0</td><td>0</td><td>20.0</td><td>20</td><td>100.0</td><td>0</td><td>0.0</td></tr><tr><td>DEMO_READ_03</td><td>20</td><td>40.0</td><td>4</td><td>40.0</td><td>20</td><td>100.0</td><td>20</td><td>100.0</td></tr></tbody></table></div></details>
+<h3>QC synthétique par cycle</h3><p></p><details open><summary>Afficher le tableau intégral · 20 lignes</summary><div class="data-table"><table><thead><tr><th>cycle</th><th>n_bases</th><th>mean_phred</th><th>q20_percent</th><th>q30_percent</th></tr></thead><tbody><tr><td>1</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>2</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>3</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>4</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>5</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>6</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>7</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>8</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>9</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>10</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>11</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>12</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>13</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>14</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>15</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>16</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>17</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>18</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>19</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr><tr><td>20</td><td>3</td><td>33.33</td><td>100.0</td><td>66.7</td></tr></tbody></table></div></details>
+<h3>Résumé JSON FASTQ</h3><pre class="code"><code>{
+  &quot;records&quot;: 3,
+  &quot;bases&quot;: 60,
+  &quot;encoding&quot;: &quot;Phred+33&quot;,
+  &quot;status&quot;: &quot;synthetic training fixture; not sequencer output&quot;,
+  &quot;limitations&quot;: &quot;No adapter detection, instrument calibration, contamination screening, or biological inference.&quot;
+}</code></pre>
+<h3>FASTQ intégral (synthétique)</h3><pre class="code"><code>@DEMO_READ_01
+ACGTGCTAGCTAGGCTAACG
++
+IIIIIIIIIIIIIIIIIIII
+@DEMO_READ_02
+GCTTACGATCGATCGTACGA
++
+55555555555555555555
+@DEMO_READ_03
+NNACGTACGTACGTACGTNN
++
+IIIIIIIIIIIIIIIIIIII
+</code></pre>
+<h3>Contrôle de l’automate et justification des métriques</h3><p>Pour un run réel, archiver run ID et version, rendement, reads pass/fail, Phred par cycle, bases ambiguës, démultiplexage, contrôles positifs/négatifs, couverture et contamination. La longueur mesure les bases lues, GC décrit leur composition, N signale une base non résolue; aucune seule métrique ne prouve l’identité ni la représentativité de la séquence. Aucun rapport d’automate réel n’étant fourni, ses valeurs ne sont pas inventées.</p>
+<h3>Script FASTA complet</h3><details open><summary>Code complet · 112 lignes</summary><pre class="code"><code>#!/usr/bin/env python3
+&quot;&quot;&quot;Rebuild Project 02 exploratory FASTA QC using only Python&#x27;s standard library.&quot;&quot;&quot;
+from __future__ import annotations
+
+import argparse
+import csv
+import html
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+VALID = set(&quot;ACGT&quot;)
+STOPS = {&quot;TAA&quot;, &quot;TAG&quot;, &quot;TGA&quot;}
+
+
+def read_fasta(path: Path) -&gt; list[tuple[str, str]]:
+    records: list[tuple[str, str]] = []
+    name: str | None = None
+    seq: list[str] = []
+    for line_no, raw in enumerate(path.read_text(encoding=&quot;utf-8-sig&quot;).splitlines(), 1):
+        line = raw.strip()
+        if not line:
+            continue
+        if line.startswith(&quot;&gt;&quot;):
+            if name is not None:
+                records.append((name, &quot;&quot;.join(seq).upper()))
+            name, seq = line[1:].strip(), []
+            if not name:
+                raise ValueError(f&quot;Empty FASTA header at line {line_no}&quot;)
+        elif name is None:
+            raise ValueError(f&quot;Sequence found before a FASTA header at line {line_no}&quot;)
+        else:
+            seq.append(&quot;&quot;.join(line.split()))
+    if name is not None:
+        records.append((name, &quot;&quot;.join(seq).upper()))
+    if not records or any(not sequence for _, sequence in records):
+        raise ValueError(&quot;FASTA must contain at least one non-empty sequence&quot;)
+    return records
+
+
+def longest_simple_orf(sequence: str) -&gt; int:
+    longest = 0
+    for frame in range(3):
+        start: int | None = None
+        for pos in range(frame, len(sequence) - 2, 3):
+            codon = sequence[pos:pos + 3]
+            if start is None and codon == &quot;ATG&quot;:
+                start = pos
+            elif start is not None and codon in STOPS:
+                longest = max(longest, pos + 3 - start)
+                start = None
+    return longest
+
+
+def render_svg(rows: list[dict[str, object]], mean_gc: float, total_bp: int, ambiguous: int, path: Path) -&gt; None:
+    out = [&#x27;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 960 440&quot; role=&quot;img&quot; aria-labelledby=&quot;title desc&quot;&gt;&#x27;,
+           &#x27;&lt;title id=&quot;title&quot;&gt;Synthetic sequence quality-control overview&lt;/title&gt;&#x27;,
+           &#x27;&lt;desc id=&quot;desc&quot;&gt;Lengths, GC fraction, and ambiguous base counts for three synthetic sequences.&lt;/desc&gt;&#x27;,
+           &#x27;&lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;#f7fafc&quot;/&gt;&#x27;,
+           &#x27;&lt;text x=&quot;42&quot; y=&quot;48&quot; font-family=&quot;Arial&quot; font-size=&quot;25&quot; font-weight=&quot;700&quot; fill=&quot;#173b52&quot;&gt;Contrôle qualité des séquences&lt;/text&gt;&#x27;,
+           &#x27;&lt;text x=&quot;42&quot; y=&quot;78&quot; font-family=&quot;Arial&quot; font-size=&quot;14&quot; fill=&quot;#587080&quot;&gt;Démonstration synthétique · longueur en pb · contenu GC · bases ambiguës&lt;/text&gt;&#x27;]
+    for i, row in enumerate(rows):
+        y = 137 + i * 86
+        name = html.escape(f&quot;séquence {i + 1:02d}&quot;)
+        length, gc, amb = int(row[&quot;length_bp&quot;]), float(row[&quot;gc_percent&quot;]), int(row[&quot;ambiguous_bases&quot;])
+        out += [f&#x27;&lt;text x=&quot;42&quot; y=&quot;{y}&quot; font-family=&quot;Arial&quot; font-size=&quot;16&quot; font-weight=&quot;700&quot; fill=&quot;#173b52&quot;&gt;{name}&lt;/text&gt;&#x27;,
+                f&#x27;&lt;text x=&quot;42&quot; y=&quot;{y + 24}&quot; font-family=&quot;Arial&quot; font-size=&quot;13&quot; fill=&quot;#587080&quot;&gt;{length} pb · {gc:.1f}% GC · {amb} base(s) ambiguë(s)&lt;/text&gt;&#x27;,
+                f&#x27;&lt;rect x=&quot;350&quot; y=&quot;{y - 17}&quot; width=&quot;480&quot; height=&quot;20&quot; rx=&quot;10&quot; fill=&quot;#e3edf1&quot;/&gt;&#x27;,
+                f&#x27;&lt;rect x=&quot;350&quot; y=&quot;{y - 17}&quot; width=&quot;{480 * gc / 100:.1f}&quot; height=&quot;20&quot; rx=&quot;10&quot; fill=&quot;#0b8290&quot;/&gt;&#x27;,
+                f&#x27;&lt;text x=&quot;850&quot; y=&quot;{y}&quot; font-family=&quot;Arial&quot; font-size=&quot;14&quot; font-weight=&quot;700&quot; fill=&quot;#173b52&quot;&gt;{gc:.1f}% GC&lt;/text&gt;&#x27;,
+                f&#x27;&lt;rect x=&quot;350&quot; y=&quot;{y + 14}&quot; width=&quot;{max(amb * 7, 4)}&quot; height=&quot;8&quot; rx=&quot;4&quot; fill=&quot;{&quot;#d18431&quot; if amb else &quot;#9ab7c0&quot;}&quot;/&gt;&#x27;]
+    out += [f&#x27;&lt;text x=&quot;42&quot; y=&quot;405&quot; font-family=&quot;Arial&quot; font-size=&quot;13&quot; fill=&quot;#587080&quot;&gt;Sommaire : {len(rows)} séquences · {total_bp} pb · {ambiguous} bases ambiguës · GC moyen {mean_gc:.3f}%&lt;/text&gt;&#x27;, &#x27;&lt;/svg&gt;&#x27;]
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(&quot;\n&quot;.join(out), encoding=&quot;utf-8&quot;)
+
+
+def main() -&gt; None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(&quot;--input&quot;, type=Path, default=ROOT / &quot;data&quot; / &quot;DEMO_SYNTHETIC_sequences.fasta&quot;)
+    parser.add_argument(&quot;--output-dir&quot;, type=Path, default=ROOT / &quot;results&quot;)
+    args = parser.parse_args()
+    records = read_fasta(args.input)
+    rows = []
+    for name, sequence in records:
+        valid_count = sum(base in VALID for base in sequence)
+        gc_count = sum(base in {&quot;G&quot;, &quot;C&quot;} for base in sequence)
+        ambiguous = len(sequence) - valid_count
+        rows.append({&quot;sequence_id&quot;: name, &quot;length_bp&quot;: len(sequence),
+                     &quot;gc_percent&quot;: round(gc_count * 100 / valid_count, 3) if valid_count else 0.0,
+                     &quot;ambiguous_bases&quot;: ambiguous, &quot;ambiguous_percent&quot;: round(ambiguous * 100 / len(sequence), 3),
+                     &quot;longest_simple_orf_nt_forward_strand&quot;: longest_simple_orf(sequence),
+                     &quot;contains_non_acgt&quot;: str(ambiguous &gt; 0)})
+    total_bp = sum(int(row[&quot;length_bp&quot;]) for row in rows)
+    total_ambiguous = sum(int(row[&quot;ambiguous_bases&quot;]) for row in rows)
+    mean_length = round(total_bp / len(rows), 2)
+    mean_gc = round(sum(float(row[&quot;gc_percent&quot;]) for row in rows) / len(rows), 3)
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    headers = [&quot;sequence_id&quot;, &quot;length_bp&quot;, &quot;gc_percent&quot;, &quot;ambiguous_bases&quot;, &quot;ambiguous_percent&quot;, &quot;longest_simple_orf_nt_forward_strand&quot;, &quot;contains_non_acgt&quot;]
+    with (args.output_dir / &quot;sequence_qc.csv&quot;).open(&quot;w&quot;, newline=&quot;&quot;, encoding=&quot;utf-8&quot;) as handle:
+        writer = csv.DictWriter(handle, fieldnames=headers)
+        writer.writeheader(); writer.writerows(rows)
+    summary = {&quot;fasta_file&quot;: args.input.name, &quot;n_sequences&quot;: len(rows), &quot;total_bp&quot;: total_bp,
+               &quot;mean_length_bp&quot;: mean_length, &quot;mean_gc_percent&quot;: mean_gc,
+               &quot;total_ambiguous_bases&quot;: total_ambiguous,
+               &quot;note&quot;: &quot;Synthetic exploratory QC only; not species identification, assembly validation or formal annotation.&quot;}
+    (args.output_dir / &quot;sequence_qc_summary.json&quot;).write_text(json.dumps(summary, indent=2) + &quot;\n&quot;, encoding=&quot;utf-8&quot;)
+    render_svg(rows, mean_gc, total_bp, total_ambiguous, args.output_dir / &quot;sequence_qc_overview.svg&quot;)
+    print(f&quot;Rebuilt QC for {len(rows)} sequences ({total_bp} bp; {total_ambiguous} ambiguous bases).&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre></details>
+<h3>Script FASTQ complet</h3><details open><summary>Code complet · 41 lignes</summary><pre class="code"><code>#!/usr/bin/env python3
+&quot;&quot;&quot;Summarize per-read and per-cycle Phred+33 metrics for a tiny synthetic FASTQ.&quot;&quot;&quot;
+import argparse,csv,json,math
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+def parse(path):
+    lines=path.read_text(encoding=&#x27;ascii&#x27;).splitlines(); rec=[]
+    if len(lines)%4: raise ValueError(&#x27;FASTQ must contain complete four-line records&#x27;)
+    for i in range(0,len(lines),4):
+        h,s,p,q=lines[i:i+4]
+        if not h.startswith(&#x27;@&#x27;) or not p.startswith(&#x27;+&#x27;) or len(s)!=len(q): raise ValueError(f&#x27;Invalid FASTQ record at line {i+1}&#x27;)
+        if any(not 33&lt;=ord(x)&lt;=126 for x in q): raise ValueError(&#x27;Quality chars outside Phred+33 printable range&#x27;)
+        rec.append((h[1:],s.upper(),[ord(x)-33 for x in q]))
+    if not rec: raise ValueError(&#x27;No FASTQ records&#x27;)
+    return rec
+def main():
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument(&#x27;--input&#x27;,type=Path,default=ROOT/&#x27;data/DEMO_SYNTHETIC_reads.fastq&#x27;);ap.add_argument(&#x27;--output-dir&#x27;,type=Path,default=ROOT/&#x27;results&#x27;);a=ap.parse_args(); rec=parse(a.input)
+    out=[]
+    for name,seq,qs in rec:
+        n=len(seq); gc=sum(x in &#x27;GC&#x27; for x in seq); q20=sum(x&gt;=20 for x in qs);q30=sum(x&gt;=30 for x in qs)
+        out.append({&#x27;read_id&#x27;:name,&#x27;length_bp&#x27;:n,&#x27;gc_percent&#x27;:round(100*gc/n,1),&#x27;ambiguous_bases&#x27;:sum(x not in &#x27;ACGT&#x27; for x in seq),&#x27;mean_phred&#x27;:round(sum(qs)/len(qs),2),&#x27;q20_bases&#x27;:q20,&#x27;q20_percent&#x27;:round(100*q20/n,1),&#x27;q30_bases&#x27;:q30,&#x27;q30_percent&#x27;:round(100*q30/n,1)})
+    maxlen=max(len(s) for _,s,_ in rec); cyc=[]
+    for pos in range(maxlen):
+        qs=[q[pos] for _,s,q in rec if pos&lt;len(s)];cyc.append({&#x27;cycle&#x27;:pos+1,&#x27;n_bases&#x27;:len(qs),&#x27;mean_phred&#x27;:round(sum(qs)/len(qs),2),&#x27;q20_percent&#x27;:round(100*sum(x&gt;=20 for x in qs)/len(qs),1),&#x27;q30_percent&#x27;:round(100*sum(x&gt;=30 for x in qs)/len(qs),1)})
+    a.output_dir.mkdir(parents=True,exist_ok=True)
+    for name,rows in [(&#x27;fastq_read_qc.csv&#x27;,out),(&#x27;fastq_per_cycle_qc.csv&#x27;,cyc)]:
+        with (a.output_dir/name).open(&#x27;w&#x27;,newline=&#x27;&#x27;,encoding=&#x27;utf-8&#x27;) as f:w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+    (a.output_dir/&#x27;fastq_qc_summary.json&#x27;).write_text(json.dumps({&#x27;records&#x27;:len(rec),&#x27;bases&#x27;:sum(len(s) for _,s,_ in rec),&#x27;encoding&#x27;:&#x27;Phred+33&#x27;,&#x27;status&#x27;:&#x27;synthetic training fixture; not sequencer output&#x27;,&#x27;limitations&#x27;:&#x27;No adapter detection, instrument calibration, contamination screening, or biological inference.&#x27;},indent=2)+&#x27;\n&#x27;,encoding=&#x27;utf-8&#x27;)
+    width,height=860,390; outsvg=[&#x27;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 860 390&quot; role=&quot;img&quot; aria-labelledby=&quot;t d&quot;&gt;&lt;title id=&quot;t&quot;&gt;Synthetic FASTQ Phred quality by cycle&lt;/title&gt;&lt;desc id=&quot;d&quot;&gt;Mean Phred scores and Q30 percentage across 20 read positions in three synthetic reads.&lt;/desc&gt;&lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;#fff&quot;/&gt;&lt;text x=&quot;35&quot; y=&quot;42&quot; font-family=&quot;Arial&quot; font-size=&quot;22&quot; font-weight=&quot;bold&quot; fill=&quot;#153b52&quot;&gt;Qualité FASTQ synthétique · Phred+33&lt;/text&gt;&lt;text x=&quot;35&quot; y=&quot;68&quot; font-family=&quot;Arial&quot; font-size=&quot;13&quot; fill=&quot;#59686e&quot;&gt;Moyenne Phred par cycle · trois lectures de démonstration&lt;/text&gt;&#x27;]
+    x0,y0,pw,ph=58,100,750,220
+    for t in [0,10,20,30,40]:
+        y=y0+ph*(40-t)/40;outsvg += [f&#x27;&lt;line x1=&quot;{x0}&quot; y1=&quot;{y}&quot; x2=&quot;{x0+pw}&quot; y2=&quot;{y}&quot; stroke=&quot;#d7e1e4&quot;/&gt;&#x27;,f&#x27;&lt;text x=&quot;{x0-10}&quot; y=&quot;{y+4}&quot; text-anchor=&quot;end&quot; font-family=&quot;Arial&quot; font-size=&quot;11&quot; fill=&quot;#59686e&quot;&gt;{t}&lt;/text&gt;&#x27;]
+    pts=[]
+    for r in cyc: pts.append(f&quot;{x0+pw*(r[&#x27;cycle&#x27;]-1)/(maxlen-1):.1f},{y0+ph*(40-r[&#x27;mean_phred&#x27;])/40:.1f}&quot;)
+    outsvg += [f&#x27;&lt;polyline points=&quot;{&quot; &quot;.join(pts)}&quot; fill=&quot;none&quot; stroke=&quot;#087e8b&quot; stroke-width=&quot;3&quot;/&gt;&#x27;]
+    for r in cyc:
+        x=x0+pw*(r[&#x27;cycle&#x27;]-1)/(maxlen-1);y=y0+ph*(40-r[&#x27;mean_phred&#x27;])/40;outsvg.append(f&#x27;&lt;circle cx=&quot;{x:.1f}&quot; cy=&quot;{y:.1f}&quot; r=&quot;4&quot; fill=&quot;#087e8b&quot;/&gt;&#x27;)
+    outsvg += [f&#x27;&lt;text x=&quot;{x0+pw/2}&quot; y=&quot;358&quot; text-anchor=&quot;middle&quot; font-family=&quot;Arial&quot; font-size=&quot;13&quot; fill=&quot;#59686e&quot;&gt;Cycle de base&lt;/text&gt;&#x27;,&#x27;&lt;text x=&quot;35&quot; y=&quot;382&quot; font-family=&quot;Arial&quot; font-size=&quot;12&quot; fill=&quot;#59686e&quot;&gt;Q20/Q30 = fraction des bases avec score Phred ≥20/≥30; indicateurs de démonstration uniquement.&lt;/text&gt;&#x27;,&#x27;&lt;/svg&gt;&#x27;]
+    (a.output_dir/&#x27;fastq_quality_by_cycle.svg&#x27;).write_text(&#x27;\n&#x27;.join(outsvg),encoding=&#x27;utf-8&#x27;)
+    print(f&#x27;FASTQ QC rebuilt: {len(rec)} synthetic reads, {sum(len(s) for _,s,_ in rec)} bases, {len(cyc)} cycles.&#x27;)
+if __name__==&#x27;__main__&#x27;:main()
+</code></pre></details>
+</section><h2>Références récentes (2017–2023)</h2><ol><li>Wick et al. Unicycler: bacterial genome assembly from short and long reads. PLOS Comput Biol. 2017. <a href="https://doi.org/10.1371/journal.pcbi.1005595" target="_blank" rel="noopener">Source</a></li><li>Chen et al. fastp: an ultra-fast all-in-one FASTQ preprocessor. Bioinformatics. 2018. <a href="https://doi.org/10.1093/bioinformatics/bty560" target="_blank" rel="noopener">Source</a></li><li>Souvorov et al. SKESA: strategic k-mer extension for scrupulous assemblies. Genome Biology. 2018. <a href="https://doi.org/10.1186/s13059-018-1540-z" target="_blank" rel="noopener">Source</a></li><li>Mikheenko et al. Versatile genome assembly evaluation with QUAST-LG. Bioinformatics. 2018. <a href="https://doi.org/10.1093/bioinformatics/bty266" target="_blank" rel="noopener">Source</a></li><li>Bortolaia et al. ResFinder 4.0 for predictions of phenotypes from genotypes. J Antimicrob Chemother. 2020. <a href="https://doi.org/10.1093/jac/dkaa345" target="_blank" rel="noopener">Source</a></li><li>Prjibelski et al. Using SPAdes de novo assembler. Current Protocols. 2020. <a href="https://doi.org/10.1002/cpbi.102" target="_blank" rel="noopener">Source</a></li><li>Schwengers et al. Bakta: rapid and standardized annotation of bacterial genomes. Microbial Genomics. 2021. <a href="https://doi.org/10.1099/mgen.0.000685" target="_blank" rel="noopener">Source</a></li><li>Feldgarden et al. AMRFinderPlus and the Reference Gene Catalog. Scientific Reports. 2021. <a href="https://doi.org/10.1038/s41598-021-91456-0" target="_blank" rel="noopener">Source</a></li><li>Orakov et al. GUNC: detection of chimerism and contamination in prokaryotic genomes. Genome Biology. 2021. <a href="https://doi.org/10.1186/s13059-021-02393-0" target="_blank" rel="noopener">Source</a></li><li>Chklovski et al. CheckM2: a rapid, scalable and accurate tool for assessing microbial genome quality. Nature Methods. 2023. <a href="https://doi.org/10.1038/s41592-023-01940-w" target="_blank" rel="noopener">Source</a></li></ol><p class="note">Données synthétiques publiées pour démontrer la méthode.</p><p class="software-links"><strong>Logiciels :</strong> <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">Python 3</a> · <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank" rel="noopener">FastQC</a> · <a href="https://multiqc.info/" target="_blank" rel="noopener">MultiQC</a></p></main><footer class="site-footer"><div class="site-footer-inner"><span>Akonassou Sedjro Tchédrac Singbo · Technicien de laboratoire</span><a href="mailto:akonassousedjrotchedracs@gmail.com">Contact professionnel</a></div></footer>
 </body></html>
 

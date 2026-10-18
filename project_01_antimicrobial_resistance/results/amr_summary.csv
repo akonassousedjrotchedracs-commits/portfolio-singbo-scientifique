@@ -1,6 +1,11 @@
 organism,antibiotic,n_records,resistant_n,intermediate_n,susceptible_n,resistant_pct
-Escherichia coli,Ceftriaxone,20,6,4,10,30.0
-Escherichia coli,Ciprofloxacin,20,11,2,7,55.0
-Klebsiella pneumoniae,Ceftriaxone,20,8,3,9,40.0
-Klebsiella pneumoniae,Ciprofloxacin,20,4,5,11,20.0
-Staphylococcus aureus,Cefoxitin,20,7,1,12,35.0
+Enterococcus faecalis,Ampicillin,10,2,2,6,20.0
+Enterococcus faecalis,Vancomycin,10,1,1,8,10.0
+Escherichia coli,Ceftriaxone,10,3,2,5,30.0
+Escherichia coli,Gentamicin,10,1,3,6,10.0
+Klebsiella pneumoniae,Ceftriaxone,10,4,2,4,40.0
+Klebsiella pneumoniae,Ciprofloxacin,10,3,3,4,30.0
+Pseudomonas aeruginosa,Ceftazidime,10,4,2,4,40.0
+Pseudomonas aeruginosa,Ciprofloxacin,10,3,2,5,30.0
+Staphylococcus aureus,Cefoxitin,10,2,1,7,20.0
+Staphylococcus aureus,Penicillin,10,5,2,3,50.0

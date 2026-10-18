@@ -13,7 +13,7 @@
   "source_url": "NOT_APPLICABLE_SYNTHETIC_FIXTURE",
   "source_query": "Synthetic fixture bundled with this project",
   "retrieval_date": null,
-  "run_utc": "2026-10-18T01:22:36.180775+00:00",
+  "run_utc": "2026-10-18T01:45:17.913675+00:00",
   "database_status": "SQLite in-memory; Python standard library",
   "data_provenance_note": "All input observations are synthetic and do not originate from patients, hospitals, or a biological surveillance source."
 }
