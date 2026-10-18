@@ -9,7 +9,7 @@
 3. **Data analyst** : nettoyer, explorer, résumer, quantifier l’incertitude, visualiser et expliquer les résultats.
 4. **Data engineering / SQL** : transformer des fichiers en tables fiables, tester les contraintes, tracer les données et automatiser le flux.
 
-Ce positionnement prolonge le parcours du CV : licence en biotechnologie médicale, travail en laboratoire hospitalier, mémoire sur des biomarqueurs inflammatoires et formation complémentaire Python/SQL/Power BI. Il ne prétend pas que les scripts ont été utilisés au CHU-MEL.
+Ce positionnement s’appuie sur le parcours professionnel : licence en biotechnologie médicale, travail en laboratoire hospitalier, mémoire sur des biomarqueurs inflammatoires et formation complémentaire Python/SQL/Power BI. Il ne prétend pas que les scripts ont été utilisés au CHU-MEL.
 
 ## 2. Projet 1 — surveillance descriptive de la résistance aux antimicrobiens
 
@@ -75,4 +75,4 @@ Sources officielles :
 3. Tenir un journal daté de ce que vous avez compris, modifié et appris.
 4. Ajouter un export public réel et son manifeste avant d’affirmer qu’une analyse NCBI a été faite.
 5. Publier le code, les rapports et les instructions sur GitHub, sans données de patients ni identifiants confidentiels.
-6. Dans le CV, mettre le lien vers le dépôt GitHub public et, si souhaité, le lien vers le PDF du portfolio.
+6. Dans les supports professionnels, ajouter le lien vers le dépôt GitHub public et, si souhaité, le lien vers le PDF du portfolio.

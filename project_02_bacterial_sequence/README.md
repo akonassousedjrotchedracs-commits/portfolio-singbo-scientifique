@@ -1,20 +1,20 @@
 # Projet 02 — Contrôle qualité de séquences bactériennes
 
-**Positionnement :** exercice complémentaire de bioinformatique du portfolio. Le CV décrit des compétences en Python et analyse de données, mais ne présente pas ce travail comme une expérience hospitalière ou un résultat clinique.
+Contrôle exploratoire de trois séquences FASTA synthétiques : longueur, fraction GC, bases ambiguës et recherche simple d’ORF sur le brin avant. Aucun résultat n’identifie un organisme ou n’annote un gène.
 
-## Objectif et méthode
+## Reproduire
 
-Calculer des métriques de contrôle exploratoire sur des séquences FASTA synthétiques : longueur, fraction GC, bases ambiguës et indicateur simple d’ORF sur le brin direct.
+Prérequis : Python 3, aucune dépendance externe. Depuis ce dossier :
 
-## Résumé des données
+```powershell
+python scripts/reproduce.py
+```
 
-Le jeu de démonstration contient trois séquences pour un total de 191 bases. Huit bases ambiguës sont présentes dans l’ensemble. Les indicateurs ne constituent ni une identification bactérienne, ni une annotation de gènes, ni une analyse de résistance.
+## Fichiers
 
-## Résultats
-
-- [Présentation détaillée](index.html)
-- [Graphique de contrôle qualité (SVG)](results/sequence_qc_overview.svg)
-- [Tableau de contrôle qualité](results/sequence_qc.csv)
-- [Résumé JSON](results/sequence_qc_summary.json)
+- [Fiche détaillée](index.html)
+- [Script Python](scripts/reproduce.py) · [entrée FASTA synthétique](data/DEMO_SYNTHETIC_sequences.fasta)
+- [Résultats CSV](results/sequence_qc.csv) · [résumé JSON](results/sequence_qc_summary.json)
+- [Graphique SVG](results/sequence_qc_overview.svg)
 
 [English version](README_EN.md)

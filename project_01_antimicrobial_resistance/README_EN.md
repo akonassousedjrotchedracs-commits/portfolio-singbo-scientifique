@@ -1,6 +1,6 @@
 # Project 01 — Antimicrobial Resistance
 
-**Connection to the CV:** the CV lists microbiology and antibiotic susceptibility testing in hospital laboratory work. This is a separate portfolio exercise using synthetic data.
+**Scientific context:** this is a portfolio demonstration separate from hospital laboratory activity. This is a separate portfolio exercise using synthetic data.
 
 ## Objective
 

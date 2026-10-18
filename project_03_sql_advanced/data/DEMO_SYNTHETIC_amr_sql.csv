@@ -1,0 +1,13 @@
+isolate_id,organism,antibiotic,result
+DEMO_EC_01,Escherichia coli,Ceftriaxone,R
+DEMO_EC_01,Escherichia coli,Ciprofloxacin,R
+DEMO_EC_01,Escherichia coli,Gentamicin,S
+DEMO_EC_02,Escherichia coli,Ceftriaxone,I
+DEMO_EC_02,Escherichia coli,Ciprofloxacin,S
+DEMO_EC_02,Escherichia coli,Gentamicin,S
+DEMO_KP_01,Klebsiella pneumoniae,Ceftriaxone,R
+DEMO_KP_01,Klebsiella pneumoniae,Ciprofloxacin,R
+DEMO_KP_01,Klebsiella pneumoniae,Gentamicin,I
+DEMO_KP_02,Klebsiella pneumoniae,Ceftriaxone,S
+DEMO_KP_02,Klebsiella pneumoniae,Ciprofloxacin,S
+DEMO_KP_02,Klebsiella pneumoniae,Gentamicin,R

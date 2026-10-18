@@ -1,6 +1,6 @@
 # Project 04 — Biomedical Statistical Analysis
 
-**Connection to the CV:** the CV lists biostatistics and statistical processing for the thesis. This is a separate demonstration using synthetic data, not a reanalysis of the 81 thesis patients.
+**Scientific context:** this separate demonstration illustrates a biostatistical method. This is a separate demonstration using synthetic data, not a reanalysis of the 81 thesis patients.
 
 ## Objective and method
 

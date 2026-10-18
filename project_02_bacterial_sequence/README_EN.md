@@ -1,6 +1,6 @@
 # Project 02 — Bacterial Sequence Quality Control
 
-**Positioning:** a complementary bioinformatics exercise in the portfolio. The CV lists Python and data-analysis skills; it does not present this as hospital experience or a clinical result.
+**Positioning:** a complementary bioinformatics exercise in the portfolio. This is a technical exercise, not hospital experience or a clinical result.
 
 ## Objective and method
 

@@ -370,7 +370,7 @@ header.site-masthead {
 .site-nav .language-link { border-left:1px solid var(--line); margin-left:.25rem; }
 .site-footer { border-top:1px solid var(--line); padding:1rem clamp(1rem,4vw,2.5rem); color:var(--muted); font-size:.85rem; }
 .site-footer-inner { max-width:1050px; margin:auto; display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
-.cv-context { border-left:4px solid var(--accent); background:#f3f8f9; color:#303b40; padding:.8rem 1rem; margin:1rem 0 1.5rem; }
+.portfolio-context { border-left:4px solid var(--accent); background:#f3f8f9; color:#303b40; padding:.8rem 1rem; margin:1rem 0 1.5rem; }
 .project-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1rem; margin:1rem 0 2rem; }
 .project-card { display:flex; flex-direction:column; gap:.55rem; border:1px solid var(--line); border-top:3px solid var(--accent); background:#fff; padding:1.1rem; min-height:100%; }
 .project-card h2, .project-card h3 { margin:0; border:0; padding:0; font-size:1.1rem; }
@@ -387,3 +387,5 @@ header.site-masthead {
 
 
 .software-list{display:flex;flex-wrap:wrap;gap:.55rem;margin:1rem 0}.software-list span{border:1px solid #cdd9df;background:#f7fafc;border-radius:4px;padding:.4rem .7rem;color:#244d63;font-weight:600;font-size:.9rem}
+
+.download-panel{border:1px solid var(--line);padding:1rem;background:#f8fafb;margin:1rem 0}.download-panel a{display:inline-block;margin:.2rem .65rem .2rem 0}.figure-card img{max-width:100%;height:auto}

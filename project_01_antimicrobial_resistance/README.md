@@ -1,19 +1,23 @@
 # Projet 01 — Résistance aux antimicrobiens
 
-**Lien avec le parcours :** le CV mentionne la microbiologie et les antibiogrammes en laboratoire hospitalier. Cette fiche est un exercice de portefeuille distinct, exécuté sur des données synthétiques.
+Démonstration descriptive sur 100 observations synthétiques (cinq couples, 20 résultats par couple). Les valeurs illustrent le calcul et ne sont pas représentatives.
 
-## Objectif
+## Reproduire
 
-Décrire les catégories S/I/R par organisme et antibiotique en gardant visibles les effectifs et dénominateurs. Le jeu livré contient 100 observations synthétiques réparties sur cinq couples organisme–antibiotique (20 résultats par couple).
+Prérequis : Python 3, aucune dépendance externe. Depuis ce dossier :
 
-## Résultats publics
+```powershell
+python scripts/reproduce.py
+```
 
-- [Présentation détaillée](index.html)
-- [Résumé des proportions](results/amr_summary.csv)
-- [Effectifs S/I/R](results/result_counts.csv)
-- [Graphique des proportions](results/resistance_proportions.svg)
-- [Jeu de démonstration](results/amr_observations_synthetic_100.csv)
+Le script relit les observations incluses et reconstruit les résumés CSV et le graphique SVG.
 
-Dans les données de démonstration, la proportion R varie de 20 % à 55 % selon le couple étudié. Ces valeurs illustrent le calcul uniquement : elles ne décrivent ni les patients, ni le CHU-MEL, ni une population clinique.
+## Fichiers
+
+- [Fiche détaillée](index.html)
+- [Script Python](scripts/reproduce.py)
+- [Observations synthétiques](results/amr_observations_synthetic_100.csv)
+- [Résumé S/I/R](results/amr_summary.csv) · [effectifs par catégorie](results/result_counts.csv)
+- [Graphique SVG](results/resistance_proportions.svg)
 
 [English version](README_EN.md)

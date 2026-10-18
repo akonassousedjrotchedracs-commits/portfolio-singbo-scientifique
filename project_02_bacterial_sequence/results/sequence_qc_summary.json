@@ -1,9 +1,9 @@
 {
-  "fasta_file":"DEMO_SYNTHETIC_sequences.fasta",
-  "n_sequences":3,
-  "total_bp":191,
-  "mean_length_bp":63.67,
-  "mean_gc_percent":47.354,
-  "total_ambiguous_bases":8,
-  "note":"Simple exploratory QC; not species identification, assembly validation or formal genome annotation."
+  "fasta_file": "DEMO_SYNTHETIC_sequences.fasta",
+  "n_sequences": 3,
+  "total_bp": 191,
+  "mean_length_bp": 63.67,
+  "mean_gc_percent": 47.354,
+  "total_ambiguous_bases": 8,
+  "note": "Synthetic exploratory QC only; not species identification, assembly validation or formal annotation."
 }

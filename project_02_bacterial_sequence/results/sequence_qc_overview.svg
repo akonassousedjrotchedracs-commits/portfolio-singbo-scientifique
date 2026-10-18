@@ -1,27 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" role="img" aria-labelledby="title desc">
+<title id="title">Synthetic sequence quality-control overview</title>
+<desc id="desc">Lengths, GC fraction, and ambiguous base counts for three synthetic sequences.</desc>
 <rect width="100%" height="100%" fill="#f7fafc"/>
 <text x="42" y="48" font-family="Arial" font-size="25" font-weight="700" fill="#173b52">Contrôle qualité des séquences</text>
-<text x="42" y="78" font-family="Arial" font-size="14" fill="#587080">Données synthétiques · longueur en pb · contenu GC et bases ambiguës</text>
-<text x="42" y="137" font-family="Arial" font-size="16" font-weight="700" fill="#173b52">seq01</text>
+<text x="42" y="78" font-family="Arial" font-size="14" fill="#587080">Démonstration synthétique · longueur en pb · contenu GC · bases ambiguës</text>
+<text x="42" y="137" font-family="Arial" font-size="16" font-weight="700" fill="#173b52">séquence 01</text>
 <text x="42" y="161" font-family="Arial" font-size="13" fill="#587080">64 pb · 50.0% GC · 0 base(s) ambiguë(s)</text>
 <rect x="350" y="120" width="480" height="20" rx="10" fill="#e3edf1"/>
 <rect x="350" y="120" width="240.0" height="20" rx="10" fill="#0b8290"/>
 <text x="850" y="137" font-family="Arial" font-size="14" font-weight="700" fill="#173b52">50.0% GC</text>
 <rect x="350" y="151" width="4" height="8" rx="4" fill="#9ab7c0"/>
-<text x="410" y="161" font-family="Arial" font-size="12" fill="#587080">0 ambiguë(s)</text>
-<text x="42" y="223" font-family="Arial" font-size="16" font-weight="700" fill="#173b52">seq02</text>
+<text x="42" y="223" font-family="Arial" font-size="16" font-weight="700" fill="#173b52">séquence 02</text>
 <text x="42" y="247" font-family="Arial" font-size="13" fill="#587080">63 pb · 49.2% GC · 0 base(s) ambiguë(s)</text>
 <rect x="350" y="206" width="480" height="20" rx="10" fill="#e3edf1"/>
 <rect x="350" y="206" width="236.2" height="20" rx="10" fill="#0b8290"/>
 <text x="850" y="223" font-family="Arial" font-size="14" font-weight="700" fill="#173b52">49.2% GC</text>
 <rect x="350" y="237" width="4" height="8" rx="4" fill="#9ab7c0"/>
-<text x="410" y="247" font-family="Arial" font-size="12" fill="#587080">0 ambiguë(s)</text>
-<text x="42" y="309" font-family="Arial" font-size="16" font-weight="700" fill="#173b52">seq03</text>
+<text x="42" y="309" font-family="Arial" font-size="16" font-weight="700" fill="#173b52">séquence 03</text>
 <text x="42" y="333" font-family="Arial" font-size="13" fill="#587080">64 pb · 42.9% GC · 8 base(s) ambiguë(s)</text>
 <rect x="350" y="292" width="480" height="20" rx="10" fill="#e3edf1"/>
 <rect x="350" y="292" width="205.7" height="20" rx="10" fill="#0b8290"/>
 <text x="850" y="309" font-family="Arial" font-size="14" font-weight="700" fill="#173b52">42.9% GC</text>
 <rect x="350" y="323" width="56" height="8" rx="4" fill="#d18431"/>
-<text x="410" y="333" font-family="Arial" font-size="12" fill="#587080">8 ambiguë(s)</text>
-<text x="42" y="405" font-family="Arial" font-size="13" fill="#587080">Sommaire : 3 séquences · 191 pb · 8 bases ambiguës · moyenne GC 47,35%</text>
+<text x="42" y="405" font-family="Arial" font-size="13" fill="#587080">Sommaire : 3 séquences · 191 pb · 8 bases ambiguës · GC moyen 47.354%</text>
 </svg>

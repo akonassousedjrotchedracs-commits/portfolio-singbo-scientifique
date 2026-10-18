@@ -1,6 +1,6 @@
 # Project 03 — SQL Modelling and ETL Pipeline
 
-**Connection to the CV:** the CV lists Python and SQL for data manipulation and analysis. This is a reproducible demonstration on synthetic microbiological observations, not a tool reported as used at CHU-MEL.
+**Scientific context:** this demonstration uses Python and SQL on a synthetic dataset. This is a reproducible demonstration on synthetic microbiological observations, not a tool reported as used at CHU-MEL.
 
 ## Objective and method
 
@@ -8,7 +8,7 @@ Structure susceptibility observations, validate fields and S/I/R categories, ret
 
 ## Published run summary
 
-The manifest records `SUCCESS` for 12 synthetic rows, four isolate identifiers and two organisms. Six aggregation rows are published. Source metadata and retrieval date are unspecified; the SHA-256 fingerprint identifies the input file but does not validate its biological origin.
+The manifest records `SUCCESS` for 12 synthetic rows, four isolate identifiers and two organisms. Six aggregation rows are published. The manifest identifies the bundled synthetic fixture and its SHA-256 fingerprint; no clinical or epidemiological source is used.
 
 ## Outputs
 

@@ -1,21 +1,21 @@
 # Projet 03 — Modélisation SQL et pipeline ETL
 
-**Lien avec le parcours :** le CV mentionne Python et SQL pour la manipulation et l’analyse de données. Ce projet montre une démonstration reproductible sur des observations microbiologiques synthétiques ; il n’est pas présenté comme un outil utilisé au CHU-MEL.
+Pipeline reproductible pour valider des observations synthétiques S/I/R, charger un modèle relationnel SQLite en mémoire, conserver les anomalies et produire les agrégations avec SQL. Aucune source clinique n’est utilisée.
 
-## Objectif et méthode
+## Reproduire
 
-Structurer des observations d’antibiogramme, contrôler les champs et catégories S/I/R, conserver les anomalies, tracer le fichier d’entrée et produire des agrégations SQL.
+Prérequis : Python 3 (module SQLite inclus dans les distributions standard courantes), aucune dépendance Python externe. Depuis ce dossier :
 
-## Résumé de l’exécution publiée
+```powershell
+python scripts/run_pipeline.py
+```
 
-Le manifeste indique une exécution `SUCCESS` sur 12 lignes synthétiques, représentant quatre identifiants d’isolats et deux organismes. Six lignes d’agrégation sont publiées. Les métadonnées de source et de date de récupération sont indiquées comme non spécifiées ; l’empreinte SHA-256 identifie le fichier exécuté mais ne valide pas son origine biologique.
+## Fichiers
 
-## Résultats
-
-- [Présentation détaillée](index.html)
-- [Graphique du résumé SQL (SVG)](results/sql_amr_summary.svg)
-- [Résumé SQL](results/sql_amr_summary.csv)
-- [Anomalies de qualité](results/data_quality_issues.csv)
-- [Manifeste de provenance](results/provenance_manifest.json)
+- [Fiche détaillée](index.html)
+- [Pipeline Python](scripts/run_pipeline.py) · [requête SQL](sql/summary.sql)
+- [Données synthétiques](data/DEMO_SYNTHETIC_amr_sql.csv)
+- [Résumé CSV](results/sql_amr_summary.csv) · [audit CSV](results/data_quality_issues.csv)
+- [Manifeste](results/provenance_manifest.json) · [graphique SVG](results/sql_amr_summary.svg)
 
 [English version](README_EN.md)

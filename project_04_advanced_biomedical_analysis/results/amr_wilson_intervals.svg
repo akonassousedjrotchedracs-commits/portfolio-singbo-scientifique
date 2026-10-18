@@ -1,1 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 690" role="img" aria-labelledby="title desc"><title id="title">Resistance proportions with Wilson intervals</title><desc id="desc">Synthetic data; six organism-antibiotic pairs with two tests per pair. Wide intervals illustrate uncertainty.</desc><rect width="100%" height="100%" fill="#FFFFFF"/><text x="55" y="55" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#153B52" font-weight="bold" text-anchor="start">Resistance proportions with Wilson intervals</text><text x="55" y="88" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#59686E" font-weight="normal" text-anchor="start">Synthetic data; six organism-antibiotic pairs with two tests per pair. Wide intervals illustrate uncertainty.</text><line x1="500.0" y1="130" x2="500.0" y2="588" stroke="#D7E1E4" stroke-width="1"/><text x="500.0" y="120" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#59686E" font-weight="normal" text-anchor="middle">0%</text><line x1="703.8" y1="130" x2="703.8" y2="588" stroke="#D7E1E4" stroke-width="1"/><text x="703.75" y="120" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#59686E" font-weight="normal" text-anchor="middle">25%</text><line x1="907.5" y1="130" x2="907.5" y2="588" stroke="#D7E1E4" stroke-width="1"/><text x="907.5" y="120" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#59686E" font-weight="normal" text-anchor="middle">50%</text><line x1="1111.2" y1="130" x2="1111.2" y2="588" stroke="#D7E1E4" stroke-width="1"/><text x="1111.25" y="120" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#59686E" font-weight="normal" text-anchor="middle">75%</text><line x1="1315.0" y1="130" x2="1315.0" y2="588" stroke="#D7E1E4" stroke-width="1"/><text x="1315.0" y="120" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#59686E" font-weight="normal" text-anchor="middle">100%</text><text x="482" y="174" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#153B52" font-weight="normal" text-anchor="end">Escherichia coli · Ceftriaxone (n=2)</text><line x1="577.0" y1="168" x2="1238.0" y2="168" stroke="#087E8B" stroke-width="5" stroke-linecap="round"/><line x1="577.0" y1="158" x2="577.0" y2="178" stroke="#087E8B" stroke-width="3"/><line x1="1238.0" y1="158" x2="1238.0" y2="178" stroke="#087E8B" stroke-width="3"/><circle cx="907.5" cy="168" r="8" fill="#153B52"/><line x1="55" y1="201" x2="1345" y2="201" stroke="#D7E1E4" stroke-width="1"/><text x="482" y="249" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#153B52" font-weight="normal" text-anchor="end">Escherichia coli · Ciprofloxacin (n=2)</text><line x1="577.0" y1="243" x2="1238.0" y2="243" stroke="#087E8B" stroke-width="5" stroke-linecap="round"/><line x1="577.0" y1="233" x2="577.0" y2="253" stroke="#087E8B" stroke-width="3"/><line x1="1238.0" y1="233" x2="1238.0" y2="253" stroke="#087E8B" stroke-width="3"/><circle cx="907.5" cy="243" r="8" fill="#153B52"/><line x1="55" y1="276" x2="1345" y2="276" stroke="#D7E1E4" stroke-width="1"/><text x="482" y="324" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#153B52" font-weight="normal" text-anchor="end">Escherichia coli · Gentamicin (n=2)</text><line x1="500.0" y1="318" x2="1036.0" y2="318" stroke="#087E8B" stroke-width="5" stroke-linecap="round"/><line x1="500.0" y1="308" x2="500.0" y2="328" stroke="#087E8B" stroke-width="3"/><line x1="1036.0" y1="308" x2="1036.0" y2="328" stroke="#087E8B" stroke-width="3"/><circle cx="500.0" cy="318" r="8" fill="#153B52"/><line x1="55" y1="351" x2="1345" y2="351" stroke="#D7E1E4" stroke-width="1"/><text x="482" y="399" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#153B52" font-weight="normal" text-anchor="end">Klebsiella pneumoniae · Ceftriaxone (n=2)</text><line x1="577.0" y1="393" x2="1238.0" y2="393" stroke="#087E8B" stroke-width="5" stroke-linecap="round"/><line x1="577.0" y1="383" x2="577.0" y2="403" stroke="#087E8B" stroke-width="3"/><line x1="1238.0" y1="383" x2="1238.0" y2="403" stroke="#087E8B" stroke-width="3"/><circle cx="907.5" cy="393" r="8" fill="#153B52"/><line x1="55" y1="426" x2="1345" y2="426" stroke="#D7E1E4" stroke-width="1"/><text x="482" y="474" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#153B52" font-weight="normal" text-anchor="end">Klebsiella pneumoniae · Ciprofloxacin (n=2)</text><line x1="577.0" y1="468" x2="1238.0" y2="468" stroke="#087E8B" stroke-width="5" stroke-linecap="round"/><line x1="577.0" y1="458" x2="577.0" y2="478" stroke="#087E8B" stroke-width="3"/><line x1="1238.0" y1="458" x2="1238.0" y2="478" stroke="#087E8B" stroke-width="3"/><circle cx="907.5" cy="468" r="8" fill="#153B52"/><line x1="55" y1="501" x2="1345" y2="501" stroke="#D7E1E4" stroke-width="1"/><text x="482" y="549" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#153B52" font-weight="normal" text-anchor="end">Klebsiella pneumoniae · Gentamicin (n=2)</text><line x1="577.0" y1="543" x2="1238.0" y2="543" stroke="#087E8B" stroke-width="5" stroke-linecap="round"/><line x1="577.0" y1="533" x2="577.0" y2="553" stroke="#087E8B" stroke-width="3"/><line x1="1238.0" y1="533" x2="1238.0" y2="553" stroke="#087E8B" stroke-width="3"/><circle cx="907.5" cy="543" r="8" fill="#153B52"/><line x1="55" y1="576" x2="1345" y2="576" stroke="#D7E1E4" stroke-width="1"/><text x="907.5" y="616" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#59686E" font-weight="normal" text-anchor="middle">Resistance among tested records with 95% Wilson confidence interval</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 690" role="img" aria-labelledby="title desc">
+<title id="title">Wilson intervals for synthetic resistance proportions</title>
+<desc id="desc">Six synthetic organism-antibiotic groups with n equals two; wide 95 percent intervals.</desc>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="55" y="55" font-family="Arial" font-size="26" font-weight="700" fill="#153b52">Proportions de résistance et intervalles de Wilson</text>
+<text x="55" y="88" font-family="Arial" font-size="16" fill="#59686e">Données synthétiques · six couples · n=2 par couple · IC bilatéraux à 95 %</text>
+<line x1="500.0" y1="130" x2="500.0" y2="625" stroke="#d7e1e4"/>
+<text x="500.0" y="120" text-anchor="middle" font-family="Arial" font-size="14" fill="#59686e">0%</text>
+<line x1="703.8" y1="130" x2="703.8" y2="625" stroke="#d7e1e4"/>
+<text x="703.8" y="120" text-anchor="middle" font-family="Arial" font-size="14" fill="#59686e">25%</text>
+<line x1="907.5" y1="130" x2="907.5" y2="625" stroke="#d7e1e4"/>
+<text x="907.5" y="120" text-anchor="middle" font-family="Arial" font-size="14" fill="#59686e">50%</text>
+<line x1="1111.2" y1="130" x2="1111.2" y2="625" stroke="#d7e1e4"/>
+<text x="1111.2" y="120" text-anchor="middle" font-family="Arial" font-size="14" fill="#59686e">75%</text>
+<line x1="1315.0" y1="130" x2="1315.0" y2="625" stroke="#d7e1e4"/>
+<text x="1315.0" y="120" text-anchor="middle" font-family="Arial" font-size="14" fill="#59686e">100%</text>
+<text x="482" y="180" text-anchor="end" font-family="Arial" font-size="16" fill="#153b52">Escherichia coli · Ceftriaxone (n=2)</text>
+<line x1="577.0" y1="175" x2="1238.0" y2="175" stroke="#087e8b" stroke-width="5" stroke-linecap="round"/>
+<line x1="577.0" y1="165" x2="577.0" y2="185" stroke="#087e8b" stroke-width="3"/>
+<line x1="1238.0" y1="165" x2="1238.0" y2="185" stroke="#087e8b" stroke-width="3"/>
+<circle cx="907.5" cy="175" r="8" fill="#153b52"/>
+<line x1="55" y1="208" x2="1345" y2="208" stroke="#d7e1e4"/>
+<text x="482" y="255" text-anchor="end" font-family="Arial" font-size="16" fill="#153b52">Escherichia coli · Ciprofloxacin (n=2)</text>
+<line x1="577.0" y1="250" x2="1238.0" y2="250" stroke="#087e8b" stroke-width="5" stroke-linecap="round"/>
+<line x1="577.0" y1="240" x2="577.0" y2="260" stroke="#087e8b" stroke-width="3"/>
+<line x1="1238.0" y1="240" x2="1238.0" y2="260" stroke="#087e8b" stroke-width="3"/>
+<circle cx="907.5" cy="250" r="8" fill="#153b52"/>
+<line x1="55" y1="283" x2="1345" y2="283" stroke="#d7e1e4"/>
+<text x="482" y="330" text-anchor="end" font-family="Arial" font-size="16" fill="#153b52">Escherichia coli · Gentamicin (n=2)</text>
+<line x1="500.0" y1="325" x2="1036.0" y2="325" stroke="#087e8b" stroke-width="5" stroke-linecap="round"/>
+<line x1="500.0" y1="315" x2="500.0" y2="335" stroke="#087e8b" stroke-width="3"/>
+<line x1="1036.0" y1="315" x2="1036.0" y2="335" stroke="#087e8b" stroke-width="3"/>
+<circle cx="500.0" cy="325" r="8" fill="#153b52"/>
+<line x1="55" y1="358" x2="1345" y2="358" stroke="#d7e1e4"/>
+<text x="482" y="405" text-anchor="end" font-family="Arial" font-size="16" fill="#153b52">Klebsiella pneumoniae · Ceftriaxone (n=2)</text>
+<line x1="577.0" y1="400" x2="1238.0" y2="400" stroke="#087e8b" stroke-width="5" stroke-linecap="round"/>
+<line x1="577.0" y1="390" x2="577.0" y2="410" stroke="#087e8b" stroke-width="3"/>
+<line x1="1238.0" y1="390" x2="1238.0" y2="410" stroke="#087e8b" stroke-width="3"/>
+<circle cx="907.5" cy="400" r="8" fill="#153b52"/>
+<line x1="55" y1="433" x2="1345" y2="433" stroke="#d7e1e4"/>
+<text x="482" y="480" text-anchor="end" font-family="Arial" font-size="16" fill="#153b52">Klebsiella pneumoniae · Ciprofloxacin (n=2)</text>
+<line x1="577.0" y1="475" x2="1238.0" y2="475" stroke="#087e8b" stroke-width="5" stroke-linecap="round"/>
+<line x1="577.0" y1="465" x2="577.0" y2="485" stroke="#087e8b" stroke-width="3"/>
+<line x1="1238.0" y1="465" x2="1238.0" y2="485" stroke="#087e8b" stroke-width="3"/>
+<circle cx="907.5" cy="475" r="8" fill="#153b52"/>
+<line x1="55" y1="508" x2="1345" y2="508" stroke="#d7e1e4"/>
+<text x="482" y="555" text-anchor="end" font-family="Arial" font-size="16" fill="#153b52">Klebsiella pneumoniae · Gentamicin (n=2)</text>
+<line x1="577.0" y1="550" x2="1238.0" y2="550" stroke="#087e8b" stroke-width="5" stroke-linecap="round"/>
+<line x1="577.0" y1="540" x2="577.0" y2="560" stroke="#087e8b" stroke-width="3"/>
+<line x1="1238.0" y1="540" x2="1238.0" y2="560" stroke="#087e8b" stroke-width="3"/>
+<circle cx="907.5" cy="550" r="8" fill="#153b52"/>
+<line x1="55" y1="583" x2="1345" y2="583" stroke="#d7e1e4"/>
+<text x="907" y="660" text-anchor="middle" font-family="Arial" font-size="15" fill="#59686e">Proportion R avec bornes inférieure et supérieure de Wilson à 95 %</text>
+</svg>

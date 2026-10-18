@@ -1,6 +1,8 @@
 {
   "rows_received": 12,
+  "rows_curated": 12,
   "missing_by_column": {
+    "record_id": 0,
     "isolate_id": 0,
     "organism": 0,
     "antibiotic": 0,
@@ -10,5 +12,7 @@
     "source_accession": 0
   },
   "duplicate_isolate_antibiotic_rows": 0,
-  "invalid_result_values": []
+  "invalid_result_values": [],
+  "issue_rows": [],
+  "dataset_status": "synthetic demonstration; not clinical data"
 }

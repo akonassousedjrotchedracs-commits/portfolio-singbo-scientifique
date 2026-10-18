@@ -1,1 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc"><title id="title">Antimicrobial resistance proportions</title><desc id="desc">Five synthetic organism-antibiotic pairs; 20 records per pair; no clinical inference.</desc><rect width="100%" height="100%" fill="#FFFFFF"/><text x="55" y="55" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#153B52" font-weight="bold" text-anchor="start">Antimicrobial resistance proportions</text><text x="55" y="88" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#59686E" font-weight="normal" text-anchor="start">Five synthetic organism-antibiotic pairs; 20 records per pair; no clinical inference.</text><line x1="365.0" y1="125" x2="365.0" y2="515" stroke="#D7E1E4" stroke-width="1"/><text x="365.0" y="118" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#59686E" font-weight="normal" text-anchor="middle">0%</text><line x1="553.8" y1="125" x2="553.8" y2="515" stroke="#D7E1E4" stroke-width="1"/><text x="553.75" y="118" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#59686E" font-weight="normal" text-anchor="middle">25%</text><line x1="742.5" y1="125" x2="742.5" y2="515" stroke="#D7E1E4" stroke-width="1"/><text x="742.5" y="118" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#59686E" font-weight="normal" text-anchor="middle">50%</text><line x1="931.2" y1="125" x2="931.2" y2="515" stroke="#D7E1E4" stroke-width="1"/><text x="931.25" y="118" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#59686E" font-weight="normal" text-anchor="middle">75%</text><line x1="1120.0" y1="125" x2="1120.0" y2="515" stroke="#D7E1E4" stroke-width="1"/><text x="1120.0" y="118" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#59686E" font-weight="normal" text-anchor="middle">100%</text><text x="347" y="171" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#153B52" font-weight="normal" text-anchor="end">Escherichia coli · Ceftriaxone</text><rect x="365" y="150" width="755" height="30" rx="4" fill="#EEF6F7"/><rect x="365" y="150" width="226.5" height="30" rx="4" fill="#087E8B"/><text x="601.5" y="171" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#153B52" font-weight="bold" text-anchor="start">30% (n=20)</text><line x1="55" y1="199" x2="1145" y2="199" stroke="#D7E1E4" stroke-width="1"/><text x="347" y="248" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#153B52" font-weight="normal" text-anchor="end">Escherichia coli · Ciprofloxacin</text><rect x="365" y="227" width="755" height="30" rx="4" fill="#EEF6F7"/><rect x="365" y="227" width="415.2" height="30" rx="4" fill="#087E8B"/><text x="790.25" y="248" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#153B52" font-weight="bold" text-anchor="start">55% (n=20)</text><line x1="55" y1="276" x2="1145" y2="276" stroke="#D7E1E4" stroke-width="1"/><text x="347" y="325" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#153B52" font-weight="normal" text-anchor="end">Klebsiella pneumoniae · Ceftriaxone</text><rect x="365" y="304" width="755" height="30" rx="4" fill="#EEF6F7"/><rect x="365" y="304" width="302.0" height="30" rx="4" fill="#087E8B"/><text x="677.0" y="325" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#153B52" font-weight="bold" text-anchor="start">40% (n=20)</text><line x1="55" y1="353" x2="1145" y2="353" stroke="#D7E1E4" stroke-width="1"/><text x="347" y="402" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#153B52" font-weight="normal" text-anchor="end">Klebsiella pneumoniae · Ciprofloxacin</text><rect x="365" y="381" width="755" height="30" rx="4" fill="#EEF6F7"/><rect x="365" y="381" width="151.0" height="30" rx="4" fill="#087E8B"/><text x="526.0" y="402" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#153B52" font-weight="bold" text-anchor="start">20% (n=20)</text><line x1="55" y1="430" x2="1145" y2="430" stroke="#D7E1E4" stroke-width="1"/><text x="347" y="479" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#153B52" font-weight="normal" text-anchor="end">Staphylococcus aureus · Cefoxitin</text><rect x="365" y="458" width="755" height="30" rx="4" fill="#EEF6F7"/><rect x="365" y="458" width="264.2" height="30" rx="4" fill="#087E8B"/><text x="639.25" y="479" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#153B52" font-weight="bold" text-anchor="start">35% (n=20)</text><line x1="55" y1="507" x2="1145" y2="507" stroke="#D7E1E4" stroke-width="1"/><text x="742.5" y="538" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#59686E" font-weight="normal" text-anchor="middle">Resistant results (R) among tests in each synthetic pair</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+<title id="title">Synthetic antimicrobial resistance proportions</title>
+<desc id="desc">Five synthetic organism-antibiotic pairs with 20 records per pair.</desc>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="55" y="55" font-family="Arial" font-size="26" font-weight="700" fill="#153b52">Antimicrobial resistance proportions</text>
+<text x="55" y="88" font-family="Arial" font-size="16" fill="#59686e">Synthetic dataset · denominators shown · no clinical inference</text>
+<line x1="365.0" y1="125" x2="365.0" y2="515" stroke="#d7e1e4"/>
+<text x="365.0" y="118" text-anchor="middle" font-family="Arial" font-size="13" fill="#59686e">0%</text>
+<line x1="553.8" y1="125" x2="553.8" y2="515" stroke="#d7e1e4"/>
+<text x="553.8" y="118" text-anchor="middle" font-family="Arial" font-size="13" fill="#59686e">25%</text>
+<line x1="742.5" y1="125" x2="742.5" y2="515" stroke="#d7e1e4"/>
+<text x="742.5" y="118" text-anchor="middle" font-family="Arial" font-size="13" fill="#59686e">50%</text>
+<line x1="931.2" y1="125" x2="931.2" y2="515" stroke="#d7e1e4"/>
+<text x="931.2" y="118" text-anchor="middle" font-family="Arial" font-size="13" fill="#59686e">75%</text>
+<line x1="1120.0" y1="125" x2="1120.0" y2="515" stroke="#d7e1e4"/>
+<text x="1120.0" y="118" text-anchor="middle" font-family="Arial" font-size="13" fill="#59686e">100%</text>
+<text x="347" y="171" text-anchor="end" font-family="Arial" font-size="17" fill="#153b52">Escherichia coli · Ceftriaxone</text>
+<rect x="365" y="144" width="755" height="30" rx="4" fill="#eef6f7"/>
+<rect x="365" y="144" width="226.5" height="30" rx="4" fill="#087e8b"/>
+<text x="601.5" y="166" font-family="Arial" font-size="15" font-weight="700" fill="#153b52">30% (n=20)</text>
+<line x1="55" y1="193" x2="1145" y2="193" stroke="#d7e1e4"/>
+<text x="347" y="248" text-anchor="end" font-family="Arial" font-size="17" fill="#153b52">Escherichia coli · Ciprofloxacin</text>
+<rect x="365" y="221" width="755" height="30" rx="4" fill="#eef6f7"/>
+<rect x="365" y="221" width="415.2" height="30" rx="4" fill="#087e8b"/>
+<text x="790.2" y="243" font-family="Arial" font-size="15" font-weight="700" fill="#153b52">55% (n=20)</text>
+<line x1="55" y1="270" x2="1145" y2="270" stroke="#d7e1e4"/>
+<text x="347" y="325" text-anchor="end" font-family="Arial" font-size="17" fill="#153b52">Klebsiella pneumoniae · Ceftriaxone</text>
+<rect x="365" y="298" width="755" height="30" rx="4" fill="#eef6f7"/>
+<rect x="365" y="298" width="302.0" height="30" rx="4" fill="#087e8b"/>
+<text x="677.0" y="320" font-family="Arial" font-size="15" font-weight="700" fill="#153b52">40% (n=20)</text>
+<line x1="55" y1="347" x2="1145" y2="347" stroke="#d7e1e4"/>
+<text x="347" y="402" text-anchor="end" font-family="Arial" font-size="17" fill="#153b52">Klebsiella pneumoniae · Ciprofloxacin</text>
+<rect x="365" y="375" width="755" height="30" rx="4" fill="#eef6f7"/>
+<rect x="365" y="375" width="151.0" height="30" rx="4" fill="#087e8b"/>
+<text x="526.0" y="397" font-family="Arial" font-size="15" font-weight="700" fill="#153b52">20% (n=20)</text>
+<line x1="55" y1="424" x2="1145" y2="424" stroke="#d7e1e4"/>
+<text x="347" y="479" text-anchor="end" font-family="Arial" font-size="17" fill="#153b52">Staphylococcus aureus · Cefoxitin</text>
+<rect x="365" y="452" width="755" height="30" rx="4" fill="#eef6f7"/>
+<rect x="365" y="452" width="264.2" height="30" rx="4" fill="#087e8b"/>
+<text x="639.2" y="474" font-family="Arial" font-size="15" font-weight="700" fill="#153b52">35% (n=20)</text>
+<line x1="55" y1="501" x2="1145" y2="501" stroke="#d7e1e4"/>
+<text x="742" y="550" text-anchor="middle" font-family="Arial" font-size="15" fill="#59686e">Resistant results (R) / all classified tests in each synthetic pair</text>
+</svg>

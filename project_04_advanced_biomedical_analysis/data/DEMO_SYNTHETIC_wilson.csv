@@ -1,0 +1,13 @@
+record_id,isolate_id,organism,antibiotic,result,collection_year,country,source_accession
+D04-001,D04-001,Escherichia coli,Ceftriaxone,R,SYNTHETIC,SYNTHETIC,NOT_APPLICABLE
+D04-002,D04-002,Escherichia coli,Ceftriaxone,I,SYNTHETIC,SYNTHETIC,NOT_APPLICABLE
+D04-003,D04-003,Escherichia coli,Ciprofloxacin,R,SYNTHETIC,SYNTHETIC,NOT_APPLICABLE
+D04-004,D04-004,Escherichia coli,Ciprofloxacin,S,SYNTHETIC,SYNTHETIC,NOT_APPLICABLE
+D04-005,D04-005,Escherichia coli,Gentamicin,S,SYNTHETIC,SYNTHETIC,NOT_APPLICABLE
+D04-006,D04-006,Escherichia coli,Gentamicin,S,SYNTHETIC,SYNTHETIC,NOT_APPLICABLE
+D04-007,D04-007,Klebsiella pneumoniae,Ceftriaxone,R,SYNTHETIC,SYNTHETIC,NOT_APPLICABLE
+D04-008,D04-008,Klebsiella pneumoniae,Ceftriaxone,S,SYNTHETIC,SYNTHETIC,NOT_APPLICABLE
+D04-009,D04-009,Klebsiella pneumoniae,Ciprofloxacin,R,SYNTHETIC,SYNTHETIC,NOT_APPLICABLE
+D04-010,D04-010,Klebsiella pneumoniae,Ciprofloxacin,S,SYNTHETIC,SYNTHETIC,NOT_APPLICABLE
+D04-011,D04-011,Klebsiella pneumoniae,Gentamicin,R,SYNTHETIC,SYNTHETIC,NOT_APPLICABLE
+D04-012,D04-012,Klebsiella pneumoniae,Gentamicin,I,SYNTHETIC,SYNTHETIC,NOT_APPLICABLE
