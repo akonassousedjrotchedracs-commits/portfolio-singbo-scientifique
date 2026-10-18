@@ -7,7 +7,7 @@
 | Projet 1 — analyse AMR | `DEMO_SYNTHETIC_amr.csv` | Terminé sans erreur ; sorties CSV et graphique créées |
 | Projet 2 — QC séquences | `DEMO_SYNTHETIC_sequences.fasta` | Terminé sans erreur ; rapport CSV/JSON créé |
 | Projet 3 — requêtes SQL | `DEMO_SYNTHETIC_amr_sql.csv` | Terminé sans erreur ; base et résumé créés |
-| Projet 3 — ETL | `DEMO_SYNTHETIC_amr_sql.csv` | Statut SUCCESS ; 12 lignes reçues/curées, 4 identifiants, 2 espèces |
+| Projet 3 — ETL | `DEMO_SYNTHETIC_amr_sql.csv` | Statut SUCCESS ; 191 lignes reçues/curées, 191 identifiants générés, 2 espèces |
 | Projet 4 — analyse avancée | `DEMO_SYNTHETIC_amr_sql.csv` | Terminé sans erreur ; audit, estimations et figure créés |
 
 ## Tests de robustesse à effectuer si les scripts sont modifiés

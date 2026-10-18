@@ -8,7 +8,7 @@ Calculate descriptive resistance proportions and 95% Wilson intervals after audi
 
 ## Results and limitations
 
-For a proportion of 1/2, the 95% Wilson interval is approximately 9.45–90.55%. For 0/2, it ranges from 0 to about 65.76%. These wide intervals illustrate uncertainty with very small denominators; the data do not support clinical inference.
+For a proportion of 1/2, the 95% Wilson interval is approximately 9.45–90.55%. For 0/2, it ranges from 0 to about 65.76%. These wide intervals illustrate uncertainty with very synthetic demonstration groups; the data do not support clinical inference.
 
 - [Detailed case page (French)](index.html)
 - [Estimates and intervals](results/amr_estimates_with_wilson_ci.csv)

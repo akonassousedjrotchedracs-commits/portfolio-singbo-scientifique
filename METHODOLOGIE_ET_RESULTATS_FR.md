@@ -32,7 +32,7 @@ Ce document résume les méthodes décrites dans les fiches publiques et les ré
 
 **Étapes exécutées.** Lecture de CSV normalisé ; contrôle de schéma ; normalisation des espaces et de la casse ; contrôle des valeurs obligatoires, catégories S/I/R et doublons ; calcul d’empreinte SHA-256 ; génération de données curées, journal de qualité, manifeste de provenance et résumés SQL.
 
-**Résultats observés.** Le CSV synthétique utilisé par le pipeline ETL contient 12 lignes, 4 identifiants d’isolat et 2 espèces. L’exécution s’est terminée avec le statut `SUCCESS` et a généré la base et les rapports. Les requêtes sont reproductibles sur le fichier fourni.
+**Résultats observés.** Le CSV synthétique utilisé par le pipeline ETL contient 191 lignes synthétiques, 191 identifiants générés et 2 espèces. L’exécution s’est terminée avec le statut `SUCCESS` et a généré les agrégats SQL, le classement par fonction fenêtre, l’audit de couverture et les rapports. Les requêtes sont reproductibles sur le fichier fourni.
 
 **Interprétation.** L’empreinte permet de reconnaître le fichier utilisé lors d’une exécution, mais ne certifie pas sa provenance biologique. Le moteur testé est SQLite ; une migration vers PostgreSQL, MySQL ou DuckDB demanderait une adaptation et une nouvelle série de tests. La présence d’une dépendance DuckDB dans `requirements.txt` ne signifie pas que le chargeur vérifié a utilisé DuckDB : la sortie d’exécution indique SQLite.
 

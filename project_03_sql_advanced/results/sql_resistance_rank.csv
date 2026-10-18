@@ -1,0 +1,7 @@
+organism,antibiotic,n,resistant_fraction,resistance_rank
+Escherichia coli,Ceftriaxone,32,0.5,1
+Escherichia coli,Ciprofloxacin,32,0.5,1
+Escherichia coli,Gentamicin,32,0.0,3
+Klebsiella pneumoniae,Ceftriaxone,32,0.5,1
+Klebsiella pneumoniae,Ciprofloxacin,32,0.5,1
+Klebsiella pneumoniae,Gentamicin,31,0.4838709677419355,3

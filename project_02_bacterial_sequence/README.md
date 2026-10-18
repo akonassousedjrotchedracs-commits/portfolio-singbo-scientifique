@@ -18,3 +18,6 @@ python scripts/reproduce.py
 - [Graphique SVG](results/sequence_qc_overview.svg)
 
 [English version](README_EN.md)
+
+
+La page comporte aussi un exemple FASTQ distinct, entièrement synthétique, pour calculer des scores Phred+33/Q20/Q30 par lecture et par cycle. Il ne s’agit pas de données de séquençage réelles. Reproduction : `python scripts/reproduce_fastq_qc.py`.

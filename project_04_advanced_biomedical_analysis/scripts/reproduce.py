@@ -28,10 +28,10 @@ def write_svg(rows: list[dict[str, object]], path: Path) -> None:
     x0, width = 500, 815
     out = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 690" role="img" aria-labelledby="title desc">',
            '<title id="title">Wilson intervals for synthetic resistance proportions</title>',
-           '<desc id="desc">Six synthetic organism-antibiotic groups with n equals two; wide 95 percent intervals.</desc>',
+           '<desc id="desc">Six synthetic organism-antibiotic groups with n equals fifty; Wilson 95 percent intervals.</desc>',
            '<rect width="100%" height="100%" fill="#fff"/>',
            '<text x="55" y="55" font-family="Arial" font-size="26" font-weight="700" fill="#153b52">Proportions de résistance et intervalles de Wilson</text>',
-           '<text x="55" y="88" font-family="Arial" font-size="16" fill="#59686e">Données synthétiques · six couples · n=2 par couple · IC bilatéraux à 95 %</text>']
+           '<text x="55" y="88" font-family="Arial" font-size="16" fill="#59686e">Données synthétiques · six couples · n=50 par couple · IC bilatéraux à 95 %</text>']
     for tick in (0, 25, 50, 75, 100):
         x = x0 + width * tick / 100
         out += [f'<line x1="{x:.1f}" y1="130" x2="{x:.1f}" y2="625" stroke="#d7e1e4"/>',

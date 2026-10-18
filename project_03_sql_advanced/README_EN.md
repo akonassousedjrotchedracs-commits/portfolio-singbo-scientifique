@@ -8,7 +8,7 @@ Structure susceptibility observations, validate fields and S/I/R categories, ret
 
 ## Published run summary
 
-The manifest records `SUCCESS` for 12 synthetic rows, four isolate identifiers and two organisms. Six aggregation rows are published. The manifest identifies the bundled synthetic fixture and its SHA-256 fingerprint; no clinical or epidemiological source is used.
+The manifest records `SUCCESS` for 191 synthetic rows, 191 generated identifiers and two organisms. Six aggregation rows are published. The manifest identifies the bundled synthetic fixture and its SHA-256 fingerprint; no clinical or epidemiological source is used.
 
 ## Outputs
 

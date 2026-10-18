@@ -26,10 +26,10 @@ def write_svg(path: Path, rows: list[dict[str, object]]) -> None:
     width, height, x0, plot = 1100, 180 + 76 * len(rows), 440, 560
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" role="img" aria-labelledby="t d">',
            '<title id="t">Synthetic antimicrobial resistance summary from SQLite</title>',
-           '<desc id="d">SQL aggregates for synthetic organism-antibiotic groups; two tests per group.</desc>',
+           '<desc id="d">SQL aggregates for synthetic organism-antibiotic groups; 31–32 synthetic tests per group.</desc>',
            '<rect width="100%" height="100%" fill="#fff"/>',
            '<text x="45" y="48" font-family="Arial" font-size="25" font-weight="700" fill="#153b52">SQL summary · synthetic observations</text>',
-           '<text x="45" y="78" font-family="Arial" font-size="15" fill="#59686e">Resistant results (R) / all classified tests · n=2 per pair</text>']
+           '<text x="45" y="78" font-family="Arial" font-size="15" fill="#59686e">Resistant results (R) / all classified tests · n=31–32 per pair</text>']
     for tick in (0,25,50,75,100):
         x=x0+plot*tick/100
         out.extend([f'<line x1="{x:.1f}" y1="110" x2="{x:.1f}" y2="{height-42}" stroke="#d7e1e4"/>',f'<text x="{x:.1f}" y="105" text-anchor="middle" font-family="Arial" font-size="12" fill="#59686e">{tick}%</text>'])
@@ -95,6 +95,19 @@ def main() -> None:
     args.output_dir.mkdir(parents=True, exist_ok=True)
     write_csv(args.output_dir / "sql_amr_summary.csv", ["organism", "antibiotic", "n_tested", "resistant_n", "intermediate_n", "susceptible_n", "resistant_pct"], summary_rows)
     write_csv(args.output_dir / "data_quality_issues.csv", ["row_number", "issue", "value", "isolate_id", "antibiotic"], issues)
+    advanced_text = (ROOT / "sql" / "advanced_queries.sql").read_text(encoding="utf-8")
+    statements, buffer = [], ""
+    for line in advanced_text.splitlines():
+        buffer += line + "\n"
+        if sqlite3.complete_statement(buffer):
+            if buffer.strip(): statements.append(buffer)
+            buffer = ""
+    if buffer.strip(): raise SystemExit("Advanced SQL has an incomplete final statement")
+    if len(statements) != 3: raise SystemExit(f"Expected three advanced SQL statements, got {len(statements)}")
+    for query, filename in ((statements[1], "sql_resistance_rank.csv"), (statements[2], "sql_coverage_audit.csv")):
+        cursor = conn.execute(query)
+        output_rows = [dict(zip([col[0] for col in cursor.description], row)) for row in cursor.fetchall()]
+        write_csv(args.output_dir / filename, list(output_rows[0]) if output_rows else [col[0] for col in cursor.description], output_rows)
     write_svg(args.output_dir / "sql_amr_summary.svg", summary_rows)
     manifest = {"pipeline": "AMR CSV ETL", "status": "SUCCESS", "input_filename": args.input.relative_to(ROOT).as_posix(),
                 "input_sha256": hashlib.sha256(raw_bytes).hexdigest(), "rows_received": len(records), "rows_curated": inserted,

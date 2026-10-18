@@ -1,0 +1,7 @@
+organism,antibiotic,observed_n
+Escherichia coli,Ceftriaxone,32
+Escherichia coli,Ciprofloxacin,32
+Escherichia coli,Gentamicin,32
+Klebsiella pneumoniae,Ceftriaxone,32
+Klebsiella pneumoniae,Ciprofloxacin,32
+Klebsiella pneumoniae,Gentamicin,31

@@ -7,7 +7,7 @@
 | Project 1 — AMR analysis | `DEMO_SYNTHETIC_amr.csv` | Completed; CSV outputs and plot created |
 | Project 2 — sequence QC | `DEMO_SYNTHETIC_sequences.fasta` | Completed; CSV/JSON report created |
 | Project 3 — SQL queries | `DEMO_SYNTHETIC_amr_sql.csv` | Completed; database and summary created |
-| Project 3 — ETL | `DEMO_SYNTHETIC_amr_sql.csv` | SUCCESS; 12 rows received/curated, 4 identifiers, 2 species |
+| Project 3 — ETL | `DEMO_SYNTHETIC_amr_sql.csv` | SUCCESS; 191 rows received/curated, 191 generated identifiers, 2 species |
 | Project 4 — advanced analysis | `DEMO_SYNTHETIC_amr_sql.csv` | Completed; audit, estimates and plot created |
 
 ## Robustness tests to run after code changes

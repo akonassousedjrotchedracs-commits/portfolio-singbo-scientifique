@@ -1,0 +1,7 @@
+{
+  "records": 3,
+  "bases": 60,
+  "encoding": "Phred+33",
+  "status": "synthetic training fixture; not sequencer output",
+  "limitations": "No adapter detection, instrument calibration, contamination screening, or biological inference."
+}

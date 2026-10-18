@@ -1,7 +1,7 @@
 organism,antibiotic,n_tested,resistant_n,intermediate_n,susceptible_n,resistant_pct,wilson95_low_pct,wilson95_high_pct
-Escherichia coli,Ceftriaxone,2,1,1,0,50.0,9.452865480086615,90.54713451991339
-Escherichia coli,Ciprofloxacin,2,1,0,1,50.0,9.452865480086615,90.54713451991339
-Escherichia coli,Gentamicin,2,0,0,2,0.0,0.0,65.76280471103807
-Klebsiella pneumoniae,Ceftriaxone,2,1,0,1,50.0,9.452865480086615,90.54713451991339
-Klebsiella pneumoniae,Ciprofloxacin,2,1,0,1,50.0,9.452865480086615,90.54713451991339
-Klebsiella pneumoniae,Gentamicin,2,1,1,0,50.0,9.452865480086615,90.54713451991339
+Escherichia coli,Ceftriaxone,50,16,5,29,32.0,20.758044093999402,45.810557136276074
+Escherichia coli,Ciprofloxacin,50,24,5,21,48.0,34.79691239550571,61.48848774119157
+Escherichia coli,Gentamicin,50,12,5,33,24.0,14.297252401872207,37.41294937519236
+Klebsiella pneumoniae,Ceftriaxone,50,30,5,15,60.0,46.18118910275937,72.39181021375425
+Klebsiella pneumoniae,Ciprofloxacin,50,8,5,37,16.0,8.337321362087696,28.51448096176598
+Klebsiella pneumoniae,Gentamicin,50,20,5,25,40.0,27.608189786245752,53.81881089724063

@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 636" role="img" aria-labelledby="t d">
 <title id="t">Synthetic antimicrobial resistance summary from SQLite</title>
-<desc id="d">SQL aggregates for synthetic organism-antibiotic groups; two tests per group.</desc>
+<desc id="d">SQL aggregates for synthetic organism-antibiotic groups; 31–32 synthetic tests per group.</desc>
 <rect width="100%" height="100%" fill="#fff"/>
 <text x="45" y="48" font-family="Arial" font-size="25" font-weight="700" fill="#153b52">SQL summary · synthetic observations</text>
-<text x="45" y="78" font-family="Arial" font-size="15" fill="#59686e">Resistant results (R) / all classified tests · n=2 per pair</text>
+<text x="45" y="78" font-family="Arial" font-size="15" fill="#59686e">Resistant results (R) / all classified tests · n=31–32 per pair</text>
 <line x1="440.0" y1="110" x2="440.0" y2="594" stroke="#d7e1e4"/>
 <text x="440.0" y="105" text-anchor="middle" font-family="Arial" font-size="12" fill="#59686e">0%</text>
 <line x1="580.0" y1="110" x2="580.0" y2="594" stroke="#d7e1e4"/>
@@ -17,25 +17,25 @@
 <text x="425" y="152" text-anchor="end" font-family="Arial" font-size="15" fill="#153b52">Escherichia coli - Ceftriaxone</text>
 <rect x="440" y="130" width="560" height="25" rx="3" fill="#eef6f7"/>
 <rect x="440" y="130" width="280.0" height="25" rx="3" fill="#087e8b"/>
-<text x="728.0" y="148" font-family="Arial" font-size="13" font-weight="700" fill="#153b52">50% (n=2)</text>
+<text x="728.0" y="148" font-family="Arial" font-size="13" font-weight="700" fill="#153b52">50% (n=32)</text>
 <text x="425" y="228" text-anchor="end" font-family="Arial" font-size="15" fill="#153b52">Escherichia coli - Ciprofloxacin</text>
 <rect x="440" y="206" width="560" height="25" rx="3" fill="#eef6f7"/>
 <rect x="440" y="206" width="280.0" height="25" rx="3" fill="#087e8b"/>
-<text x="728.0" y="224" font-family="Arial" font-size="13" font-weight="700" fill="#153b52">50% (n=2)</text>
+<text x="728.0" y="224" font-family="Arial" font-size="13" font-weight="700" fill="#153b52">50% (n=32)</text>
 <text x="425" y="304" text-anchor="end" font-family="Arial" font-size="15" fill="#153b52">Escherichia coli - Gentamicin</text>
 <rect x="440" y="282" width="560" height="25" rx="3" fill="#eef6f7"/>
 <rect x="440" y="282" width="0.0" height="25" rx="3" fill="#087e8b"/>
-<text x="448.0" y="300" font-family="Arial" font-size="13" font-weight="700" fill="#153b52">0% (n=2)</text>
+<text x="448.0" y="300" font-family="Arial" font-size="13" font-weight="700" fill="#153b52">0% (n=32)</text>
 <text x="425" y="380" text-anchor="end" font-family="Arial" font-size="15" fill="#153b52">Klebsiella pneumoniae - Ceftriaxone</text>
 <rect x="440" y="358" width="560" height="25" rx="3" fill="#eef6f7"/>
 <rect x="440" y="358" width="280.0" height="25" rx="3" fill="#087e8b"/>
-<text x="728.0" y="376" font-family="Arial" font-size="13" font-weight="700" fill="#153b52">50% (n=2)</text>
+<text x="728.0" y="376" font-family="Arial" font-size="13" font-weight="700" fill="#153b52">50% (n=32)</text>
 <text x="425" y="456" text-anchor="end" font-family="Arial" font-size="15" fill="#153b52">Klebsiella pneumoniae - Ciprofloxacin</text>
 <rect x="440" y="434" width="560" height="25" rx="3" fill="#eef6f7"/>
 <rect x="440" y="434" width="280.0" height="25" rx="3" fill="#087e8b"/>
-<text x="728.0" y="452" font-family="Arial" font-size="13" font-weight="700" fill="#153b52">50% (n=2)</text>
+<text x="728.0" y="452" font-family="Arial" font-size="13" font-weight="700" fill="#153b52">50% (n=32)</text>
 <text x="425" y="532" text-anchor="end" font-family="Arial" font-size="15" fill="#153b52">Klebsiella pneumoniae - Gentamicin</text>
 <rect x="440" y="510" width="560" height="25" rx="3" fill="#eef6f7"/>
-<rect x="440" y="510" width="280.0" height="25" rx="3" fill="#087e8b"/>
-<text x="728.0" y="528" font-family="Arial" font-size="13" font-weight="700" fill="#153b52">50% (n=2)</text>
+<rect x="440" y="510" width="271.0" height="25" rx="3" fill="#087e8b"/>
+<text x="719.0" y="528" font-family="Arial" font-size="13" font-weight="700" fill="#153b52">48.4% (n=31)</text>
 </svg>

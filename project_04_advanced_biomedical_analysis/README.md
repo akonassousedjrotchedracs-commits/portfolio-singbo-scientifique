@@ -1,6 +1,6 @@
 # Projet 04 — Analyse statistique biomédicale
 
-Calcul de proportions descriptives et d’intervalles de Wilson à 95 % sur six groupes synthétiques (n=2 chacun). Les intervalles très larges illustrent l’incertitude des petits effectifs ; aucune interprétation clinique n’est possible.
+Calcul de proportions descriptives et d’intervalles de Wilson à 95 % sur six groupes synthétiques (n=50 chacun). Les intervalles très larges illustrent l’incertitude des effectifs synthétiques de démonstration ; aucune interprétation clinique n’est possible.
 
 ## Reproduire
 

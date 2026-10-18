@@ -2,10 +2,10 @@
   "pipeline": "AMR CSV ETL",
   "status": "SUCCESS",
   "input_filename": "data/DEMO_SYNTHETIC_amr_sql.csv",
-  "input_sha256": "8c859cd07675c35463058306a9961e29b20d417308c199cff3c9a7396a11c5b6",
-  "rows_received": 12,
-  "rows_curated": 12,
-  "unique_isolates": 4,
+  "input_sha256": "d72a3f8308997f1d6915fccf0aeae9af7cc505602ffa3785e7e996a078b531ab",
+  "rows_received": 191,
+  "rows_curated": 191,
+  "unique_isolates": 191,
   "organisms": [
     "Escherichia coli",
     "Klebsiella pneumoniae"
@@ -13,7 +13,7 @@
   "source_url": "NOT_APPLICABLE_SYNTHETIC_FIXTURE",
   "source_query": "Synthetic fixture bundled with this project",
   "retrieval_date": null,
-  "run_utc": "2026-10-18T00:57:46.390470+00:00",
+  "run_utc": "2026-10-18T01:22:36.180775+00:00",
   "database_status": "SQLite in-memory; Python standard library",
   "data_provenance_note": "All input observations are synthetic and do not originate from patients, hospitals, or a biological surveillance source."
 }

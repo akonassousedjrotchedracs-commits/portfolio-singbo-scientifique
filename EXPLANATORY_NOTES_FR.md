@@ -46,7 +46,7 @@ Pour une proportion binomiale, l’intervalle de Wilson se comporte généraleme
 
 ## 6. Résultats de la démonstration fournie
 
-Deux jeux de démonstration distincts sont publiés : le projet 01 contient 100 observations synthétiques sur cinq couples organisme–antibiotique ; le projet 03 contient 12 observations synthétiques, quatre identifiants d’isolats et deux organismes. Leurs tableaux de résultats sont placés dans les dossiers `project_01_antimicrobial_resistance/results/` et `project_03_sql_advanced/results/`. Aucun des deux jeux ne constitue une découverte biologique ni un résultat hospitalier.
+Deux jeux de démonstration distincts sont publiés : le projet 01 contient 100 observations synthétiques sur cinq couples organisme–antibiotique ; le projet 03 contient 191 observations synthétiques, 191 identifiants générés et deux organismes. Leurs tableaux de résultats sont placés dans les dossiers `project_01_antimicrobial_resistance/results/` et `project_03_sql_advanced/results/`. Aucun des deux jeux ne constitue une découverte biologique ni un résultat hospitalier.
 
 ## 7. Données publiques : ce qui doit être vérifié
 

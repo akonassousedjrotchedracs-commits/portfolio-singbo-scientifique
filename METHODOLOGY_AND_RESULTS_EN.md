@@ -32,7 +32,7 @@ This document summarizes the methods described in the public project pages and t
 
 **Executed steps.** Read normalized CSV; validate schema; trim and uppercase categories; check required values, S/I/R categories and duplicates; compute SHA-256; generate curated data, quality log, provenance manifest and SQL summaries.
 
-**Fixture results.** The synthetic CSV used by ETL contains 12 rows, 4 isolate identifiers and 2 species. The run completed with `SUCCESS` and generated the database and reports. Queries can be reproduced from the supplied input.
+**Fixture results.** The synthetic CSV used by ETL contains 191 synthetic rows, 191 generated identifiers and 2 species. The run completed with `SUCCESS` and generated SQL aggregates, window-function ranks, a coverage audit and reports. Queries can be reproduced from the supplied input.
 
 **Interpretation.** A hash identifies the file used in a run but does not certify biological provenance. SQLite was the tested engine; migration to PostgreSQL, MySQL or DuckDB would require adaptation and a new test run. A DuckDB dependency in `requirements.txt` does not mean the verified loader used DuckDB: the execution output states SQLite.
 

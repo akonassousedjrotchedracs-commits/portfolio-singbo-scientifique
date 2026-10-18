@@ -1,6 +1,6 @@
 {
-  "rows_received": 12,
-  "rows_curated": 12,
+  "rows_received": 300,
+  "rows_curated": 300,
   "missing_by_column": {
     "record_id": 0,
     "isolate_id": 0,

@@ -18,3 +18,6 @@ The dataset contains three synthetic sequences totalling 191 bases, with eight a
 - [Summary JSON](results/sequence_qc_summary.json)
 
 [Version française](README.md)
+
+
+The page also contains a separate, fully synthetic FASTQ example for Phred+33/Q20/Q30 metrics by read and cycle. It is not real sequencer data. Reproduce with `python scripts/reproduce_fastq_qc.py`.

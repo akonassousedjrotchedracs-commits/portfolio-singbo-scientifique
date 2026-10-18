@@ -1,0 +1,4 @@
+read_id,length_bp,gc_percent,ambiguous_bases,mean_phred,q20_bases,q20_percent,q30_bases,q30_percent
+DEMO_READ_01,20,55.0,0,40.0,20,100.0,20,100.0
+DEMO_READ_02,20,50.0,0,20.0,20,100.0,0,0.0
+DEMO_READ_03,20,40.0,4,40.0,20,100.0,20,100.0
