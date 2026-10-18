@@ -1,17 +1,13 @@
-# Profil scientifique — AKONASSOU SEDJRO TCHÉDRAC SINGBO
+# Profil scientifique — Akonassou Sedjro Tchédrac Singbo
 
-**Inspecteur d’Actions Sanitaires en Analyse Biomédicale | Technicien de laboratoire**  
-Biotechnologie médicale · microbiologie clinique · recherche biomédicale · analyse de données
+Technicien de laboratoire et Inspecteur d’Actions Sanitaires en Analyse Biomédicale. Biotechnologie médicale · laboratoire hospitalier · recherche biomédicale · analyse de données.
 
-Je suis titulaire d’une licence en biotechnologie médicale, mention Bien, obtenue à l’ENSBBA–UNSTIM à Dassa-Zoumé, au Bénin. Depuis juillet 2026, j’exerce au CHU de la Mère et de l’Enfant (CHU-MEL), à Cotonou. Mes activités couvrent l’hématologie, la biochimie clinique, la sérologie/immunologie, la microbiologie et la parasitologie.
+Depuis juillet 2026, je travaille au CHU de la Mère et de l’Enfant (CHU-MEL), à Cotonou. Mon activité s’inscrit en hématologie, biochimie clinique, sérologie/immunologie, microbiologie et parasitologie. Les techniques de mon parcours comprennent le frottis sanguin, l’ELISA, l’immunoturbidimétrie, la culture bactérienne, la coloration de Gram et les antibiogrammes.
 
-Mon expérience comprend également le contrôle qualité, la validation technique des résultats, la biosécurité, la gestion des données de laboratoire et la réalisation de techniques telles que l’ELISA, l’immunoturbidimétrie, la culture bactérienne, la coloration de Gram et les antibiogrammes.
+Mes principes de travail sont la qualité analytique, la traçabilité, la biosécurité, la confidentialité et la communication prudente des limites.
 
-Mon mémoire de licence, soutenu au CHUD Ouémé-Plateau, porte sur l’évaluation statistique des biomarqueurs inflammatoires dans le dysfonctionnement prostatique. Il concerne 81 patients et les biomarqueurs CRP, PSA, leucocytes et cytokines. J’ai obtenu 17,67/20 pour ce mémoire et 15,87/20 de moyenne finale en licence.
+Mon mémoire de licence en Biotechnologie Médicale (ENSBBA–UNSTIM, 2021–2024, Mention Bien) étudie 81 patients au CHUD Ouémé-Plateau à partir de données agrégées sur la CRP, le PSA, les leucocytes et des cytokines. Note du mémoire : 17,67/20; moyenne finale : 15,87/20. Sans données individuelles anonymisées, aucun p exact, intervalle ou coefficient de corrélation supplémentaire ne peut être recalculé.
 
-Je développe aussi des compétences en Python, SQL, Excel avancé, Power BI, biostatistique et visualisation de données. Je parle français (langue maternelle) et anglais (niveau B2).
+Outils : Python, SQL/SQLite, Excel, Power BI, biostatistique et visualisation. Français (langue maternelle), anglais (B2).
 
-**Lieu :** Cotonou, Bénin.  
-**Contact professionnel :** [akonassousedjrotchedracs@gmail.com](mailto:akonassousedjrotchedracs@gmail.com)
-
-[English profile](PROFILE_EN.md)
+Cotonou, Bénin · [Contact](mailto:akonassousedjrotchedracs@gmail.com)

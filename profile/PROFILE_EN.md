@@ -1,17 +1,13 @@
-# Scientific Profile — AKONASSOU SEDJRO TCHÉDRAC SINGBO
+# Scientific profile — Akonassou Sedjro Tchédrac Singbo
 
-**Health Actions Inspector in Biomedical Analysis | Laboratory Technician**  
-Medical biotechnology · clinical microbiology · biomedical research · data analysis
+Laboratory technician and Health Actions Inspector in Biomedical Analysis. Medical biotechnology · hospital laboratory · biomedical research · data analysis.
 
-I hold a Bachelor's degree in Medical Biotechnology, awarded with Honours, from ENSBBA–UNSTIM in Dassa-Zoumé, Benin. Since July 2026, I have worked at the Mother and Child University Hospital (CHU-MEL) in Cotonou. My work covers haematology, clinical biochemistry, serology/immunology, microbiology and parasitology.
+Since July 2026, I have worked at the Mother and Child University Hospital (CHU-MEL) in Cotonou. My practice spans haematology, clinical biochemistry, serology/immunology, microbiology and parasitology. Techniques in my background include blood smears, ELISA, immunoturbidimetry, bacterial culture, Gram staining and antimicrobial susceptibility testing.
 
-My experience also includes quality control, technical validation of results, biosafety, laboratory data management, and techniques such as ELISA, immunoturbidimetry, bacterial culture, Gram staining and antibiotic susceptibility testing.
+My work is guided by analytical quality, traceability, biosafety, confidentiality and careful communication of limitations.
 
-My undergraduate thesis at CHUD Ouémé-Plateau examined the statistical evaluation of inflammatory biomarkers in prostatic dysfunction. It covered 81 patients and CRP, PSA, leucocytes and cytokines. I earned 17.67/20 for the thesis and a final degree average of 15.87/20.
+My Medical Biotechnology undergraduate thesis (ENSBBA–UNSTIM, 2021–2024, Honours) covers aggregate results for 81 patients at CHUD Ouémé-Plateau, including CRP, PSA, leucocytes and cytokines. Thesis mark: 17.67/20; final average: 15.87/20. Without anonymized individual-level data, no additional exact p-value, interval or correlation coefficient can be recalculated.
 
-I am also developing skills in Python, SQL, advanced Excel, Power BI, biostatistics and data visualization. I speak French (native) and English (B2).
+Tools and methods: Python, SQL/SQLite, Excel, Power BI, biostatistics and data visualization. French (native), English (B2).
 
-**Location:** Cotonou, Benin.  
-**Professional contact:** [akonassousedjrotchedracs@gmail.com](mailto:akonassousedjrotchedracs@gmail.com)
-
-[Profil en français](PROFILE.md)
+Cotonou, Benin · [Contact](mailto:akonassousedjrotchedracs@gmail.com)
