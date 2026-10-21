@@ -27,9 +27,9 @@ Tous les scripts s’appuient sur Python standard; SQLite est utilisé via le mo
 ## Limites restantes
 
 - La comparaison automatisée intégrale entre chaque tableau HTML et CSV n’est pas implémentée; les incohérences les plus visibles ont été vérifiées et corrigées au cours de l’audit.
-- L’accueil et la page du mémoire ont été rendus avec Chrome headless en formats bureau et mobile. Le contrôle mobile révèle un débordement horizontal de contenu sur l’accueil qui reste à corriger; la page du mémoire s’affiche correctement. Le clavier et les contrastes n’ont pas fait l’objet d’un audit manuel complet. Le PDF a aussi été rendu et vérifié visuellement.
+- L’accueil et la page du mémoire ont été rendus avec Chrome headless en formats bureau et mobile. La capture supposée à 390 px a en réalité un viewport CSS de 512 px; elle ne permet donc pas de conclure sur l’affichage téléphone. Le contrôle calculé à 512 px ne signale pas de débordement horizontal. Le clavier et les contrastes n’ont pas fait l’objet d’un audit manuel complet. Le PDF a aussi été rendu et vérifié visuellement.
 - Le document de soutenance a été contrôlé comme source des méthodes et agrégats rapportés. Aucun test statistique ne peut être reproduit sans les données individuelles ou tableaux sources; les valeurs rapportées n’ont pas été recalculées.
 - La pièce confirme la filière Biotechnologie Médicale, la soutenance du 23 juillet 2024, l’effectif rapporté de 81 (61 rétrospectifs, 20 prospectifs), les périodes et les marqueurs PSA total/CRP/NFS. Elle n’indique pas la note de 17,67/20 et ne décrit aucun dosage de cytokines.
 - Le PDF `portfolio_summary.pdf` a été reconstruit, extrait pour vérification du texte, rendu en trois pages puis inspecté visuellement. Les effectifs des projets sont synchronisés et les notes, mention et cytokines non étayées ont été retirées comme faits.
 - Le script de génération est conservé dans `docs/audit/build_portfolio_summary.py` et s’exécute depuis la racine avec ReportLab installé : `python docs/audit/build_portfolio_summary.py`.
-- Le workflow GitHub Pages n’a pas encore été déclenché; aucun push ou déploiement n’a eu lieu au moment de la rédaction de ce rapport.
+- Le workflow GitHub Pages a été déclenché après le push du commit d’audit et s’est terminé avec succès; la page publique répond en HTTP 200.
