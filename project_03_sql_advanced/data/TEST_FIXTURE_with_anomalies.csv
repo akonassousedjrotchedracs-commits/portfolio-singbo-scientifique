@@ -1,0 +1,6 @@
+isolate_id,organism,antibiotic,result
+TST001,Escherichia coli,Ampicillin,S
+TST002,Klebsiella pneumoniae,Ceftriaxone,R
+TST003,Escherichia coli,Ciprofloxacin,
+TST004,Escherichia coli,Amoxicillin,X
+TST001,Escherichia coli,Ampicillin,S

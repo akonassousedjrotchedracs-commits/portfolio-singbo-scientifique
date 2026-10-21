@@ -3,7 +3,7 @@
 [English version](PUBLIC_DATA_WORKFLOW_EN.md)
 
 ## Objet
-Ce protocole décrit comment préparer une analyse reproductible à partir d’un export public de données d’antibiogramme. Il ne signifie pas qu’un export NCBI est inclus dans ce dépôt : les données présentes sont des fichiers de démonstration.
+Cette référence technique générique décrit des précautions de traçabilité pour des exports publics d’antibiogrammes. Elle ne constitue pas un projet de recherche personnel ni un travail annoncé à réaliser. Aucun export NCBI n’est inclus dans ce dépôt; les données présentes sont des fichiers de démonstration.
 
 ## Procédure
 1. Identifier la ressource publique et vérifier ses conditions d’utilisation et son dictionnaire de données.

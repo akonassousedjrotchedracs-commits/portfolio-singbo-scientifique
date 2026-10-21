@@ -9,7 +9,7 @@
 3. **Data analyst** : nettoyer, explorer, résumer, quantifier l’incertitude, visualiser et expliquer les résultats.
 4. **Data engineering / SQL** : transformer des fichiers en tables fiables, tester les contraintes, tracer les données et automatiser le flux.
 
-Ce positionnement s’appuie sur le parcours professionnel : licence en biotechnologie médicale, travail en laboratoire hospitalier, mémoire sur des biomarqueurs inflammatoires et formation complémentaire Python/SQL/Power BI. Il ne prétend pas que les scripts ont été utilisés au CHU-MEL.
+Ce positionnement s’appuie sur les informations de parcours présentées dans le dépôt et sur des exercices Python/SQL reproductibles. Les intitulés officiels du diplôme et du poste restent à confirmer. Les scripts ne sont pas présentés comme ayant été utilisés au CHU-MEL.
 
 ## 2. Projet 1 — surveillance descriptive de la résistance aux antimicrobiens
 
@@ -46,7 +46,7 @@ Pour une proportion binomiale, l’intervalle de Wilson se comporte généraleme
 
 ## 6. Résultats de la démonstration fournie
 
-Deux jeux de démonstration distincts sont publiés : le projet 01 contient 100 observations synthétiques sur cinq couples organisme–antibiotique ; le projet 03 contient 191 observations synthétiques, 191 identifiants générés et deux organismes. Leurs tableaux de résultats sont placés dans les dossiers `project_01_antimicrobial_resistance/results/` et `project_03_sql_advanced/results/`. Aucun des deux jeux ne constitue une découverte biologique ni un résultat hospitalier.
+Deux jeux de démonstration distincts sont publiés : le projet 01 contient 100 observations synthétiques sur dix couples organisme–antibiotique (10 par couple) ; le projet 03 contient 191 observations synthétiques, 191 identifiants générés et deux organismes. Leurs tableaux de résultats sont placés dans les dossiers `project_01_antimicrobial_resistance/results/` et `project_03_sql_advanced/results/`. Aucun des deux jeux ne constitue une découverte biologique ni un résultat hospitalier.
 
 ## 7. Données publiques : ce qui doit être vérifié
 
@@ -73,6 +73,6 @@ Sources officielles :
 1. Lire ces notes et exécuter chaque commande.
 2. Vérifier les résultats à la main sur quelques lignes.
 3. Tenir un journal daté de ce que vous avez compris, modifié et appris.
-4. Ajouter un export public réel et son manifeste avant d’affirmer qu’une analyse NCBI a été faite.
-5. Publier le code, les rapports et les instructions sur GitHub, sans données de patients ni identifiants confidentiels.
+4. Distinguer clairement les fixtures synthétiques de tout export public réel; aucune analyse NCBI n’est revendiquée dans cette livraison.
+5. Avant toute publication ultérieure, contrôler le code, les rapports et l’absence de données patient ou d’identifiants confidentiels.
 6. Dans les supports professionnels, ajouter le lien vers le dépôt GitHub public et, si souhaité, le lien vers le PDF du portfolio.

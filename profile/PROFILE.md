@@ -1,13 +1,13 @@
 # Profil scientifique — Akonassou Sedjro Tchédrac Singbo
 
-Technicien de laboratoire et Inspecteur d’Actions Sanitaires en Analyse Biomédicale. Biotechnologie médicale · laboratoire hospitalier · recherche biomédicale · analyse de données.
+Professionnel de laboratoire biomédical. Biotechnologie · laboratoire hospitalier · recherche biomédicale · analyse de données.
 
 Depuis juillet 2026, je travaille au CHU de la Mère et de l’Enfant (CHU-MEL), à Cotonou. Mon activité s’inscrit en hématologie, biochimie clinique, sérologie/immunologie, microbiologie et parasitologie. Les techniques de mon parcours comprennent le frottis sanguin, l’ELISA, l’immunoturbidimétrie, la culture bactérienne, la coloration de Gram et les antibiogrammes.
 
 Mes principes de travail sont la qualité analytique, la traçabilité, la biosécurité, la confidentialité et la communication prudente des limites.
 
-Mon mémoire de licence en Biotechnologie Médicale (ENSBBA–UNSTIM, 2021–2024, Mention Bien) étudie 81 patients au CHUD Ouémé-Plateau à partir de données agrégées sur la CRP, le PSA, les leucocytes et des cytokines. Note du mémoire : 17,67/20; moyenne finale : 15,87/20. Sans données individuelles anonymisées, aucun p exact, intervalle ou coefficient de corrélation supplémentaire ne peut être recalculé.
+Mon mémoire de fin de formation en filière Biotechnologie Médicale (ENSBBA–UNSTIM), soutenu le 23 juillet 2024, rapporte une étude rétrospective et prospective de 81 patients au CHUD-OP. Il décrit des analyses du PSA, de la CRP et de la NFS ainsi que des comparaisons agrégées entre groupes de PSA. Le mémoire fourni ne contient pas les données individuelles; les calculs statistiques originaux ne peuvent donc pas être recalculés. Les notes de 17,67/20 et 15,87/20 figurent dans d’autres textes du dépôt, mais ne sont pas établies par le mémoire fourni.
 
-Outils : Python, SQL/SQLite, Excel, Power BI, biostatistique et visualisation. Français (langue maternelle), anglais (B2).
+Outils démontrés dans les scripts : Python standard, SQL/SQLite, calculs descriptifs et génération de graphiques SVG. Une spécification Power BI est présente, sans fichier `.pbix` livré.
 
 Cotonou, Bénin · [Contact](mailto:akonassousedjrotchedracs@gmail.com)

@@ -40,7 +40,7 @@ Une ligne représente un résultat associé à un identifiant d’isolat, un org
 - Exporter les données nettoyées, les résumés et un graphique.
 
 ### 3.4 Résultats de démonstration
-Le CSV publié contient 100 observations synthétiques, réparties sur cinq couples organisme–antibiotique, avec 20 tests par couple :
+Le CSV publié contient 100 observations synthétiques, réparties sur dix couples organisme–antibiotique, avec 10 tests par couple :
 - **Escherichia coli — Ceftriaxone :** 6 résultats R sur 20, soit 30 % ;
 - **Escherichia coli — Ciprofloxacin :** 11 résultats R sur 20, soit 55 % ;
 - **Klebsiella pneumoniae — Ceftriaxone :** 8 résultats R sur 20, soit 40 % ;
@@ -86,7 +86,7 @@ Le troisième enregistrement de démonstration contient des caractères ambigus 
 ### 4.4 Limites de l’approche ORF
 La recherche simple d’ORF sur un seul brin n’est pas une annotation génomique. Une analyse robuste doit considérer les six cadres de lecture, le code génétique approprié, la longueur minimale, les codons de démarrage et d’arrêt, les pseudogènes, la qualité de l’assemblage et des outils d’annotation validés. Une séquence courte et artificielle ne permet aucune conclusion taxonomique ni fonctionnelle.
 
-### 4.5 Suite recommandée
+### 4.5 Portée de la démonstration
 Pour des séquences publiques réelles, consigner l’accession, l’organisme indiqué par la source, la date de téléchargement, la version et la licence ou les conditions de réutilisation. Les identifications d’espèces ou les gènes de résistance doivent être confirmés avec les ressources appropriées et ne doivent pas être déduits uniquement du pourcentage GC.
 
 ## 5. Projet 3 — SQL et Data Engineering
@@ -157,34 +157,10 @@ Le tableau de bord recommandé comporte :
 
 Les couleurs ne doivent pas être la seule information. Les graphiques doivent distinguer une valeur nulle d’une donnée absente et éviter les classements sur des effectifs trop faibles.
 
-## 7. Plan pour une analyse réelle NCBI
-### 7.1 Sources officielles à documenter
-- NCBI Pathogen Detection : https://www.ncbi.nlm.nih.gov/pathogens/
-- Aide de Pathogen Detection : https://www.ncbi.nlm.nih.gov/pathogens/pathogens_help/
-- Ressources AMR / AST Browser : https://www.ncbi.nlm.nih.gov/pathogens/antimicrobial-resistance/resources/
-- Sequence Read Archive : https://www.ncbi.nlm.nih.gov/sra
-- NCBI Datasets : https://www.ncbi.nlm.nih.gov/datasets/
+## 7. Portée et limites du portfolio
+Cette documentation décrit les démonstrations techniques livrées et les limites des jeux de données synthétiques. Aucun export NCBI réel n’est inclus ou analysé dans cette version. Les sources mentionnées dans la bibliographie sont des références générales, et non l’annonce d’un projet de recherche ou d’une analyse à réaliser.
 
-### 7.2 Protocole
-1. Formuler une question descriptive limitée à une espèce et à un résultat clairement défini.
-2. Établir les critères d’inclusion et d’exclusion avant de regarder les résultats.
-3. Télécharger un export depuis une page officielle accessible et conserver le fichier brut sans modification.
-4. Noter la requête exacte, les filtres, la date d’accès, le nom de fichier, la taille, le nombre de lignes et le SHA-256.
-5. Examiner le dictionnaire des variables et documenter le mapping vers le schéma analytique.
-6. Mesurer les valeurs manquantes, doublons potentiels, discordances et dénominateurs.
-7. Appliquer des règles de déduplication adaptées aux métadonnées ; ne pas supposer qu’un isolat = un patient.
-8. Exécuter les analyses Python et SQL, comparer leurs totaux et archiver les sorties.
-9. Construire des graphiques avec les effectifs et l’incertitude.
-10. Rédiger les résultats, limites et conclusions proportionnées aux données.
-11. Citer la ressource et les accessions disponibles ; vérifier les conditions de réutilisation et ne pas exposer de données sensibles.
-
-### 7.3 Pourquoi les résultats NCBI ne représentent pas automatiquement le Bénin
-Les bases publiques regroupent des données déposées par différents laboratoires, projets et pays. La couverture dépend des pratiques de séquençage et de soumission. Un échantillon de données publiques peut surreprésenter certains organismes, périodes ou lieux. Sans plan d’échantillonnage représentatif, les proportions observées dans l’export ne doivent pas être décrites comme une prévalence nationale ou hospitalière.
-
-### 7.4 État de l’analyse réelle dans cette édition
-**Non réalisée dans cette session :** aucun export NCBI réel n’a pu être téléchargé en raison d’une indisponibilité de résolution réseau dans l’environnement. Les résultats présentés plus haut restent ceux des fixtures synthétiques. Le code est préparé pour une entrée structurée ; le passage à des données NCBI nécessite le téléchargement réel, la vérification des champs et l’exécution sur ce fichier. Cette limite est explicitement signalée afin d’éviter toute fausse déclaration scientifique.
-
-## 8. Tests et validation logicielle à réaliser
+## 8. Validation logicielle
 Les tests ne doivent pas seulement vérifier que le programme se lance. Ils doivent inclure :
 - test du cas valide ;
 - test d’un fichier vide ;
@@ -224,4 +200,4 @@ Après avoir réalisé toi-même les exécutions, les modifications et les lectu
 - Wilson EB. Probable inference, the law of succession, and statistical inference. Journal of the American Statistical Association. 1927;22(158):209–212. doi:10.1080/01621459.1927.10502953
 
 ## 11. Conclusion générale
-Le portfolio montre une chaîne de travail allant de la donnée brute à l’analyse, à la visualisation et à la documentation. Sa valeur ne repose pas seulement sur la quantité de code : elle repose sur la capacité à expliquer la question scientifique, les choix techniques, la qualité des données, les incertitudes et les limites. La prochaine amélioration scientifique n’est pas d’allonger artificiellement les résultats, mais de refaire le même pipeline sur un export public authentique, avec une provenance traçable, puis de comparer les sorties et d’en discuter les écarts.
+Le portfolio montre des démonstrations techniques reproductibles sur des données synthétiques et une synthèse prudente du mémoire à partir des éléments disponibles. Il distingue les calculs exécutés, les informations rapportées et les limites qui ne peuvent être vérifiées à partir du dépôt.

@@ -1,6 +1,6 @@
 # Projet 01 — Résistance aux antimicrobiens
 
-Démonstration descriptive sur 100 observations synthétiques (cinq couples, 20 résultats par couple). Les valeurs illustrent le calcul et ne sont pas représentatives.
+Démonstration descriptive sur 100 observations synthétiques réparties sur dix couples organisme–antibiotique (10 résultats par couple). Les valeurs illustrent le calcul et ne sont pas représentatives.
 
 ## Reproduire
 

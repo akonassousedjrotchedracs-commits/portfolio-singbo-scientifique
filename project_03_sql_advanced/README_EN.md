@@ -2,6 +2,8 @@
 
 **Scientific context:** this demonstration uses Python and SQL on a synthetic dataset. This is a reproducible demonstration on synthetic microbiological observations, not a tool reported as used at CHU-MEL.
 
+The main fixture contains 191 valid rows and produces no audit issues. A separate test fixture, `data/TEST_FIXTURE_with_anomalies.csv`, checks missing fields, an invalid category and a duplicate; it is not mixed into the main demonstration data.
+
 ## Objective and method
 
 Structure susceptibility observations, validate fields and S/I/R categories, retain quality issues, fingerprint the input file and produce SQL aggregations.

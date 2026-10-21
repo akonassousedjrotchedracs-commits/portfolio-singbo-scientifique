@@ -2,23 +2,23 @@
 
 ## Scope and traceability
 
-This document summarizes the methods described in the public project pages and the outputs included with the demonstration files. Working scripts are not part of this public repository. The demonstration fixtures are labelled `DEMO_SYNTHETIC`. They exercise the code, formats and output checks. Figures below are calculations on these inputs, not clinical prevalence estimates or real surveillance findings.
+This document summarizes the methods and outputs included in the public project folders. Reproduction scripts are included and use the Python standard library. Projects 01–04 use synthetic fixtures; their results are not clinical prevalence estimates or surveillance findings.
 
 ## Project 1 — Antimicrobial resistance
 
 **Question.** How can descriptive summaries be calculated by organism and antibiotic while retaining S, I and R separately?
 
-**Tools.** Python 3, pandas for CSV input, light cleaning and aggregation, Matplotlib for plotting, and CSV/JSON outputs.
+**Tools.** Python 3 standard library (`csv`, `collections`, `pathlib`), CSV and directly generated SVG. The delivered script does not use pandas or Matplotlib.
 
 **Executed steps.** Read CSV; check four required columns; convert required fields to strings and trim whitespace; uppercase result codes; validate S/I/R categories; stop on duplicate isolate-organism-antibiotic keys; calculate S/I/R counts and R proportion; export tables and plot.
 
-**Results in the published CSV.** The synthetic dataset contains 100 observations across five organism–antibiotic pairs (20 tests per pair). *E. coli*–ceftriaxone: 6/20 (30%); *E. coli*–ciprofloxacin: 11/20 (55%); *K. pneumoniae*–ceftriaxone: 8/20 (40%); *K. pneumoniae*–ciprofloxacin: 4/20 (20%); *S. aureus*–cefoxitin: 7/20 (35%).
+**Results in the published CSV.** The synthetic dataset contains 100 observations across ten organism–antibiotic pairs (10 tests per pair). R proportions in summary order are 20%, 10%, 30%, 10%, 40%, 30%, 40%, 30%, 20% and 50%. These are calculations on the fixture, not clinical frequencies.
 
 **Interpretation.** The script demonstrates aggregation and preservation of S/I/R. It cannot establish prevalence without a sampling design or harmonize undocumented breakpoint standards. Categories must match the original laboratory method and interpretive standard.
 
 ## Project 2 — Sequence quality control
 
-**Tools.** Python 3, Biopython (`Bio.SeqIO`, `Bio.SeqUtils.gc_fraction`), pandas, FASTA, CSV and JSON.
+**Tools.** Python 3 standard library, FASTA, FASTQ, CSV, JSON and SVG. The delivered scripts do not import Biopython or pandas.
 
 **Executed steps.** Parse FASTA records; calculate sequence length and GC fraction; count ambiguous bases; scan the three forward-strand frames from ATG to TAA/TAG/TGA stop codons; export metrics.
 
@@ -28,7 +28,7 @@ This document summarizes the methods described in the public project pages and t
 
 ## Project 3 — SQL and ETL
 
-**Tools.** Python 3, pandas, SQL, SQLite in the verified run, JSON manifest and SHA-256 input fingerprint.
+**Tools.** Python 3 standard library, `sqlite3`, SQL, JSON and SHA-256 input fingerprint. The script does not depend on pandas.
 
 **Executed steps.** Read normalized CSV; validate schema; trim and uppercase categories; check required values, S/I/R categories and duplicates; compute SHA-256; generate curated data, quality log, provenance manifest and SQL summaries.
 
@@ -38,17 +38,17 @@ This document summarizes the methods described in the public project pages and t
 
 ## Project 4 — Proportions and Wilson intervals
 
-**Tools.** Python 3, pandas, Matplotlib, the Wilson formula implemented in the script, CSV and JSON.
+**Tools.** Python standard library, the Wilson formula implemented in the script, CSV/JSON and directly generated SVG.
 
-**Method.** After schema validation and an audit of missing values, duplicates and invalid categories, the script calculates per group the number of results, resistant count, R proportion and 95% Wilson confidence interval (z=1.96). Outputs include an audit, isolate-antibiotic matrix, yearly summaries when a year field exists, a manifest and a figure.
+**Method.** After schema, missing-value, category and isolate–antibiotic duplicate checks, the script calculates valid S/I/R totals, R/n and a 95% Wilson interval (z=1.96) for each group. I stays in the denominator and remains a separate category; this descriptive convention does not replace the applicable interpretive standard or scientific question.
 
-**Example results.** One resistant result out of two gives 50%, with a 95% Wilson CI of approximately 9.45–90.55%. Zero resistant results out of two gives 0%, with an upper bound around 65.76%. These wide intervals reflect uncertainty with very small denominators.
+**Results.** Each of the six groups has 50 records. R proportions are 32%, 48%, 24%, 60%, 16% and 40%. The script computes the 95% Wilson bounds from R counts and denominators and exports them to CSV. Results are synthetic, not clinical.
 
 **Interpretation.** Wilson intervals are appropriate for binomial proportions and behave better than a simple normal approximation for small n, but they do not correct selection bias, dependence between isolates or classification error. Time trends are comparable only when procedures and populations are sufficiently comparable.
 
 ## Public repository artefacts
 
-The tables, figures and manifests linked from the project pages are the published artefacts. Working scripts are not included in this repository, so the results document the supplied examples and do not represent a rerun reproducible from this repository alone. The synthetic datasets are neither CHU-MEL data nor patient records.
+The scripts, tables, figures and manifests linked from the project pages are included in this repository. The four pipelines were executed during this audit. Synthetic datasets are neither CHU-MEL data nor patient records.
 
 ## Checks required before analysing real data
 

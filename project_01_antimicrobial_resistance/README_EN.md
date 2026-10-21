@@ -4,7 +4,7 @@
 
 ## Objective
 
-Summarize S/I/R categories by organism and antibiotic while keeping counts and denominators visible. The published demonstration contains 100 synthetic observations across five organism–antibiotic pairs (20 results per pair).
+Summarize S/I/R categories by organism and antibiotic while keeping counts and denominators visible. The published demonstration contains 100 synthetic observations across ten organism–antibiotic pairs (10 results per pair).
 
 ## Published outputs
 
@@ -14,6 +14,6 @@ Summarize S/I/R categories by organism and antibiotic while keeping counts and d
 - [Proportion chart](results/resistance_proportions.svg)
 - [Synthetic demonstration data](results/amr_observations_synthetic_100.csv)
 
-In this demonstration, the R proportion ranges from 20% to 55% across the five pairs. These values illustrate calculation only; they do not describe patients, CHU-MEL or any clinical population.
+In this demonstration, the R proportion ranges from 10% to 50% across the ten pairs. These values illustrate calculation only; they do not describe patients, CHU-MEL or any clinical population.
 
 [Version française](README.md)

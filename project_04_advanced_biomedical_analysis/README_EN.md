@@ -4,11 +4,11 @@
 
 ## Objective and method
 
-Calculate descriptive resistance proportions and 95% Wilson intervals after auditing fields, categories and duplicates. The published outputs cover six organism–antibiotic pairs, with two synthetic tests per pair.
+Calculate descriptive resistance proportions and 95% Wilson intervals after auditing fields, categories and duplicates. The published input contains 300 synthetic records across six organism–antibiotic pairs, with 50 records per pair. The R proportion uses all valid S, I and R records as its denominator; I is retained as a separate category and is not recoded.
 
 ## Results and limitations
 
-For a proportion of 1/2, the 95% Wilson interval is approximately 9.45–90.55%. For 0/2, it ranges from 0 to about 65.76%. These wide intervals illustrate uncertainty with very synthetic demonstration groups; the data do not support clinical inference.
+The published estimates and intervals are recalculated from the input CSV by the reproduction script. They describe only the synthetic fixture; they do not support clinical inference or estimate resistance in a population.
 
 - [Detailed case page (French)](index.html)
 - [Estimates and intervals](results/amr_estimates_with_wilson_ci.csv)

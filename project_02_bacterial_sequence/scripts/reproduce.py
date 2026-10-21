@@ -10,6 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 VALID = set("ACGT")
+DNA_IUPAC = set("ACGTRYSWKMBDHVN")
 STOPS = {"TAA", "TAG", "TGA"}
 
 
@@ -35,6 +36,13 @@ def read_fasta(path: Path) -> list[tuple[str, str]]:
         records.append((name, "".join(seq).upper()))
     if not records or any(not sequence for _, sequence in records):
         raise ValueError("FASTA must contain at least one non-empty sequence")
+    names = [name for name, _ in records]
+    if len(names) != len(set(names)):
+        raise ValueError("FASTA record headers must be unique")
+    for name, sequence in records:
+        invalid = sorted(set(sequence) - DNA_IUPAC)
+        if invalid:
+            raise ValueError(f"Invalid DNA symbol(s) in FASTA record {name!r}: {', '.join(invalid)}")
     return records
 
 

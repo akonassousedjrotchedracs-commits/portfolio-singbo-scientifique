@@ -2,23 +2,23 @@
 
 ## Périmètre et principe de traçabilité
 
-Ce document résume les méthodes décrites dans les fiches publiques et les résultats présents dans les fichiers de démonstration livrés. Les scripts de travail ne font pas partie de ce dépôt public. Les jeux de démonstration portent explicitement la mention `DEMO_SYNTHETIC`. Ils permettent d’exécuter le code, de contrôler les formats et de vérifier les sorties. Les chiffres ci-dessous sont donc des résultats de calcul sur ces entrées, pas des estimations de fréquence clinique ou de surveillance réelle.
+Ce document résume les méthodes décrites dans les fiches publiques et les résultats présents dans les fichiers de démonstration livrés. Les scripts sont inclus dans les cinq dossiers de projets et peuvent être exécutés avec Python standard. Les jeux des projets 01 à 04 sont synthétiques; leurs résultats ne sont pas des estimations de fréquence clinique ou de surveillance réelle.
 
 ## Projet 1 — Résistance aux antimicrobiens
 
 **Question.** Comment calculer des résumés descriptifs par organisme et antibiotique tout en gardant séparées les catégories S, I et R ?
 
-**Outils.** Python 3, pandas pour la lecture CSV, nettoyage léger et agrégation, Matplotlib pour le graphique, CSV/JSON pour les sorties.
+**Outils.** Python 3 standard (`csv`, `collections`, `pathlib`), CSV et SVG généré directement. Le script livré n’utilise pas pandas ni Matplotlib.
 
 **Étapes exécutées.** Lecture du CSV ; vérification des quatre champs obligatoires ; conversion des champs en chaînes et retrait des espaces ; passage des résultats en majuscules ; contrôle des catégories S/I/R ; arrêt si doublons dans la clé isolat-organisme-antibiotique ; calcul des nombres S/I/R et de la proportion R ; export des tableaux et de la figure.
 
-**Résultats observés dans le CSV publié.** Le jeu contient 100 observations synthétiques, réparties sur cinq couples organisme–antibiotique (20 tests par couple). *E. coli*–ceftriaxone : 6/20 (30 %) ; *E. coli*–ciprofloxacine : 11/20 (55 %) ; *K. pneumoniae*–ceftriaxone : 8/20 (40 %) ; *K. pneumoniae*–ciprofloxacine : 4/20 (20 %) ; *S. aureus*–céfoxitine : 7/20 (35 %).
+**Résultats observés dans le CSV publié.** Le jeu contient 100 observations synthétiques, réparties sur dix couples organisme–antibiotique (10 tests par couple). Les proportions R par groupe sont 20 %, 10 %, 30 %, 10 %, 40 %, 30 %, 40 %, 30 %, 20 % et 50 % (dans l’ordre du CSV de synthèse). Ce sont des résultats de calcul sur la fixture, pas des fréquences cliniques.
 
 **Interprétation.** Le script démontre l’agrégation et le maintien de S/I/R. Il ne peut établir une prévalence sans plan d’échantillonnage, ni harmoniser des référentiels de seuils non documentés. Les catégories doivent correspondre au référentiel et à la méthode de laboratoire d’origine.
 
 ## Projet 2 — Contrôle qualité des séquences
 
-**Outils.** Python 3, Biopython (`Bio.SeqIO`, `Bio.SeqUtils.gc_fraction`), pandas, FASTA, CSV et JSON.
+**Outils.** Python 3 standard, FASTA, FASTQ, CSV, JSON et SVG. Les scripts n’importent ni Biopython ni pandas.
 
 **Étapes exécutées.** Lecture des enregistrements FASTA ; mesure de longueur ; calcul de la fraction GC ; décompte des bases ambiguës ; scan exploratoire des trois cadres sur le brin direct à partir d’ATG jusqu’à un codon stop TAA/TAG/TGA ; export des métriques.
 
@@ -28,7 +28,7 @@ Ce document résume les méthodes décrites dans les fiches publiques et les ré
 
 ## Projet 3 — SQL et ETL
 
-**Outils.** Python 3, pandas, SQL, SQLite dans l’exécution vérifiée, JSON pour le manifeste, SHA-256 pour l’empreinte du fichier source.
+**Outils.** Python 3 standard, `sqlite3`, SQL, JSON et SHA-256 pour l’empreinte du fichier source. Le script ne dépend pas de pandas.
 
 **Étapes exécutées.** Lecture de CSV normalisé ; contrôle de schéma ; normalisation des espaces et de la casse ; contrôle des valeurs obligatoires, catégories S/I/R et doublons ; calcul d’empreinte SHA-256 ; génération de données curées, journal de qualité, manifeste de provenance et résumés SQL.
 
@@ -38,17 +38,17 @@ Ce document résume les méthodes décrites dans les fiches publiques et les ré
 
 ## Projet 4 — Proportions et intervalles de Wilson
 
-**Outils.** Python 3, pandas, Matplotlib, formule de Wilson implémentée dans le script, CSV/JSON.
+**Outils.** Python 3 standard, formule de Wilson implémentée dans le script, CSV/JSON et SVG généré directement.
 
-**Méthode.** Après contrôle de schéma et audit des valeurs manquantes/doublons/catégories, le script calcule pour chaque groupe le nombre de résultats, le nombre R, la proportion R et l’intervalle de confiance à 95 % de Wilson (z=1,96). Les résultats comprennent un audit, une matrice isolat-antibiotique, des résumés annuels si l’année existe, un manifeste et une figure.
+**Méthode.** Après contrôle de schéma, valeurs manquantes, catégories et doublons isolat–antibiotique, le script calcule pour chaque groupe le nombre de résultats valides S/I/R, le nombre R, R/n et l’intervalle de Wilson à 95 % (z=1,96). La catégorie I reste dans le dénominateur et demeure distincte; cette convention descriptive ne remplace pas le référentiel et la question scientifique applicables.
 
-**Exemples de résultats.** Pour 1 R sur 2, la proportion est 50 % et l’IC Wilson à 95 % est approximativement 9,45–90,55 %. Pour 0 R sur 2, la proportion est 0 % et la borne supérieure est environ 65,76 %. La largeur de ces intervalles reflète l’incertitude élevée des très petits effectifs.
+**Résultats.** Les six groupes contiennent chacun 50 lignes. Les proportions R sont respectivement 32 %, 48 %, 24 %, 60 %, 16 % et 40 %. Les bornes Wilson à 95 % sont calculées à la volée à partir des comptes R et n dans le script et sont exportées dans le CSV. Les résultats sont synthétiques et non cliniques.
 
 **Interprétation.** Les intervalles de Wilson sont adaptés à une proportion binomiale et se comportent mieux que l’approximation normale simple pour de petits n, mais ils ne corrigent ni biais de sélection, ni dépendance entre isolats, ni erreur de classification. Les tendances temporelles ne sont comparables que si les procédures et populations sont suffisamment comparables.
 
 ## Artefacts disponibles dans le dépôt public
 
-Les tableaux CSV, figures et manifestes référencés dans les fiches sont les artefacts publiés. Les scripts de travail ne sont pas inclus dans ce dépôt ; les résultats documentent donc les exemples livrés et ne constituent pas une exécution reproductible à partir du dépôt seul. Les jeux synthétiques ne sont ni des données du CHU-MEL ni des données de patients.
+Les scripts, tableaux CSV, figures et manifestes référencés dans les fiches sont inclus dans le dépôt. Les quatre pipelines ont été exécutés pendant l’audit. Les jeux synthétiques ne sont ni des données du CHU-MEL ni des données de patients.
 
 ## Contrôles à refaire avant toute analyse de données réelles
 

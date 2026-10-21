@@ -1,8 +1,8 @@
 # Scientific Portfolio — AKONASSOU SEDJRO TCHÉDRAC SINGBO
 
-**Health Actions Inspector in Biomedical Analysis | Laboratory Technician** · Cotonou, Benin
+**Biomedical laboratory professional** · Cotonou, Benin
 
-I hold a Bachelor's degree in Medical Biotechnology from ENSBBA–UNSTIM, awarded with Honours, and have worked at the Mother and Child University Hospital (CHU-MEL) since July 2026. My experience covers haematology, clinical biochemistry, serology/immunology, microbiology and parasitology, as well as quality control, technical validation and biosafety.
+My thesis identifies the Medical Biotechnology programme at ENSBBA–UNSTIM and states that the report was submitted toward a professional degree. The exact title on the degree certificate still needs confirmation. I work in a biomedical laboratory at the Mother and Child University Hospital (CHU-MEL), according to information in this repository; the official job title and start date still need confirmation.
 
 ## Portfolio
 
@@ -14,7 +14,7 @@ I hold a Bachelor's degree in Medical Biotechnology from ENSBBA–UNSTIM, awarde
 
 ## Research and additional skills
 
-My undergraduate thesis covered 81 patients at CHUD Ouémé-Plateau and examined CRP, PSA, leucocytes and cytokines. Thesis mark: 17.67/20. I am developing skills in Python, SQL, biostatistics, advanced Excel, Power BI and data visualization.
+The professional degree thesis in the Medical Biotechnology programme (ENSBBA–UNSTIM), defended on 23 July 2024, reports a study of 81 patients at CHUD-OP covering PSA, CRP and CBC. It describes a retrospective/prospective comparison and aggregate results; individual-level data are not available here. A mark of 17.67/20 appears elsewhere in the repository but not in the supplied thesis. The projects demonstrate Python, SQL/SQLite and descriptive calculations; the Power BI specification is not an operational dashboard.
 
 Demonstration datasets in the portfolio projects are labelled synthetic. Professional experience is distinguished from portfolio work; projects in this repository are not represented as tools deployed at a hospital.
 
@@ -27,6 +27,6 @@ Demonstration datasets in the portfolio projects are labelled synthetic. Profess
 
 **Professional contact:** [akonassousedjrotchedracs@gmail.com](mailto:akonassousedjrotchedracs@gmail.com)
 
-Source code, tests, working data and internal files are kept separately from this public presentation repository.
+Reproduction scripts, synthetic data and outputs are included in the project folders. Audit documents are in `docs/audit/`.
 
 [Version française](README.md)

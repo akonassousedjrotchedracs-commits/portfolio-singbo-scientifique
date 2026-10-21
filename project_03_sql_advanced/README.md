@@ -2,6 +2,8 @@
 
 Pipeline reproductible pour valider des observations synthétiques S/I/R, charger un modèle relationnel SQLite en mémoire, conserver les anomalies et produire les agrégations avec SQL. Aucune source clinique n’est utilisée.
 
+La fixture principale contient 191 lignes valides et ne produit aucune anomalie dans son journal. Une fixture de test séparée, `data/TEST_FIXTURE_with_anomalies.csv`, vérifie les rejets de champs manquants, de catégorie invalide et de doublon; elle n’est pas mélangée aux données principales.
+
 ## Reproduire
 
 Prérequis : Python 3 (module SQLite inclus dans les distributions standard courantes), aucune dépendance Python externe. Depuis ce dossier :

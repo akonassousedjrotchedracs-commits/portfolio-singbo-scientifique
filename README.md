@@ -1,8 +1,8 @@
 # Portfolio scientifique — AKONASSOU SEDJRO TCHÉDRAC SINGBO
 
-**Inspecteur d’Actions Sanitaires en Analyse Biomédicale | Technicien de laboratoire** · Cotonou, Bénin
+**Professionnel de laboratoire biomédical** · Cotonou, Bénin
 
-Titulaire d’une licence en biotechnologie médicale (ENSBBA–UNSTIM, mention Bien), j’exerce au CHU de la Mère et de l’Enfant (CHU-MEL) depuis juillet 2026. Mon expérience couvre l’hématologie, la biochimie clinique, la sérologie/immunologie, la microbiologie et la parasitologie, ainsi que le contrôle qualité, la validation technique et la biosécurité.
+Mon mémoire de fin de formation situe mon parcours dans la filière Biotechnologie Médicale de l’ENSBBA–UNSTIM et indique une formation en vue d’un diplôme de licence professionnelle. L’intitulé exact figurant sur le diplôme délivré reste à confirmer. J’exerce une activité en laboratoire biomédical au CHU de la Mère et de l’Enfant (CHU-MEL) depuis juillet 2026, selon les informations du dépôt; le poste exact et la date de prise de fonction restent à confirmer.
 
 ## Portfolio
 
@@ -14,7 +14,7 @@ Titulaire d’une licence en biotechnologie médicale (ENSBBA–UNSTIM, mention 
 
 ## Recherche et compétences complémentaires
 
-Mon mémoire de licence porte sur 81 patients au CHUD Ouémé-Plateau et étudie la CRP, le PSA, les leucocytes et les cytokines. Note du mémoire : 17,67/20. Je développe des compétences en Python, SQL, biostatistique, Excel avancé, Power BI et visualisation de données.
+Le mémoire de fin de formation en filière Biotechnologie Médicale (ENSBBA–UNSTIM), soutenu le 23 juillet 2024, rapporte une étude de 81 patients au CHUD-OP portant sur le PSA, la CRP et la NFS. Il décrit une comparaison rétrospective/prospective et des résultats agrégés; les données individuelles ne sont pas disponibles ici. La note de 17,67/20 figure dans d’autres textes du dépôt, mais pas dans le mémoire fourni. Les projets démontrent Python, SQL/SQLite et des calculs descriptifs; la spécification Power BI n’est pas un tableau de bord opérationnel.
 
 Les jeux de démonstration des projets sont identifiés comme synthétiques. Les expériences professionnelles et les travaux de portfolio sont distingués ; les projets de ce dépôt ne sont pas présentés comme des outils déployés à l’hôpital.
 
@@ -27,6 +27,6 @@ Les jeux de démonstration des projets sont identifiés comme synthétiques. Les
 
 **Contact professionnel :** [akonassousedjrotchedracs@gmail.com](mailto:akonassousedjrotchedracs@gmail.com)
 
-Le code source, les tests, les données de travail et les fichiers internes sont conservés séparément du dépôt de présentation publique.
+Les scripts, données synthétiques et sorties reproductibles sont inclus dans les dossiers de projets. Les documents d’audit sont dans `docs/audit/`.
 
 [English README](README_EN.md)

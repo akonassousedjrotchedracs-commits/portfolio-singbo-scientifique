@@ -2,7 +2,7 @@
 
 [Version française](PUBLIC_DATA_WORKFLOW.md)
 
-This protocol describes how to prepare a reproducible analysis from a public antimicrobial-susceptibility export. It does not mean an NCBI export is bundled here: the included files are demonstration fixtures.
+This generic technical reference describes provenance safeguards for public antimicrobial-susceptibility exports. It is not a personal research project or announced work to be conducted. No NCBI export is included here; the available data are demonstration fixtures.
 
 1. Identify the public resource and review its terms and data dictionary.
 2. Define organisms, antibiotics, time period, geography and inclusion criteria.

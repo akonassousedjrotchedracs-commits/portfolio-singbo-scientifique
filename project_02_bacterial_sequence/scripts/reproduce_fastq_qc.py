@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Summarize per-read and per-cycle Phred+33 metrics for a tiny synthetic FASTQ."""
-import argparse,csv,json,math
+import argparse
+import csv
+import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def parse(path):
@@ -8,7 +10,9 @@ def parse(path):
     if len(lines)%4: raise ValueError('FASTQ must contain complete four-line records')
     for i in range(0,len(lines),4):
         h,s,p,q=lines[i:i+4]
-        if not h.startswith('@') or not p.startswith('+') or len(s)!=len(q): raise ValueError(f'Invalid FASTQ record at line {i+1}')
+        if not h.startswith('@') or not p.startswith('+') or not s or len(s)!=len(q): raise ValueError(f'Invalid FASTQ record at line {i+1}')
+        if p[1:].strip() and p[1:].strip()!=h[1:].strip(): raise ValueError(f'FASTQ identifier mismatch at line {i+3}')
+        if any(base.upper() not in 'ACGTRYSWKMBDHVN' for base in s): raise ValueError(f'Invalid DNA symbol at line {i+2}')
         if any(not 33<=ord(x)<=126 for x in q): raise ValueError('Quality chars outside Phred+33 printable range')
         rec.append((h[1:],s.upper(),[ord(x)-33 for x in q]))
     if not rec: raise ValueError('No FASTQ records')

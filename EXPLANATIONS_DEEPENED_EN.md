@@ -20,4 +20,4 @@ This companion document explains the implemented portfolio methods and how to re
 
 ## Reproducibility
 
-The public repository contains result tables, figures and manifests; working scripts are maintained separately and are not included here. Preserve the original input, document exclusions and compare transformed rows with the source before describing a future rerun as reproducible.
+The public repository includes reproduction scripts, result tables, figures and manifests. Preserve the original input, document exclusions and compare transformed rows with the source before interpreting results.
