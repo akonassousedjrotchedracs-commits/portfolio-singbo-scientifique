@@ -1,5 +1,5 @@
 # GUIDE EXPLICATIF APPROFONDI — PORTFOLIO SCIENTIFIQUE
-## AKONASSOU SEDJRO TCHÉDRAC SINGBO
+## AKONASSOU SÈDJRO TCHÉDRAC SINGBO
 **Axes : microbiologie clinique, bioinformatique, Data Analytics, SQL et Data Engineering**
 
 ## 1. Objet et statut du travail
@@ -180,13 +180,7 @@ Les tests ne doivent pas seulement vérifier que le programme se lance. Ils doiv
 
 Chaque test doit comporter une entrée contrôlée, le résultat attendu, le résultat obtenu et le statut. Les données de test doivent être synthétiques et étiquetées comme telles.
 
-## 9. Comment présenter le travail à un professeur
-Une présentation honnête peut dire :
-« Ce portfolio rassemble quatre projets indépendants réalisés pour appliquer des méthodes de programmation et d’analyse à des questions biomédicales. Les sorties actuellement fournies sont reproductibles sur des jeux de test synthétiques. J’ai documenté le pipeline et les limites, et je distingue explicitement cette démonstration d’une analyse de données publiques réelles. »
-
-Après avoir réalisé toi-même les exécutions, les modifications et les lectures, tu pourras préciser ce que tu as personnellement implémenté, corrigé et appris. Ne revendique pas une compétence ou une conclusion que tu ne peux pas expliquer.
-
-## 10. Références méthodologiques et techniques
+## 9. Références méthodologiques et techniques
 - NCBI Pathogen Detection : https://www.ncbi.nlm.nih.gov/pathogens/
 - NCBI Pathogen Detection Help : https://www.ncbi.nlm.nih.gov/pathogens/pathogens_help/
 - NCBI AMR Resources / AST Browser : https://www.ncbi.nlm.nih.gov/pathogens/antimicrobial-resistance/resources/

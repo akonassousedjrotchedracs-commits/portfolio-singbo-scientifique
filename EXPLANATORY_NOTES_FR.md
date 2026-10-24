@@ -1,6 +1,6 @@
 # Notes explicatives du portfolio — version de travail pédagogique
 
-**Auteur du portfolio : AKONASSOU SEDJRO TCHÉDRAC SINGBO**
+**Auteur du portfolio : AKONASSOU SÈDJRO TCHÉDRAC SINGBO**
 
 ## 1. Pourquoi ces quatre axes ?
 
@@ -9,7 +9,7 @@
 3. **Data analyst** : nettoyer, explorer, résumer, quantifier l’incertitude, visualiser et expliquer les résultats.
 4. **Data engineering / SQL** : transformer des fichiers en tables fiables, tester les contraintes, tracer les données et automatiser le flux.
 
-Ce positionnement s’appuie sur les informations de parcours présentées dans le dépôt et sur des exercices Python/SQL reproductibles. Les intitulés officiels du diplôme et du poste restent à confirmer. Les scripts ne sont pas présentés comme ayant été utilisés au CHU-MEL.
+Ce positionnement s’appuie sur mon parcours (Licence professionnelle en Biotechnologie médicale, laboratoire hospitalier) et sur des exercices Python/SQL reproductibles. Les scripts ne sont pas présentés comme ayant été utilisés au CHU-MEL.
 
 ## 2. Projet 1 — surveillance descriptive de la résistance aux antimicrobiens
 
