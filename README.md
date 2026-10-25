@@ -29,3 +29,7 @@ Les jeux de démonstration des projets sont identifiés comme synthétiques. Les
 Les scripts, données synthétiques et sorties reproductibles sont inclus dans les dossiers de projets ; les tests automatisés sont dans `tests/`.
 
 [English README](README_EN.md)
+
+## Figures
+
+Les graphiques des projets 01 à 04 sont générés par code : `pip install matplotlib numpy` puis `python tools/make_figures.py`. Les photographies de laboratoire du projet 01 sont sous licence libre ; voir `project_01_antimicrobial_resistance/photos/CREDITS.md`.
