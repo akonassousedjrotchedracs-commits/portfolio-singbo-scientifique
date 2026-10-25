@@ -402,3 +402,7 @@ main strong { font-weight: 600; }
 .inline-evidence details { margin: .8rem 0 1.2rem; }
 .inline-evidence summary { cursor: pointer; color: var(--accent-dark); font-weight: 600; }
 .inline-evidence pre { max-width: 100%; overflow-x: auto; }
+.photo-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px 0; }
+.photo-steps .gallery-card { border: 1px solid var(--line, #d7e1e4); padding: 10px; background: #fff; margin: 0; }
+.photo-steps .gallery-card img { display: block; width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; }
+.photo-steps .gallery-card figcaption { font-size: 13px; padding-top: 8px; color: var(--muted, #59686e); }
