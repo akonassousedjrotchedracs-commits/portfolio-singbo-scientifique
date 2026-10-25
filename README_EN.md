@@ -1,8 +1,8 @@
-# Scientific Portfolio — AKONASSOU SEDJRO TCHÉDRAC SINGBO
+# Scientific Portfolio — AKONASSOU SÈDJRO TCHÉDRAC SINGBO
 
-**Biomedical laboratory professional** · Cotonou, Benin
+**Medical biotechnologist · hospital laboratory · biomedical data analysis** · Cotonou, Benin
 
-My thesis identifies the Medical Biotechnology programme at ENSBBA–UNSTIM and states that the report was submitted toward a professional degree. The exact title on the degree certificate still needs confirmation. I work in a biomedical laboratory at the Mother and Child University Hospital (CHU-MEL), according to information in this repository; the official job title and start date still need confirmation.
+I hold a Professional Bachelor's degree (Licence professionnelle) in Medical Biotechnology (ENSBBA–UNSTIM, 2024) and have worked since August 2026 as a Health Action Inspector in Biomedical Analysis (IAS/ABM) in the Laboratory Department of the Mother and Child University Hospital–Lagune (CHU-MEL), Cotonou. This portfolio brings together my bachelor's thesis and reproducible technical projects in microbiology, antimicrobial resistance and biomedical data.
 
 ## Portfolio
 
@@ -14,7 +14,7 @@ My thesis identifies the Medical Biotechnology programme at ENSBBA–UNSTIM and 
 
 ## Research and additional skills
 
-The professional degree thesis in the Medical Biotechnology programme (ENSBBA–UNSTIM), defended on 23 July 2024, reports a study of 81 patients at CHUD-OP covering PSA, CRP and CBC. It describes a retrospective/prospective comparison and aggregate results; individual-level data are not available here. A mark of 17.67/20 appears elsewhere in the repository but not in the supplied thesis. The projects demonstrate Python, SQL/SQLite and descriptive calculations; the Power BI specification is not an operational dashboard.
+My bachelor's thesis, defended on 23 July 2024 and graded 17.67/20, evaluates inflammation in prostatic dysfunction in 81 patients at CHUD Ouémé-Plateau (total PSA, CRP, complete blood count; retrospective and prospective components). Only aggregate results are presented: individual patient data remain confidential. Projects 01 to 04 use standard-library Python, SQL/SQLite, data-quality checks, confidence intervals and automated tests; the Power BI specification is a dashboard design plan.
 
 Demonstration datasets in the portfolio projects are labelled synthetic. Professional experience is distinguished from portfolio work; projects in this repository are not represented as tools deployed at a hospital.
 
@@ -23,10 +23,9 @@ Demonstration datasets in the portfolio projects are labelled synthetic. Profess
 - [Scientific profile](profile/PROFILE_EN.md)
 - [Methods and results](METHODOLOGY_AND_RESULTS_EN.md)
 - [References](REFERENCES.md)
-- [Portfolio summary (PDF)](portfolio_summary.pdf)
 
 **Professional contact:** [akonassousedjrotchedracs@gmail.com](mailto:akonassousedjrotchedracs@gmail.com)
 
-Reproduction scripts, synthetic data and outputs are included in the project folders. Audit documents are in `docs/audit/`.
+Reproduction scripts, synthetic data and outputs are included in the project folders; automated tests are in `tests/`.
 
 [Version française](README.md)

@@ -1,13 +1,13 @@
-# Profil scientifique — Akonassou Sedjro Tchédrac Singbo
+# Profil scientifique — Akonassou Sèdjro Tchédrac Singbo
 
-Professionnel de laboratoire biomédical. Biotechnologie · laboratoire hospitalier · recherche biomédicale · analyse de données.
+Biotechnologiste médical. Laboratoire hospitalier · recherche biomédicale · analyse de données.
 
-Depuis juillet 2026, je travaille au CHU de la Mère et de l’Enfant (CHU-MEL), à Cotonou. Mon activité s’inscrit en hématologie, biochimie clinique, sérologie/immunologie, microbiologie et parasitologie. Les techniques de mon parcours comprennent le frottis sanguin, l’ELISA, l’immunoturbidimétrie, la culture bactérienne, la coloration de Gram et les antibiogrammes.
+Depuis août 2026, je suis inspecteur d'actions sanitaires en analyse biomédicale (IAS/ABM) au Service de laboratoire du CHU de la Mère et de l'Enfant-Lagune (CHU-MEL), à Cotonou. Mon activité couvre l'hématologie, la biochimie clinique, la sérologie/immunologie, la microbiologie et la parasitologie : frottis sanguin, ELISA, immunoturbidimétrie, culture bactérienne, coloration de Gram et antibiogramme.
 
 Mes principes de travail sont la qualité analytique, la traçabilité, la biosécurité, la confidentialité et la communication prudente des limites.
 
-Mon mémoire de fin de formation en filière Biotechnologie Médicale (ENSBBA–UNSTIM), soutenu le 23 juillet 2024, rapporte une étude rétrospective et prospective de 81 patients au CHUD-OP. Il décrit des analyses du PSA, de la CRP et de la NFS ainsi que des comparaisons agrégées entre groupes de PSA. Le mémoire fourni ne contient pas les données individuelles; les calculs statistiques originaux ne peuvent donc pas être recalculés. Les notes de 17,67/20 et 15,87/20 figurent dans d’autres textes du dépôt, mais ne sont pas établies par le mémoire fourni.
+Je suis titulaire d'une Licence professionnelle en Biotechnologie médicale de l'ENSBBA–UNSTIM (2024). Mon mémoire, soutenu le 23 juillet 2024 et noté 17,67/20, porte sur une étude rétrospective et prospective de 81 patients au CHUD Ouémé-Plateau (PSA total, CRP et NFS, comparaisons entre groupes de PSA). Seuls des résultats agrégés sont présentés ; les données individuelles restent confidentielles.
 
-Outils démontrés dans les scripts : Python standard, SQL/SQLite, calculs descriptifs et génération de graphiques SVG. Une spécification Power BI est présente, sans fichier `.pbix` livré.
+Outils mis en œuvre dans les projets : Python (bibliothèque standard), SQL/SQLite, contrôles de qualité des données, intervalles de confiance de Wilson, génération de graphiques SVG et tests automatisés. Une spécification de tableau de bord Power BI est également présentée.
 
 Cotonou, Bénin · [Contact](mailto:akonassousedjrotchedracs@gmail.com)
