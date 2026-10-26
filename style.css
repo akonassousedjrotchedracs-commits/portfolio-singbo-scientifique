@@ -406,3 +406,4 @@ main strong { font-weight: 600; }
 .photo-steps .gallery-card { border: 1px solid var(--line, #d7e1e4); padding: 10px; background: #fff; margin: 0; }
 .photo-steps .gallery-card img { display: block; width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; }
 .photo-steps .gallery-card figcaption { font-size: 13px; padding-top: 8px; color: var(--muted, #59686e); }
+.photo-steps .gallery-card img[src*="scatter"] { object-fit: contain; }
