@@ -143,8 +143,42 @@ def project_02():
     save(fig, "project_02_bacterial_sequence/results/fig_gc_content.png")
 
 
+def project_05():
+    """Valeurs agrégées du mémoire (moyenne ± ESM) ; aucune donnée individuelle."""
+    groups = (("PSA normal", 69, "#7fb8a4"), ("PSA élevé", 12, "#136b58"))
+    markers = (  # nom, (moyenne, ESM) par groupe, intervalle usuel adulte, mention
+        ("Leucocytes (G/L)", ((5.39, .46), (5.61, .92)), (4, 10), "ns"),
+        ("Neutrophiles (G/L)", ((2.73, .25), (2.94, .67)), (1.8, 7.5), "ns"),
+        ("Lymphocytes (G/L)", ((1.87, .09), (2.12, .17)), (1, 4), "p < 0,05"),
+        ("CRP (mg/L)", ((4.61, .63), (4.48, 1.50)), (0, 6), "ns"),
+    )
+    fig, axes = plt.subplots(1, 5, figsize=(14, 3.9), gridspec_kw={"width_ratios": [1, 1, 1, 1, .8]})
+    for ax, (name, values, (low, high), note) in zip(axes, markers):
+        ax.axhspan(low, high, color="#eef4f1", zorder=0)
+        for x, ((label, n, colour), (mean, sem)) in enumerate(zip(groups, values)):
+            ax.errorbar(x, mean, yerr=sem, fmt="o", color=colour, ms=9, capsize=6, lw=2)
+            ax.text(x + .12, mean, f"{mean:.2f}".replace(".", ","), va="center", fontsize=8.5, color=INK)
+        top = max(m + s for m, s in values)
+        ax.plot([0, 0, 1, 1], [top * 1.08, top * 1.12, top * 1.12, top * 1.08], color=MUTED, lw=.8)
+        ax.text(.5, top * 1.14, note, ha="center", fontsize=9, color=SIR["R"] if note != "ns" else MUTED, fontweight="bold" if note != "ns" else None)
+        ax.set_xticks([0, 1], [f"{g[0]}\n(n={g[1]})" for g in groups], fontsize=8.5)
+        ax.set_xlim(-.5, 1.6)
+        ax.set_ylim(0, max(high, top * 1.25))
+        ax.set_title(name, loc="left", color=INK, fontweight="bold", fontsize=10)
+    pie = axes[-1]
+    pie.pie([69, 12], colors=[g[2] for g in groups], startangle=90, counterclock=False,
+            wedgeprops={"width": .38, "edgecolor": "white"}, labels=["69 (85 %)", "12 (15 %)"], textprops={"fontsize": 8.5})
+    pie.text(0, 0, "81\npatients", ha="center", va="center", fontsize=9, color=INK, fontweight="bold")
+    pie.set_title("Répartition PSA", loc="left", color=INK, fontweight="bold", fontsize=10)
+    fig.suptitle("Marqueurs sanguins selon le PSA total · moyenne ± ESM, test de Mann-Whitney · zone verte : intervalle usuel adulte",
+                 x=0.01, ha="left", color=MUTED, fontsize=9.5)
+    fig.tight_layout()
+    save(fig, "project_05_memoire_soutenance_prostate/figure_marqueurs.png")
+
+
 if __name__ == "__main__":
     project_01()
     project_02()
     project_03()
     project_04()
+    project_05()
