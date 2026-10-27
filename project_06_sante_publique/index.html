@@ -1,0 +1,228 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Projet 06 · Santé publique au Bénin : paludisme, mortalité infantile et vaccination | Tchédrac Singbo</title><link rel="stylesheet" href="../style.css"></head><body>
+<main><p class="page-back"><a href="../index.html">Retour au portfolio</a></p>
+<header class="project-hero"><span class="eyebrow">Projet 06 · santé publique</span><h1>Paludisme, mortalité infantile et vaccination au Bénin, 2000–2024</h1><p>Analyse descriptive d’indicateurs publics de l’OMS, de l’UNICEF et du groupe inter-agences des Nations unies (IGME), diffusés par la Banque mondiale, en comparaison avec quatre pays voisins et la moyenne d’Afrique subsaharienne.</p><span class="study-badge">Données publiques réelles · analyse reproductible</span></header>
+<div class="metrics"><div class="metric"><strong>44 %</strong><span>couverture rougeole au Bénin en 2024 (68 % en 2016)</span></div><div class="metric"><strong>× 1,55</strong><span>incidence du paludisme par rapport à la moyenne régionale</span></div><div class="metric"><strong>−45 %</strong><span>mortalité des moins de 5 ans depuis 2000</span></div></div>
+<h2>1. Contexte</h2><p>Le paludisme reste la première cause de consultation et d’hospitalisation des jeunes enfants au Bénin, où la transmission est permanente sur tout le territoire. La vaccination de routine (DTC3, rougeole) est l’un des moyens les plus efficaces de réduire la mortalité des moins de 5 ans ; l’agenda mondial IA2030 fixe une cible de 90 % de couverture. Suivre ces indicateurs ensemble permet de repérer les domaines où les progrès ralentissent.</p>
+<h2>2. Question et objectifs</h2><p><strong>Question :</strong> comment le Bénin a-t-il évolué depuis 2000 sur trois enjeux majeurs de santé de l’enfant, et comment se situe-t-il par rapport à ses voisins et à la région ?</p><ul><li>Décrire les tendances 2000–2024 de quatre indicateurs : incidence du paludisme, mortalité des moins de 5 ans, couvertures DTC3 et rougeole.</li><li>Quantifier la variation récente (2015–2024) par une variation annuelle moyenne.</li><li>Situer le Bénin par rapport au Togo, au Nigeria, au Burkina Faso, au Niger et à l’Afrique subsaharienne.</li></ul>
+<h2>3. Données et méthode</h2><p><strong>Source :</strong> API publique de la Banque mondiale (indicateurs SH.MLR.INCD.P3, SH.DYN.MORT, SH.IMM.IDPT, SH.IMM.MEAS), qui reprend les estimations du Rapport mondial sur le paludisme (OMS), de l’IGME et des estimations OMS/UNICEF de couverture vaccinale (WUENIC). Extraction du 27 octobre 2026 : 600 valeurs, 6 zones, 25 années, aucune valeur manquante.</p><ol><li><strong>Extraction :</strong> <code>scripts/fetch_data.py</code> télécharge les séries et les enregistre dans <code>data/indicateurs_bm.csv</code>.</li><li><strong>Indicateurs dérivés :</strong> variation 2000–2024, variation annuelle moyenne 2015–2024 (pente d’une régression log-linéaire), rapport Bénin / Afrique subsaharienne.</li><li><strong>Restitution :</strong> <code>scripts/analyse.py</code> produit le tableau de synthèse et les trois figures (matplotlib).</li></ol>
+<p class="note">Ces valeurs sont des estimations modélisées ou ajustées, pas des comptages exhaustifs ; elles peuvent être révisées lors des mises à jour annuelles. L’analyse est descriptive et écologique : elle compare des moyennes nationales et n’établit aucune causalité.</p>
+<h2>4. Résultats</h2><figure class="figure-card"><img src="results/fig_tendances_benin_region.png" alt="Quatre graphiques des tendances 2000–2024 du Bénin, des pays voisins et de l’Afrique subsaharienne" loading="lazy"><figcaption class="figure-meta">Bénin en rouge, moyenne d’Afrique subsaharienne en pointillés, pays voisins en gris. Figure produite par <code>scripts/analyse.py</code>.</figcaption></figure>
+<h3>Tableau de synthèse pour le Bénin</h3><div class="data-table"><table><thead><tr><th>Indicateur</th><th>2000</th><th>2015</th><th>2024</th><th>Variation 2000–2024 (%)</th><th>Variation annuelle 2015–2024 (%)</th><th>Bénin / région 2024</th></tr></thead><tbody><tr><td>Paludisme (cas / 1 000 à risque)</td><td>416,0</td><td>390,8</td><td>354,2</td><td>-14,8</td><td>-1,59</td><td>1,55</td></tr><tr><td>Mortalité &lt; 5 ans (‰ naissances)</td><td>135,0</td><td>96,1</td><td>74,7</td><td>-44,7</td><td>-2,77</td><td>1,05</td></tr><tr><td>Couverture DTC3 (%)</td><td>78,0</td><td>74,0</td><td>63,0</td><td>-19,2</td><td>-1,79</td><td>0,85</td></tr><tr><td>Couverture rougeole (%)</td><td>70,0</td><td>67,0</td><td>44,0</td><td>-37,1</td><td>-4,31</td><td>0,64</td></tr></tbody></table></div>
+<h3>La vaccination recule depuis 2016</h3><p>La couverture du DTC3 passe de 78 % en 2016 à 63 % en 2024, et celle de la rougeole de 68 % à 44 %, soit −4,3 % par an depuis 2015. Sur la même période, la moyenne régionale reste stable autour de 74 % et 69 %. L’écart croissant entre DTC3 et rougeole signale que de nombreux enfants commencent leur calendrier vaccinal sans le terminer.</p><figure class="figure-card"><img src="results/fig_vaccination_benin.png" alt="Couvertures DTC3 et rougeole au Bénin de 2000 à 2024 avec la cible de 90 %" loading="lazy"><figcaption class="figure-meta">Zone rose : enfants non couverts par le DTC3 ; zone jaune : enfants ayant reçu le DTC3 mais pas la première dose contre la rougeole.</figcaption></figure>
+<h3>Paludisme et mortalité : des progrès plus lents que la région</h3><p>L’incidence du paludisme diminue (−1,6 % par an depuis 2015) mais reste 1,55 fois supérieure à la moyenne régionale. La mortalité des moins de 5 ans a baissé de 45 % depuis 2000 (135 à 75 ‰) ; elle reste légèrement au-dessus de la moyenne régionale (rapport 1,05), alors que le Togo voisin atteint 56 ‰.</p><figure class="figure-card"><img src="results/fig_rapport_region.png" alt="Rapport entre les valeurs du Bénin et la moyenne d’Afrique subsaharienne pour les quatre indicateurs" loading="lazy"><figcaption class="figure-meta">Un rapport supérieur à 1 signifie une valeur plus élevée au Bénin. Pour la vaccination, une valeur inférieure à 1 est défavorable.</figcaption></figure>
+<h2>5. Interprétation</h2><p>Le recul de la vaccination est le signal le plus préoccupant : avec moins d’un enfant sur deux protégé contre la rougeole, le risque d’épidémies augmente, alors que le seuil d’immunité collective pour cette maladie est d’environ 95 %. Plusieurs hypothèses, non testées ici, mériteraient une investigation : ruptures de stock, effets durables de la pandémie de COVID-19 sur les services de routine, difficultés d’accès, hésitation vaccinale, ou modification des sources de données utilisées pour les estimations.</p>
+<h2>6. Limites</h2><ul><li>Estimations nationales : elles masquent les écarts entre départements, milieux urbain et rural, et niveaux socio-économiques.</li><li>Estimations révisables : la valeur 2024 peut être corrigée lors de la prochaine publication WUENIC.</li><li>Analyse descriptive : aucune variable explicative n’est modélisée ; les comparaisons entre pays ne tiennent pas compte des différences de systèmes de santé.</li><li>L’incidence du paludisme est modélisée par l’OMS à partir des cas notifiés et d’enquêtes ; son incertitude n’est pas fournie par l’API.</li></ul>
+<h2>7. Conclusion et prolongements</h2><p>Le Bénin progresse sur la mortalité des enfants, mais reste plus touché que la région par le paludisme et voit sa couverture vaccinale reculer depuis 2016. Prolongements possibles : analyse infranationale à partir des enquêtes démographiques et de santé (EDS) ou des données DHIS2, étude des abandons entre doses, et lien entre couverture vaccinale et cas de rougeole notifiés.</p>
+<h2>Données et code</h2>
+<details><summary>Tableau complet · 24 lignes</summary><div class="data-table"><table><thead><tr><th>Indicateur</th><th>Pays</th><th>2000</th><th>2015</th><th>2024</th><th>Variation 2000–2024 (%)</th><th>Variation annuelle 2015–2024 (%)</th></tr></thead><tbody><tr><td>Paludisme (cas / 1 000 à risque)</td><td>Bénin</td><td>416,0</td><td>390,8</td><td>354,2</td><td>-14,8</td><td>-1,59</td></tr><tr><td>Paludisme (cas / 1 000 à risque)</td><td>Togo</td><td>445,1</td><td>372,4</td><td>249,2</td><td>-44,0</td><td>-4,46</td></tr><tr><td>Paludisme (cas / 1 000 à risque)</td><td>Nigeria</td><td>401,8</td><td>283,8</td><td>294,2</td><td>-26,8</td><td>0,58</td></tr><tr><td>Paludisme (cas / 1 000 à risque)</td><td>Burkina Faso</td><td>597,2</td><td>417,9</td><td>353,5</td><td>-40,8</td><td>-0,99</td></tr><tr><td>Paludisme (cas / 1 000 à risque)</td><td>Niger</td><td>359,2</td><td>404,9</td><td>305,1</td><td>-15,1</td><td>-3,34</td></tr><tr><td>Paludisme (cas / 1 000 à risque)</td><td>Afrique subsaharienne</td><td>339,9</td><td>232,5</td><td>229,3</td><td>-32,5</td><td>-0,2</td></tr><tr><td>Mortalité &lt; 5 ans (‰ naissances)</td><td>Bénin</td><td>135,0</td><td>96,1</td><td>74,7</td><td>-44,7</td><td>-2,77</td></tr><tr><td>Mortalité &lt; 5 ans (‰ naissances)</td><td>Togo</td><td>119,2</td><td>75,2</td><td>56,1</td><td>-52,9</td><td>-3,18</td></tr><tr><td>Mortalité &lt; 5 ans (‰ naissances)</td><td>Nigeria</td><td>177,3</td><td>117,8</td><td>115,6</td><td>-34,8</td><td>-0,11</td></tr><tr><td>Mortalité &lt; 5 ans (‰ naissances)</td><td>Burkina Faso</td><td>176,0</td><td>100,8</td><td>74,9</td><td>-57,4</td><td>-3,24</td></tr><tr><td>Mortalité &lt; 5 ans (‰ naissances)</td><td>Niger</td><td>227,9</td><td>125,4</td><td>110,7</td><td>-51,4</td><td>-1,3</td></tr><tr><td>Mortalité &lt; 5 ans (‰ naissances)</td><td>Afrique subsaharienne</td><td>150,4</td><td>85,0</td><td>71,2</td><td>-52,7</td><td>-1,72</td></tr><tr><td>Couverture DTC3 (%)</td><td>Bénin</td><td>78,0</td><td>74,0</td><td>63,0</td><td>-19,2</td><td>-1,79</td></tr><tr><td>Couverture DTC3 (%)</td><td>Togo</td><td>64,0</td><td>82,0</td><td>90,0</td><td>40,6</td><td>1,08</td></tr><tr><td>Couverture DTC3 (%)</td><td>Nigeria</td><td>29,0</td><td>42,0</td><td>67,0</td><td>131,0</td><td>3,79</td></tr><tr><td>Couverture DTC3 (%)</td><td>Burkina Faso</td><td>45,0</td><td>91,0</td><td>91,0</td><td>102,2</td><td>0,0</td></tr><tr><td>Couverture DTC3 (%)</td><td>Niger</td><td>34,0</td><td>84,0</td><td>86,0</td><td>152,9</td><td>0,42</td></tr><tr><td>Couverture DTC3 (%)</td><td>Afrique subsaharienne</td><td>50,4</td><td>70,3</td><td>74,0</td><td>46,7</td><td>0,2</td></tr><tr><td>Couverture rougeole (%)</td><td>Bénin</td><td>70,0</td><td>67,0</td><td>44,0</td><td>-37,1</td><td>-4,31</td></tr><tr><td>Couverture rougeole (%)</td><td>Togo</td><td>58,0</td><td>75,0</td><td>81,0</td><td>39,7</td><td>0,98</td></tr><tr><td>Couverture rougeole (%)</td><td>Nigeria</td><td>33,0</td><td>42,0</td><td>57,0</td><td>72,7</td><td>2,03</td></tr><tr><td>Couverture rougeole (%)</td><td>Burkina Faso</td><td>48,0</td><td>88,0</td><td>88,0</td><td>83,3</td><td>0,0</td></tr><tr><td>Couverture rougeole (%)</td><td>Niger</td><td>37,0</td><td>85,0</td><td>81,0</td><td>118,9</td><td>-0,68</td></tr><tr><td>Couverture rougeole (%)</td><td>Afrique subsaharienne</td><td>49,9</td><td>67,9</td><td>69,1</td><td>38,4</td><td>-0,07</td></tr></tbody></table></div></details>
+<details><summary>Script d’extraction · fetch_data.py</summary><pre><code>&quot;&quot;&quot;Télécharge les indicateurs publics de la Banque mondiale (sources OMS/UNICEF/IGME).
+
+Usage : python scripts/fetch_data.py
+Écrit data/indicateurs_bm.csv (format long) ; à relancer pour actualiser.
+&quot;&quot;&quot;
+import csv
+import json
+import urllib.request
+from datetime import date
+from pathlib import Path
+
+COUNTRIES = {&quot;BEN&quot;: &quot;Bénin&quot;, &quot;TGO&quot;: &quot;Togo&quot;, &quot;NGA&quot;: &quot;Nigeria&quot;, &quot;BFA&quot;: &quot;Burkina Faso&quot;, &quot;NER&quot;: &quot;Niger&quot;, &quot;SSF&quot;: &quot;Afrique subsaharienne&quot;}
+INDICATORS = {
+    &quot;SH.MLR.INCD.P3&quot;: &quot;Incidence du paludisme (pour 1 000 personnes à risque)&quot;,
+    &quot;SH.DYN.MORT&quot;: &quot;Mortalité des moins de 5 ans (pour 1 000 naissances vivantes)&quot;,
+    &quot;SH.IMM.IDPT&quot;: &quot;Couverture vaccinale DTC3 (% des 12-23 mois)&quot;,
+    &quot;SH.IMM.MEAS&quot;: &quot;Couverture vaccinale rougeole (% des 12-23 mois)&quot;,
+}
+OUT = Path(__file__).resolve().parents[1] / &quot;data&quot; / &quot;indicateurs_bm.csv&quot;
+
+
+def fetch(indicator):
+    url = (f&quot;https://api.worldbank.org/v2/country/{&#x27;;&#x27;.join(COUNTRIES)}/indicator/{indicator}&quot;
+           &quot;?format=json&amp;date=2000:2024&amp;per_page=1000&quot;)
+    with urllib.request.urlopen(url, timeout=60) as response:
+        meta, rows = json.load(response)
+    if meta.get(&quot;pages&quot;, 1) != 1:
+        raise RuntimeError(f&quot;{indicator}: pagination inattendue&quot;)
+    return rows
+
+
+def main():
+    records = []
+    for code, label in INDICATORS.items():
+        for row in fetch(code):
+            if row[&quot;value&quot;] is None:
+                continue
+            records.append({&quot;country_code&quot;: row[&quot;countryiso3code&quot;], &quot;country&quot;: COUNTRIES[row[&quot;countryiso3code&quot;]],
+                            &quot;indicator_code&quot;: code, &quot;indicator&quot;: label, &quot;year&quot;: int(row[&quot;date&quot;]), &quot;value&quot;: row[&quot;value&quot;]})
+    records.sort(key=lambda r: (r[&quot;indicator_code&quot;], r[&quot;country_code&quot;], r[&quot;year&quot;]))
+    OUT.parent.mkdir(exist_ok=True)
+    with OUT.open(&quot;w&quot;, newline=&quot;&quot;, encoding=&quot;utf-8&quot;) as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(records[0]))
+        writer.writeheader()
+        writer.writerows(records)
+    print(f&quot;{len(records)} valeurs écrites dans {OUT.name} (extraction du {date.today().isoformat()})&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre></details>
+<details><summary>Script d’analyse · analyse.py</summary><pre><code>&quot;&quot;&quot;Analyse descriptive des indicateurs de santé publique du Bénin (2000-2024).
+
+Usage : python scripts/analyse.py
+Lit data/indicateurs_bm.csv, écrit les tableaux et figures dans results/.
+&quot;&quot;&quot;
+import csv
+import math
+from collections import defaultdict
+from pathlib import Path
+
+import matplotlib
+
+matplotlib.use(&quot;Agg&quot;)
+import matplotlib.pyplot as plt
+
+ROOT = Path(__file__).resolve().parents[1]
+RESULTS = ROOT / &quot;results&quot;
+INK, MUTED, GRID, BENIN, REGION = &quot;#153b52&quot;, &quot;#59686e&quot;, &quot;#d7e1e4&quot;, &quot;#c0392b&quot;, &quot;#153b52&quot;
+SHORT = {
+    &quot;SH.MLR.INCD.P3&quot;: &quot;Paludisme (cas / 1 000 à risque)&quot;,
+    &quot;SH.DYN.MORT&quot;: &quot;Mortalité &lt; 5 ans (‰ naissances)&quot;,
+    &quot;SH.IMM.IDPT&quot;: &quot;Couverture DTC3 (%)&quot;,
+    &quot;SH.IMM.MEAS&quot;: &quot;Couverture rougeole (%)&quot;,
+}
+plt.rcParams.update({&quot;font.family&quot;: &quot;DejaVu Sans&quot;, &quot;font.size&quot;: 10, &quot;axes.spines.top&quot;: False,
+                     &quot;axes.spines.right&quot;: False, &quot;axes.edgecolor&quot;: GRID, &quot;xtick.color&quot;: MUTED, &quot;ytick.color&quot;: MUTED})
+
+
+def load():
+    series = defaultdict(dict)
+    names = {}
+    with (ROOT / &quot;data/indicateurs_bm.csv&quot;).open(encoding=&quot;utf-8&quot;) as handle:
+        for row in csv.DictReader(handle):
+            series[(row[&quot;indicator_code&quot;], row[&quot;country_code&quot;])][int(row[&quot;year&quot;])] = float(row[&quot;value&quot;])
+            names[row[&quot;country_code&quot;]] = row[&quot;country&quot;]
+    return series, names
+
+
+def annual_change(points):
+    &quot;&quot;&quot;Variation annuelle moyenne (%) : pente d&#x27;une régression log-linéaire.&quot;&quot;&quot;
+    years = sorted(points)
+    xs = [y - years[0] for y in years]
+    ys = [math.log(points[y]) for y in years]
+    mx, my = sum(xs) / len(xs), sum(ys) / len(ys)
+    slope = sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / sum((x - mx) ** 2 for x in xs)
+    return (math.exp(slope) - 1) * 100
+
+
+def summary(series, names):
+    rows = []
+    for code in SHORT:
+        for country in (&quot;BEN&quot;, &quot;TGO&quot;, &quot;NGA&quot;, &quot;BFA&quot;, &quot;NER&quot;, &quot;SSF&quot;):
+            s = series[(code, country)]
+            recent = {y: v for y, v in s.items() if y &gt;= 2015}
+            rows.append({
+                &quot;indicateur&quot;: SHORT[code], &quot;pays&quot;: names[country],
+                &quot;valeur_2000&quot;: round(s[2000], 1), &quot;valeur_2015&quot;: round(s[2015], 1), &quot;valeur_2024&quot;: round(s[2024], 1),
+                &quot;variation_2000_2024_pct&quot;: round((s[2024] / s[2000] - 1) * 100, 1),
+                &quot;variation_annuelle_2015_2024_pct&quot;: round(annual_change(recent), 2),
+                &quot;rapport_benin_region_2024&quot;: round(series[(code, &quot;BEN&quot;)][2024] / series[(code, &quot;SSF&quot;)][2024], 2) if country == &quot;BEN&quot; else &quot;&quot;,
+            })
+    with (RESULTS / &quot;synthese_indicateurs.csv&quot;).open(&quot;w&quot;, newline=&quot;&quot;, encoding=&quot;utf-8&quot;) as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+    return rows
+
+
+def save(fig, name):
+    fig.savefig(RESULTS / name, dpi=160, bbox_inches=&quot;tight&quot;, facecolor=&quot;white&quot;)
+    plt.close(fig)
+
+
+def small_multiples(series, names):
+    fig, axes = plt.subplots(2, 2, figsize=(12, 7.5), sharex=True)
+    for ax, code in zip(axes.flat, SHORT):
+        for country in (&quot;TGO&quot;, &quot;NGA&quot;, &quot;BFA&quot;, &quot;NER&quot;):
+            s = series[(code, country)]
+            ax.plot(list(s), list(s.values()), color=&quot;#b8c6cc&quot;, lw=1.2)
+            ax.text(2024.4, s[2024], names[country], fontsize=7.5, color=MUTED, va=&quot;center&quot;)
+        region = series[(code, &quot;SSF&quot;)]
+        ax.plot(list(region), list(region.values()), color=REGION, lw=1.8, ls=&quot;--&quot;, label=&quot;Afrique subsaharienne&quot;)
+        benin = series[(code, &quot;BEN&quot;)]
+        ax.plot(list(benin), list(benin.values()), color=BENIN, lw=2.6, label=&quot;Bénin&quot;)
+        ax.scatter([2024], [benin[2024]], color=BENIN, zorder=3)
+        ax.annotate(f&quot;{benin[2024]:.0f}&quot;, (2024, benin[2024]), xytext=(-6, 8), textcoords=&quot;offset points&quot;, ha=&quot;right&quot;, color=BENIN, fontweight=&quot;bold&quot;)
+        if code in (&quot;SH.IMM.IDPT&quot;, &quot;SH.IMM.MEAS&quot;):
+            ax.axhline(90, color=&quot;#2f8f5b&quot;, lw=1, ls=&quot;:&quot;)
+            ax.text(2000.3, 91.5, &quot;cible IA2030 : 90 %&quot;, fontsize=7.5, color=&quot;#2f8f5b&quot;)
+            ax.set_ylim(0, 100)
+        else:
+            ax.set_ylim(0, None)
+        ax.set_title(SHORT[code], loc=&quot;left&quot;, color=INK, fontweight=&quot;bold&quot;)
+        ax.yaxis.grid(True, color=GRID)
+        ax.set_xlim(2000, 2027)
+    axes[0, 0].legend(frameon=False, fontsize=8.5, loc=&quot;lower left&quot;)
+    fig.suptitle(&quot;Bénin, pays voisins et Afrique subsaharienne, 2000–2024 · données Banque mondiale (OMS, UNICEF, IGME)&quot;,
+                 x=0.01, ha=&quot;left&quot;, color=MUTED, fontsize=9.5)
+    fig.tight_layout()
+    save(fig, &quot;fig_tendances_benin_region.png&quot;)
+
+
+def vaccination_gap(series):
+    dtc3, measles = series[(&quot;SH.IMM.IDPT&quot;, &quot;BEN&quot;)], series[(&quot;SH.IMM.MEAS&quot;, &quot;BEN&quot;)]
+    years = sorted(dtc3)
+    fig, ax = plt.subplots(figsize=(11, 4.6))
+    ax.fill_between(years, [100] * len(years), [dtc3[y] for y in years], color=&quot;#f6dcd8&quot;, label=&quot;Enfants non couverts par le DTC3&quot;)
+    ax.fill_between(years, [dtc3[y] for y in years], [measles[y] for y in years], color=&quot;#fbf0d6&quot;, label=&quot;Écart DTC3 – rougeole&quot;)
+    ax.plot(years, [dtc3[y] for y in years], color=INK, lw=2.2, label=&quot;DTC3&quot;)
+    ax.plot(years, [measles[y] for y in years], color=BENIN, lw=2.2, label=&quot;Rougeole (1re dose)&quot;)
+    ax.axhline(90, color=&quot;#2f8f5b&quot;, lw=1, ls=&quot;:&quot;)
+    ax.text(2000.2, 91.5, &quot;cible 90 %&quot;, fontsize=8, color=&quot;#2f8f5b&quot;)
+    ax.annotate(&quot;&quot;, xy=(2024, 30), xytext=(2016, 30), arrowprops={&quot;arrowstyle&quot;: &quot;&lt;-&gt;&quot;, &quot;color&quot;: MUTED})
+    ax.text(2020, 32, &quot;rougeole : −24 points depuis 2016&quot;, ha=&quot;center&quot;, fontsize=8.5, color=MUTED)
+    for y in (2016, 2024):
+        ax.annotate(f&quot;{measles[y]:.0f} %&quot;, (y, measles[y]), xytext=(0, -14), textcoords=&quot;offset points&quot;, ha=&quot;center&quot;, color=BENIN, fontsize=9, fontweight=&quot;bold&quot;)
+    ax.set(ylim=(0, 100), xlim=(2000, 2024), ylabel=&quot;Couverture (%)&quot;)
+    ax.yaxis.grid(True, color=GRID)
+    ax.legend(frameon=False, fontsize=8.5, ncol=2, loc=&quot;lower left&quot;)
+    ax.set_title(&quot;Bénin : couverture vaccinale des 12–23 mois (estimations OMS/UNICEF)&quot;, loc=&quot;left&quot;, color=INK, fontweight=&quot;bold&quot;)
+    save(fig, &quot;fig_vaccination_benin.png&quot;)
+
+
+def ratio_to_region(series):
+    fig, ax = plt.subplots(figsize=(11, 4.2))
+    colours = {&quot;SH.MLR.INCD.P3&quot;: &quot;#8e44ad&quot;, &quot;SH.DYN.MORT&quot;: &quot;#d35400&quot;, &quot;SH.IMM.IDPT&quot;: INK, &quot;SH.IMM.MEAS&quot;: BENIN}
+    for code, label in SHORT.items():
+        b, r = series[(code, &quot;BEN&quot;)], series[(code, &quot;SSF&quot;)]
+        years = sorted(set(b) &amp; set(r))
+        ratios = [b[y] / r[y] for y in years]
+        ax.plot(years, ratios, color=colours[code], lw=2, label=label)
+        ax.text(2024.3, ratios[-1], f&quot;{ratios[-1]:.2f}&quot;, color=colours[code], va=&quot;center&quot;, fontsize=9, fontweight=&quot;bold&quot;)
+    ax.axhline(1, color=MUTED, lw=1)
+    ax.text(2000.2, 1.03, &quot;niveau régional&quot;, fontsize=8, color=MUTED)
+    ax.set(xlim=(2000, 2026), ylabel=&quot;Bénin / Afrique subsaharienne&quot;)
+    ax.yaxis.grid(True, color=GRID)
+    ax.legend(frameon=False, fontsize=8.5, ncol=2, loc=&quot;upper left&quot;)
+    ax.set_title(&quot;Écart à la moyenne régionale (rapport &gt; 1 : valeur plus élevée au Bénin)&quot;, loc=&quot;left&quot;, color=INK, fontweight=&quot;bold&quot;)
+    save(fig, &quot;fig_rapport_region.png&quot;)
+
+
+def main():
+    RESULTS.mkdir(exist_ok=True)
+    series, names = load()
+    rows = summary(series, names)
+    small_multiples(series, names)
+    vaccination_gap(series)
+    ratio_to_region(series)
+    for row in rows:
+        if row[&quot;pays&quot;] == &quot;Bénin&quot;:
+            print(row)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre></details>
+<p>Reproduire : <code>pip install matplotlib</code>, puis <code>python scripts/fetch_data.py</code> et <code>python scripts/analyse.py</code>.</p>
+<h2>Références</h2><ol class="references"><li>OMS. World Malaria Report 2024. <a href="https://www.who.int/teams/global-malaria-programme/reports/world-malaria-report-2024" target="_blank" rel="noopener">Source</a></li><li>OMS/UNICEF. Estimates of National Immunization Coverage (WUENIC). <a href="https://www.who.int/teams/immunization-vaccines-and-biologicals/immunization-analysis-and-insights/global-monitoring/immunization-coverage/who-unicef-estimates-of-national-immunization-coverage" target="_blank" rel="noopener">Source</a></li><li>UN IGME. Levels and Trends in Child Mortality, Report 2024. <a href="https://childmortality.org/" target="_blank" rel="noopener">Source</a></li><li>OMS. Immunization Agenda 2030 (IA2030). <a href="https://www.immunizationagenda2030.org/" target="_blank" rel="noopener">Source</a></li><li>Banque mondiale. World Development Indicators, API v2. <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889392" target="_blank" rel="noopener">Source</a></li></ol>
+</main><footer class="site-footer"><div class="site-footer-inner"><span>Akonassou Sèdjro Tchédrac Singbo · Biotechnologie médicale</span><a href="mailto:akonassousedjrotchedracs@gmail.com">Contact professionnel</a></div></footer>
+</body></html>
