@@ -2,6 +2,8 @@
 
 Biotechnologiste médical. Laboratoire hospitalier · recherche biomédicale · analyse de données.
 
+**Recherche en cours :** collaboration à distance (in silico) en génomique bactérienne avec une équipe de l’INRS (Québec), depuis novembre 2026.
+
 Depuis août 2026, je suis inspecteur d'actions sanitaires en analyse biomédicale (IAS/ABM) au Service de laboratoire du CHU de la Mère et de l'Enfant-Lagune (CHU-MEL), à Cotonou. Mon activité couvre l'hématologie, la biochimie clinique, la sérologie/immunologie, la microbiologie et la parasitologie : frottis sanguin, ELISA, immunoturbidimétrie, culture bactérienne, coloration de Gram et antibiogramme.
 
 Mes principes de travail sont la qualité analytique, la traçabilité, la biosécurité, la confidentialité et la communication prudente des limites.
