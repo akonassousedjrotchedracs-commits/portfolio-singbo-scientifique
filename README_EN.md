@@ -11,6 +11,8 @@ I hold a Professional Bachelor's degree (Licence professionnelle) in Medical Bio
 3. [SQL modelling and ETL](project_03_sql_advanced/README_EN.md)
 4. [Biomedical statistical analysis](project_04_advanced_biomedical_analysis/README_EN.md)
 5. [Thesis: inflammatory biomarkers in prostatic dysfunction](project_05_memoire_soutenance_prostate/README_EN.md)
+6. [Public health in Benin using public data](project_06_sante_publique/README.md)
+7. **In progress** — Remote (in silico) research collaboration in bacterial genomics with a research team at INRS (Québec), since November 2026. Details will be shared with the team's agreement.
 
 ## Research and additional skills
 

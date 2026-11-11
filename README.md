@@ -11,6 +11,8 @@ Titulaire d'une Licence professionnelle en Biotechnologie médicale (ENSBBA–UN
 3. [Modélisation SQL et pipeline ETL](project_03_sql_advanced/README.md)
 4. [Analyse statistique biomédicale](project_04_advanced_biomedical_analysis/README.md)
 5. [Mémoire : biomarqueurs inflammatoires dans le dysfonctionnement prostatique](project_05_memoire_soutenance_prostate/README.md)
+6. [Santé publique au Bénin sur données publiques](project_06_sante_publique/README.md)
+7. **En cours** — Collaboration de recherche à distance (in silico) en génomique bactérienne avec une équipe de l’INRS (Québec), depuis novembre 2026. Les détails seront présentés avec l’accord de l’équipe.
 
 ## Recherche et compétences complémentaires
 
