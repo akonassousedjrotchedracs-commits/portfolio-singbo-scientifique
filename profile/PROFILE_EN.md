@@ -2,6 +2,8 @@
 
 Medical biotechnologist. Hospital laboratory · biomedical research · data analysis.
 
+**Current research:** remote (in silico) collaboration in bacterial genomics with a research team at INRS (Québec), since November 2026.
+
 Since August 2026, I have worked as a Health Action Inspector in Biomedical Analysis (IAS/ABM) in the Laboratory Department of the Mother and Child University Hospital–Lagune (CHU-MEL) in Cotonou. My practice spans haematology, clinical biochemistry, serology/immunology, microbiology and parasitology: blood smears, ELISA, immunoturbidimetry, bacterial culture, Gram staining and antimicrobial susceptibility testing.
 
 My work is guided by analytical quality, traceability, biosafety, confidentiality and careful communication of limitations.
