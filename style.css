@@ -407,3 +407,12 @@ main strong { font-weight: 600; }
 .photo-steps .gallery-card img { display: block; width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; }
 .photo-steps .gallery-card figcaption { font-size: 13px; padding-top: 8px; color: var(--muted, #59686e); }
 .photo-steps .gallery-card img[src*="scatter"] { object-fit: contain; }
+
+/* Compétences et fiches projets standardisées */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 14px 0 24px; }
+.skill-block { border: 1px solid var(--line, #d7e1e4); border-top: 3px solid var(--teal, #087e8b); padding: 14px 16px; background: #fff; }
+.skill-block h3 { margin: 0 0 6px; font-size: 15px; }
+.skill-block p { margin: 0; color: var(--muted, #59686e); font-size: 14px; }
+.card-facts { margin: 4px 0 6px; font-size: 13px; }
+.card-facts dt { font-weight: 700; color: var(--ink, #153b52); margin-top: 6px; }
+.card-facts dd { margin: 2px 0 0; color: var(--muted, #59686e); }
